@@ -4,8 +4,11 @@ A machine learning method for improving Place Name Disambiguation
 
 ### Todo 
 Get training data from wikipedia
+
 Apply Word2Vec model
+
 Apply Doc2Vec model
+
 Testing
 
 
