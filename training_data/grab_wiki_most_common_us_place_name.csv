@@ -7,8 +7,6 @@
 "Washington, Indiana","https://en.wikipedia.org/wiki/Washington,_Indiana",city
 "Washington, Iowa","https://en.wikipedia.org/wiki/Washington,_Iowa",city
 "North Washington, Iowa","https://en.wikipedia.org/wiki/North_Washington,_Iowa",city
-"North Washington, Iowa","https://en.wikipedia.org/wiki/North_Washington,_Iowa",city
-"North Washington, Iowa","https://en.wikipedia.org/wiki/North_Washington,_Iowa",city
 "Washington, Kansas","https://en.wikipedia.org/wiki/Washington,_Kansas",city
 "Washington, Kentucky","https://en.wikipedia.org/wiki/Washington,_Kentucky",village
 "Mount Washington, Kentucky","https://en.wikipedia.org/wiki/Mount_Washington,_Kentucky",city
@@ -41,8 +39,6 @@
 "Washington, Vermont","https://en.wikipedia.org/wiki/Washington,_Vermont",town
 "Washington, Virginia","https://en.wikipedia.org/wiki/Washington,_Virginia",town
 "Washington, West Virginia","https://en.wikipedia.org/wiki/Washington,_West_Virginia",CDP
-"Washington, Wisconsin","https://en.wikipedia.org/wiki/Washington_(community),_Wisconsin",unincorporated community
-"Port Washington, Wisconsin","https://en.wikipedia.org/wiki/Port_Washington,_Wisconsin",city
 "Port Washington, Wisconsin","https://en.wikipedia.org/wiki/Port_Washington,_Wisconsin",city
 "Springfield, Arkansas","https://en.wikipedia.org/wiki/Springfield,_Arkansas",town
 "Springfield, Colorado","https://en.wikipedia.org/wiki/Springfield,_Colorado",town
@@ -62,19 +58,18 @@
 "Springfield, New Jersey (Burlington County)","https://en.wikipedia.org/wiki/Springfield_Township,_Burlington_County,_New_Jersey",township
 "Springfield, New Jersey (Union County)","https://en.wikipedia.org/wiki/Springfield_Township,_Union_County,_New_Jersey",township
 "Springfield, Ohio","https://en.wikipedia.org/wiki/Springfield,_Ohio",city
-"Springfield, Oregon[3]","https://en.wikipedia.org/wiki/Springfield,_Oregon",city
-"Springfield, Pennsylvania","https://en.wikipedia.org/wiki/Springfield_Township,_Delaware_County,_Pennsylvania",CDP
+"Springfield, Oregon","https://en.wikipedia.org/wiki/Springfield,_Oregon",city
 "Springfield, South Carolina","https://en.wikipedia.org/wiki/Springfield,_South_Carolina",town
 "Springfield, South Dakota","https://en.wikipedia.org/wiki/Springfield,_South_Dakota",city
 "Springfield, Tennessee","https://en.wikipedia.org/wiki/Springfield,_Tennessee",city
 "Springfield, Vermont","https://en.wikipedia.org/wiki/Springfield,_Vermont",town
 "Springfield, Virginia","https://en.wikipedia.org/wiki/Springfield,_Virginia",CDP
 "Springfield, West Virginia","https://en.wikipedia.org/wiki/Springfield,_West_Virginia",CDP
-"Springfield, Wisconsin (Dane County)","https://en.wikipedia.org/wiki/Springfield,_Dane_County,_Wisconsin",town
+"Springfield, Dane County, Wisconsin","https://en.wikipedia.org/wiki/Springfield,_Dane_County,_Wisconsin",town
 "Springfield, Wisconsin (Jackson County)","https://en.wikipedia.org/wiki/Springfield,_Jackson_County,_Wisconsin",town[4]
 "Springfield, Wisconsin (Marquette County)","https://en.wikipedia.org/wiki/Springfield,_Marquette_County,_Wisconsin",town
 "Springfield, Wisconsin (St. Croix County)","https://en.wikipedia.org/wiki/Springfield,_St._Croix_County,_Wisconsin",town
-"Springfield, Wisconsin (Walworth County)","https://en.wikipedia.org/wiki/Springfield,_Walworth_County,_Wisconsin",town
+"Springfield, Walworth County, Wisconsin","https://en.wikipedia.org/wiki/Springfield,_Walworth_County,_Wisconsin",town
 "Franklin, Alabama","https://en.wikipedia.org/wiki/Franklin,_Alabama",town
 "Franklin, Arkansas","https://en.wikipedia.org/wiki/Franklin,_Arkansas",town
 "Franklin, Connecticut","https://en.wikipedia.org/wiki/Franklin,_Connecticut",town
@@ -96,20 +91,17 @@
 "Franklin, New Jersey","https://en.wikipedia.org/wiki/Franklin,_New_Jersey",borough
 "Franklin, Delaware County, New York","https://en.wikipedia.org/wiki/Franklin_(village),_New_York",village
 "Franklin, Franklin County, New York","https://en.wikipedia.org/wiki/Franklin,_Franklin_County,_New_York",town
-"Franklin, North Carolina","https://en.wikipedia.org/wiki/Franklin_County,_North_Carolina",Town
 "Franklin County, Ohio","https://en.wikipedia.org/wiki/Franklin_County,_Ohio",county
 "Franklin, North Carolina","https://en.wikipedia.org/wiki/Franklin,_North_Carolina",town
 "Franklin, Ohio","https://en.wikipedia.org/wiki/Franklin,_Ohio",city
 "Franklin, Cambria County, Pennsylvania","https://en.wikipedia.org/wiki/Franklin,_Cambria_County,_Pennsylvania",borough
-"Franklin, Venango County, Pennsylvania","https://en.wikipedia.org/wiki/Franklin,_Pennsylvania",city
 "Franklin, Venango County, Pennsylvania","https://en.wikipedia.org/wiki/Franklin,_Pennsylvania",city
 "Franklin, Tennessee","https://en.wikipedia.org/wiki/Franklin,_Tennessee",city
 "Franklin, Texas","https://en.wikipedia.org/wiki/Franklin,_Texas",city
 "Franklin, Vermont","https://en.wikipedia.org/wiki/Franklin,_Vermont",town
 "Franklin, Virginia","https://en.wikipedia.org/wiki/Franklin,_Virginia",city
 "Franklin, West Virginia","https://en.wikipedia.org/wiki/Franklin,_West_Virginia",town
-"Franklin, Wisconsin","https://en.wikipedia.org/wiki/Franklin,_Milwaukee_County,_Wisconsin",city
-"Franklin, Louisiana","https://en.wikipedia.org/wiki/Franklin,_Louisiana",Parish
+"Franklin, Milwaukee County, Wisconsin","https://en.wikipedia.org/wiki/Franklin,_Milwaukee_County,_Wisconsin",city
 "Greenville, Alabama","https://en.wikipedia.org/wiki/Greenville,_Alabama",city
 "Greenville, California","https://en.wikipedia.org/wiki/Greenville,_California",CDP
 "Greenville, Delaware","https://en.wikipedia.org/wiki/Greenville,_Delaware",CDP
@@ -126,10 +118,8 @@
 "Greenville, Missouri","https://en.wikipedia.org/wiki/Greenville,_Missouri",city
 "Greenville, New Hampshire","https://en.wikipedia.org/wiki/Greenville,_New_Hampshire",town
 "Greenville, New Jersey","https://en.wikipedia.org/wiki/Greenville,_New_Jersey",former township
-"Greenville, Greene County, New York","https://en.wikipedia.org/wiki/Greenville_(town),_New_York",town
 "Greenville, Orange County, New York","https://en.wikipedia.org/wiki/Greenville,_Orange_County,_New_York",town
 "Greenville, Westchester County, New York","https://en.wikipedia.org/wiki/Greenville,_Westchester_County,_New_York",CDP
-"Greenville, North Carolina","https://en.wikipedia.org/wiki/Greenville,_North_Carolina",city
 "Greenville, Ohio","https://en.wikipedia.org/wiki/Greenville,_Ohio",city
 "Greenville, Pennsylvania","https://en.wikipedia.org/wiki/Greenville,_Pennsylvania",borough
 "Greenville, Rhode Island","https://en.wikipedia.org/wiki/Greenville,_Rhode_Island",CDP
@@ -146,12 +136,9 @@
 "Bristol, Georgia","https://en.wikipedia.org/wiki/Bristol,_Georgia",City
 "Bristol, Illinois","https://en.wikipedia.org/wiki/Bristol,_Illinois",Unincorporated community
 "Bristol, Indiana","https://en.wikipedia.org/wiki/Bristol,_Indiana",Town
-"Bristol, Indiana","https://en.wikipedia.org/wiki/Bristol,_Indiana",Town
 "Bristol, Louisiana","https://en.wikipedia.org/wiki/Bristol,_Louisiana",Populated place
 "Bristol, Maryland","https://en.wikipedia.org/wiki/Bristol,_Maryland",Unincorporated community
 "Bristol, Maine","https://en.wikipedia.org/wiki/Bristol,_Maine",Town
-"Bristol, Michigan","https://en.wikipedia.org/wiki/Bristol,_Michigan",Unincorporated community
-"Bristol, Michigan","https://en.wikipedia.org/wiki/Bristol,_Michigan",Unincorporated community
 "Bristol, Michigan","https://en.wikipedia.org/wiki/Bristol,_Michigan",Unincorporated community
 "Bristol, Nevada","https://en.wikipedia.org/wiki/Bristol,_Nevada",Ghost town
 "Bristol, New Hampshire","https://en.wikipedia.org/wiki/Bristol,_New_Hampshire",Town
@@ -190,14 +177,12 @@
 "Clinton, Clinton County, New York","https://en.wikipedia.org/wiki/Clinton,_Clinton_County,_New_York",town
 "Clinton, Dutchess County, New York","https://en.wikipedia.org/wiki/Clinton,_Dutchess_County,_New_York",town
 "Clinton, Oneida County, New York","https://en.wikipedia.org/wiki/Clinton,_Oneida_County,_New_York",village
-"Clinton, North Carolina","https://en.wikipedia.org/wiki/Clinton,_North_Carolina",city
 "Clinton, Ohio","https://en.wikipedia.org/wiki/Clinton,_Ohio",village
 "Clinton, Oklahoma","https://en.wikipedia.org/wiki/Clinton,_Oklahoma",city
 "Clinton, South Carolina","https://en.wikipedia.org/wiki/Clinton,_South_Carolina",city
 "Clinton, Tennessee","https://en.wikipedia.org/wiki/Clinton,_Tennessee",city
 "Clinton, Utah","https://en.wikipedia.org/wiki/Clinton,_Utah",city
 "Clinton, Washington","https://en.wikipedia.org/wiki/Clinton,_Washington",CDP
-"Clinton, Wisconsin","https://en.wikipedia.org/wiki/Clinton_(village),_Rock_County,_Wisconsin",village
 "Fairview, Alabama","https://en.wikipedia.org/wiki/Fairview,_Alabama",town
 "Fairview, California","https://en.wikipedia.org/wiki/Fairview,_California",CDP
 "Fairview, Georgia","https://en.wikipedia.org/wiki/Fairview,_Georgia",CDP
@@ -205,20 +190,15 @@
 "Fairview, Kansas","https://en.wikipedia.org/wiki/Fairview,_Kansas",city
 "Fairview, Christian County, Kentucky","https://en.wikipedia.org/wiki/Fairview,_Christian_County,_Kentucky",town
 "Fairview, Kenton County, Kentucky","https://en.wikipedia.org/wiki/Fairview,_Kenton_County,_Kentucky",city
-"Fairview, Kenton County, Kentucky","https://en.wikipedia.org/wiki/Fairview,_Kenton_County,_Kentucky",city
-"Fairview, Maryland","https://en.wikipedia.org/wiki/Fairview,_Washington_County,_Maryland",CDP
 "Fairview, Missouri","https://en.wikipedia.org/wiki/Fairview,_Missouri",town
 "Fairview, Montana","https://en.wikipedia.org/wiki/Fairview,_Montana",town
 "Fairview, Bergen County, New Jersey","https://en.wikipedia.org/wiki/Fairview,_Bergen_County,_New_Jersey",borough
 "Fairview, Monmouth County, New Jersey","https://en.wikipedia.org/wiki/Fairview,_Monmouth_County,_New_Jersey",CDP
 "Fairview, Dutchess County, New York","https://en.wikipedia.org/wiki/Fairview,_Dutchess_County,_New_York",CDP
 "Fairview, Westchester County, New York","https://en.wikipedia.org/wiki/Fairview,_Westchester_County,_New_York",CDP
-"Fairview, North Carolina","https://en.wikipedia.org/wiki/Fairview,_Buncombe_County,_North_Carolina",CDP
-"Fairview, North Carolina","https://en.wikipedia.org/wiki/Fairview,_Union_County,_North_Carolina",town
 "Fairview, Ohio","https://en.wikipedia.org/wiki/Fairview,_Ohio",village
 "Fairview, Oklahoma","https://en.wikipedia.org/wiki/Fairview,_Oklahoma",city
 "Fairview, Oregon","https://en.wikipedia.org/wiki/Fairview,_Oregon",city
-"Fairview, Pennsylvania","https://en.wikipedia.org/wiki/Fairview,_Butler_County,_Pennsylvania",borough
 "Fairview, South Dakota","https://en.wikipedia.org/wiki/Fairview,_South_Dakota",town
 "Fairview, Tennessee","https://en.wikipedia.org/wiki/Fairview,_Tennessee",city
 "Fairview, Texas","https://en.wikipedia.org/wiki/Fairview,_Texas",town
@@ -317,7 +297,6 @@
 "Arlington, Tennessee","https://en.wikipedia.org/wiki/Arlington,_Tennessee",town
 "Arlington, Texas","https://en.wikipedia.org/wiki/Arlington,_Texas",city
 "Arlington, Vermont","https://en.wikipedia.org/wiki/Arlington,_Vermont",town
-"Arlington County, Virginia","https://en.wikipedia.org/wiki/Arlington_County,_Virginia",Urban County
 "Arlington, Northampton County, Virginia","https://en.wikipedia.org/wiki/Arlington,_Northampton_County,_Virginia",CDP
 "Arlington, Washington","https://en.wikipedia.org/wiki/Arlington,_Washington",city
 "Arlington, Wisconsin","https://en.wikipedia.org/wiki/Arlington,_Wisconsin",village
@@ -327,7 +306,6 @@
 "Ashland, Illinois","https://en.wikipedia.org/wiki/Ashland,_Illinois",village
 "Ashland, Kansas","https://en.wikipedia.org/wiki/Ashland,_Kansas",city
 "Ashland, Kentucky","https://en.wikipedia.org/wiki/Ashland,_Kentucky",city
-"Ashland, Louisiana","https://en.wikipedia.org/wiki/Ashland,_Natchitoches_Parish,_Louisiana",village
 "Ashland, Maine","https://en.wikipedia.org/wiki/Ashland,_Maine",town
 "Ashland, Massachusetts","https://en.wikipedia.org/wiki/Ashland,_Massachusetts",town
 "Ashland, Mississippi","https://en.wikipedia.org/wiki/Ashland,_Mississippi",town
@@ -344,7 +322,6 @@
 "Ashland, Pennsylvania","https://en.wikipedia.org/wiki/Ashland,_Pennsylvania",borough
 "Ashland, Virginia","https://en.wikipedia.org/wiki/Ashland,_Virginia",town
 "Ashland, Wisconsin","https://en.wikipedia.org/wiki/Ashland,_Wisconsin",city
-"Dover, Arkansas","https://en.wikipedia.org/wiki/Dover,_Arkansas",city
 "Dover, Arkansas","https://en.wikipedia.org/wiki/Dover,_Arkansas",city
 "Dover, Delaware","https://en.wikipedia.org/wiki/Dover,_Delaware",city
 "Dover, Florida","https://en.wikipedia.org/wiki/Dover,_Florida",CDP
@@ -409,7 +386,6 @@
 "Jackson, South Carolina","https://en.wikipedia.org/wiki/Jackson,_South_Carolina",Town
 "Fort Jackson, South Carolina",https://en.wikipedia.org/wiki/Fort_Jackson_(South_Carolina),Military base
 "Jackson, Tennessee","https://en.wikipedia.org/wiki/Jackson,_Tennessee",city
-"Jackson, Wisconsin","https://en.wikipedia.org/wiki/Jackson_(village),_Wisconsin",village
 "Jackson, Wyoming","https://en.wikipedia.org/wiki/Jackson,_Wyoming",town
 "Burlington, Colorado","https://en.wikipedia.org/wiki/Burlington,_Colorado",city
 "Burlington, Connecticut","https://en.wikipedia.org/wiki/Burlington,_Connecticut",town
@@ -468,7 +444,6 @@
 "Milton, Ulster County, New York","https://en.wikipedia.org/wiki/Milton,_Ulster_County,_New_York",CDP
 "Milton, North Carolina","https://en.wikipedia.org/wiki/Milton,_North_Carolina",town
 "Milton, North Dakota","https://en.wikipedia.org/wiki/Milton,_North_Dakota",city
-"Milton, Ohio","https://en.wikipedia.org/wiki/Milton_Township,_Ohio_(disambiguation)",townships in 5 counties
 "Milton, Pennsylvania","https://en.wikipedia.org/wiki/Milton,_Pennsylvania",borough
 "Milton, Tennessee","https://en.wikipedia.org/wiki/Milton,_Tennessee",village
 "Milton, Vermont","https://en.wikipedia.org/wiki/Milton,_Vermont",town
@@ -487,7 +462,6 @@
 "Newport, New Hampshire","https://en.wikipedia.org/wiki/Newport,_New_Hampshire",town
 "Newport, New York","https://en.wikipedia.org/wiki/Newport_(village),_New_York",village
 "Newport, North Carolina","https://en.wikipedia.org/wiki/Newport,_North_Carolina",town
-"Newport, Ohio","https://en.wikipedia.org/wiki/Newport,_Washington_County,_Ohio",CDP
 "Newport, Oregon","https://en.wikipedia.org/wiki/Newport,_Oregon",city
 "Newport, Pennsylvania","https://en.wikipedia.org/wiki/Newport,_Pennsylvania",borough
 "Newport, Rhode Island","https://en.wikipedia.org/wiki/Newport,_Rhode_Island",city
@@ -509,16 +483,14 @@
 "Auburn, Nebraska","https://en.wikipedia.org/wiki/Auburn,_Nebraska",city
 "Auburn, New Hampshire","https://en.wikipedia.org/wiki/Auburn,_New_Hampshire",town
 "Auburn, New York","https://en.wikipedia.org/wiki/Auburn,_New_York",city
-"Auburn, Ohio","https://en.wikipedia.org/wiki/Auburn_Township,_Geauga_County,_Ohio",township
+"Auburn Township, Geauga County, Ohio","https://en.wikipedia.org/wiki/Auburn_Township,_Geauga_County,_Ohio",township
 "Auburn, Pennsylvania","https://en.wikipedia.org/wiki/Auburn,_Pennsylvania",borough
 "Auburn, Washington","https://en.wikipedia.org/wiki/Auburn,_Washington",city
 "Auburn, West Virginia","https://en.wikipedia.org/wiki/Auburn,_West_Virginia",town
 "Auburn, Wyoming","https://en.wikipedia.org/wiki/Auburn,_Wyoming",CDP
 "Centerville, Georgia","https://en.wikipedia.org/wiki/Centerville,_Georgia",city
-"Centerville, Illinois","https://en.wikipedia.org/wiki/Centerville,_Illinois_(disambiguation)",city
 "Centerville, Indiana","https://en.wikipedia.org/wiki/Centerville,_Indiana",town
 "Centerville, Iowa","https://en.wikipedia.org/wiki/Centerville,_Iowa",city
-"Centerville, Kentucky","https://en.wikipedia.org/wiki/Centerville,_Kentucky_(disambiguation)",village
 "Centerville, Massachusetts","https://en.wikipedia.org/wiki/Centerville,_Massachusetts",village
 "Centerville, Minnesota","https://en.wikipedia.org/wiki/Centerville,_Minnesota",city
 "Centerville, Missouri","https://en.wikipedia.org/wiki/Centerville,_Missouri",city
@@ -532,7 +504,6 @@
 "Centerville, Tennessee","https://en.wikipedia.org/wiki/Centerville,_Tennessee",town
 "Centerville, Texas","https://en.wikipedia.org/wiki/Centerville,_Texas",city
 "Centerville, Utah","https://en.wikipedia.org/wiki/Centerville,_Utah",city
-"Centerville, Virginia","https://en.wikipedia.org/wiki/Centerville,_Montgomery_County,_Virginia",town
 "Centerville, Washington","https://en.wikipedia.org/wiki/Centerville,_Washington",CDP
 "Clayton, Alabama","https://en.wikipedia.org/wiki/Clayton,_Alabama",town
 "Clayton, California","https://en.wikipedia.org/wiki/Clayton,_California",city
@@ -553,7 +524,6 @@
 "Clayton, Ohio","https://en.wikipedia.org/wiki/Clayton,_Ohio",city
 "Clayton, Oklahoma","https://en.wikipedia.org/wiki/Clayton,_Oklahoma",town
 "Clayton, Washington","https://en.wikipedia.org/wiki/Clayton,_Washington",CDP
-"Clayton, Wisconsin","https://en.wikipedia.org/wiki/Clayton_(village),_Wisconsin",village
 "Dayton, Alabama","https://en.wikipedia.org/wiki/Dayton,_Alabama",town
 "Dayton, Idaho","https://en.wikipedia.org/wiki/Dayton,_Idaho",city
 "Dayton, Indiana","https://en.wikipedia.org/wiki/Dayton,_Indiana",town
@@ -573,7 +543,6 @@
 "Dayton, Texas","https://en.wikipedia.org/wiki/Dayton,_Texas",city
 "Dayton, Virginia","https://en.wikipedia.org/wiki/Dayton,_Virginia",town
 "Dayton, Washington","https://en.wikipedia.org/wiki/Dayton,_Washington",city
-"Dayton, Wisconsin (disambiguation)","https://en.wikipedia.org/wiki/Dayton,_Wisconsin_(disambiguation)",two towns
 "Dayton, Wyoming","https://en.wikipedia.org/wiki/Dayton,_Wyoming",town
 "Lexington, Alabama","https://en.wikipedia.org/wiki/Lexington,_Alabama",town
 "Lexington, Georgia","https://en.wikipedia.org/wiki/Lexington,_Georgia",city
@@ -586,7 +555,6 @@
 "Lexington, Missouri","https://en.wikipedia.org/wiki/Lexington,_Missouri",city
 "Lexington, Nebraska","https://en.wikipedia.org/wiki/Lexington,_Nebraska",city
 "Lexington, New York","https://en.wikipedia.org/wiki/Lexington,_New_York",town
-"Lexington, North Carolina","https://en.wikipedia.org/wiki/Lexington,_North_Carolina",city
 "Lexington, Ohio","https://en.wikipedia.org/wiki/Lexington,_Ohio",village
 "Lexington, Oklahoma","https://en.wikipedia.org/wiki/Lexington,_Oklahoma",city
 "Lexington, Oregon","https://en.wikipedia.org/wiki/Lexington,_Oregon",town
@@ -615,7 +583,6 @@
 "Milford, Utah","https://en.wikipedia.org/wiki/Milford,_Utah",city
 "Mount Vernon, Alabama","https://en.wikipedia.org/wiki/Mount_Vernon,_Alabama",town
 "Mount Vernon, Arkansas","https://en.wikipedia.org/wiki/Mount_Vernon,_Arkansas",city
-"Mount Vernon, Arkansas","https://en.wikipedia.org/wiki/Mount_Vernon,_Arkansas",city
 "Mount Vernon, Georgia","https://en.wikipedia.org/wiki/Mount_Vernon,_Georgia",city
 "Mount Vernon, Illinois","https://en.wikipedia.org/wiki/Mount_Vernon,_Illinois",city
 "Mount Vernon, Indiana","https://en.wikipedia.org/wiki/Mount_Vernon,_Indiana",city
@@ -628,7 +595,6 @@
 "Mount Vernon, New York","https://en.wikipedia.org/wiki/Mount_Vernon,_New_York",city
 "Mount Vernon, Ohio","https://en.wikipedia.org/wiki/Mount_Vernon,_Ohio",city
 "Mount Vernon, Oregon","https://en.wikipedia.org/wiki/Mount_Vernon,_Oregon",city
-"Mount Vernon, South Dakota","https://en.wikipedia.org/wiki/Mount_Vernon,_South_Dakota",city
 "Mount Vernon, South Dakota","https://en.wikipedia.org/wiki/Mount_Vernon,_South_Dakota",city
 "Mount Vernon, Texas","https://en.wikipedia.org/wiki/Mount_Vernon,_Texas",town
 "Mount Vernon, Virginia","https://en.wikipedia.org/wiki/Mount_Vernon,_Virginia",CDP
@@ -645,11 +611,9 @@
 "Oakland, Missouri","https://en.wikipedia.org/wiki/Oakland,_Missouri",city
 "Oakland, Nebraska","https://en.wikipedia.org/wiki/Oakland,_Nebraska",city
 "Oakland, New Jersey","https://en.wikipedia.org/wiki/Oakland,_New_Jersey",borough
-"Oakland, New Jersey","https://en.wikipedia.org/wiki/Oakland,_New_Jersey",borough
 "Oakland, Ohio","https://en.wikipedia.org/wiki/Oakland,_Ohio",village
 "Oakland, Oklahoma","https://en.wikipedia.org/wiki/Oakland,_Oklahoma",town
 "Oakland, Oregon","https://en.wikipedia.org/wiki/Oakland,_Oregon",city
-"Oakland, Pennsylvania",https://en.wikipedia.org/wiki/Oakland_(Pittsburgh),borough
 "Oakland, Lawrence County, Pennsylvania","https://en.wikipedia.org/wiki/Oakland,_Lawrence_County,_Pennsylvania",CDP
 "Oakland, Susquehanna County, Pennsylvania","https://en.wikipedia.org/wiki/Oakland,_Susquehanna_County,_Pennsylvania",borough
 "Oakland, South Carolina","https://en.wikipedia.org/wiki/Oakland,_South_Carolina",CDP
@@ -666,7 +630,6 @@
 "Winchester, Massachusetts","https://en.wikipedia.org/wiki/Winchester,_Massachusetts",town
 "Winchester, Missouri","https://en.wikipedia.org/wiki/Winchester,_Missouri",city
 "Winchester, Nevada","https://en.wikipedia.org/wiki/Winchester,_Nevada",town
-"Winchester, New Hampshire","https://en.wikipedia.org/wiki/Winchester,_New_Hampshire",town
 "Winchester, New Hampshire","https://en.wikipedia.org/wiki/Winchester,_New_Hampshire",town
 "Winchester, Ohio","https://en.wikipedia.org/wiki/Winchester,_Ohio",village
 "Winchester, Oklahoma","https://en.wikipedia.org/wiki/Winchester,_Oklahoma",town
@@ -691,7 +654,6 @@
 "Cleveland, Utah","https://en.wikipedia.org/wiki/Cleveland,_Utah",town
 "Cleveland, Virginia","https://en.wikipedia.org/wiki/Cleveland,_Virginia",town
 "Cleveland, West Virginia","https://en.wikipedia.org/wiki/Cleveland,_West_Virginia",town
-"Cleveland, Wisconsin","https://en.wikipedia.org/wiki/Cleveland,_Manitowoc_County,_Wisconsin",village
 "Hudson, Colorado","https://en.wikipedia.org/wiki/Hudson,_Colorado",town
 "Hudson, Florida","https://en.wikipedia.org/wiki/Hudson,_Florida",CDP
 "Hudson, Illinois","https://en.wikipedia.org/wiki/Hudson,_Illinois",village
@@ -703,7 +665,6 @@
 "Hudson, Massachusetts","https://en.wikipedia.org/wiki/Hudson,_Massachusetts",town
 "Hudson, Michigan","https://en.wikipedia.org/wiki/Hudson,_Michigan",city
 "Hudson, New Hampshire","https://en.wikipedia.org/wiki/Hudson,_New_Hampshire",town
-"Hudson, New York","https://en.wikipedia.org/wiki/Hudson,_New_York",city
 "Hudson, North Carolina","https://en.wikipedia.org/wiki/Hudson,_North_Carolina",town
 "Hudson, Ohio","https://en.wikipedia.org/wiki/Hudson,_Ohio",city
 "Hudson, South Dakota","https://en.wikipedia.org/wiki/Hudson,_South_Dakota",town
@@ -731,12 +692,9 @@
 "Kingston, Wisconsin","https://en.wikipedia.org/wiki/Kingston,_Wisconsin",village
 "Riverside, Alabama","https://en.wikipedia.org/wiki/Riverside,_Alabama",town
 "Riverside, California","https://en.wikipedia.org/wiki/Riverside,_California",city
-"Riverside, Georgia","https://en.wikipedia.org/wiki/Riverside,_Georgia_(disambiguation)",town
 "Riverside, Illinois","https://en.wikipedia.org/wiki/Riverside,_Illinois",village
 "Riverside, Iowa","https://en.wikipedia.org/wiki/Riverside,_Iowa",city
-"Riverside, Maryland","https://en.wikipedia.org/wiki/Riverside,_Harford_County,_Maryland",CDP
 "Riverside, Missouri","https://en.wikipedia.org/wiki/Riverside,_Missouri",city
-"Riverside, New Jersey","https://en.wikipedia.org/wiki/Riverside,_New_Jersey_(disambiguation)",town
 "Riverside, Steuben County, New York","https://en.wikipedia.org/wiki/Riverside,_Steuben_County,_New_York",village
 "Riverside, Suffolk County, New York","https://en.wikipedia.org/wiki/Riverside,_Suffolk_County,_New_York",CDP
 "Riverside, Ohio","https://en.wikipedia.org/wiki/Riverside,_Ohio",city
