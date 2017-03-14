@@ -2,12 +2,17 @@
 A machine learning method for improving Place Name Disambiguation
 
 
-### Todo 
+### Finished
 Get training data from wikipedia
 
-Apply Word2Vec model
+Word2Vec model
 
+
+
+### Todo
 Apply Doc2Vec model
+
+Get and clean testing data
 
 Testing
 
