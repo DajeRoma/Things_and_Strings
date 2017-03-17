@@ -8,6 +8,7 @@ Created on May 15, 2017
 import csv
 import os
 import sys
+from operator import itemgetter
 
 sys.path.append('/home/yiting/Dropbox/ThingsStrings/Things_and_Strings/training_data/')
 
@@ -34,6 +35,7 @@ class test_w2v():
 		self.ground_truth = []
 		self.annoted_place_names = []
 		self.load_testing_data()
+		self.result = []
 
 
 	def load_testing_data(self, 
@@ -81,6 +83,51 @@ class test_w2v():
 			write_dict_to_row_csv(candidate_score_dict, result_csv_path, append=True)
 
 
+	def load_result_data(self, result_file_path, reverse_option=False):
+		raw_result = read_listOfList_from_CSV(result_file_path)
+		result_list= []
+		for row in raw_result:
+			result_for_a_sentence = []
+			for i in xrange(len(row)/2):
+				result_for_a_sentence.append((row[2*i].lower(), row[2*i+1]))
+			sorted_result = sorted(result_for_a_sentence, key=itemgetter(1), reverse=reverse_option)
+			result_list.append(sorted_result)
+		self.result = result_list
+
+
+	def evaluate(self, limit):
+		if len(self.ground_truth) != len(self.result):
+			print "[Error] Lenth of the ground truth and the result do not match"
+			return
+		if limit > len(self.result) and limit <= 0:
+			print "[Error] Limit set out of range"
+			return
+		tp, p_hat, p = 0, 0, 0
+		rank_list = []
+		for i in xrange(len(self.ground_truth)):
+			p += 1
+			result_for_a_sentence = self.result[i]
+			for j in xrange(limit):
+				p_hat += 1
+				if str(result_for_a_sentence[j][0]) == str(self.ground_truth[i]):
+					tp += 1
+					rank_list.append(j+1)
+		precision = 1.0 * tp / p_hat
+		recall = 1.0 * tp / p
+		f_score = 2.0 * (precision * recall) / (precision + recall)
+		reciprocal_rank_sum = 0
+		for rank in rank_list:
+			if rank > 0:
+				reciprocal_rank_sum += 1.0 / rank
+		mean_reciprocal_rank = 1.0 * reciprocal_rank_sum / p
+		print "tp:",tp , "\tp-hat:", p_hat, "\tp:", p
+		print "F Score:", f_score
+		print "MRR:", mean_reciprocal_rank
+		print "precision:", precision
+		print "Recall:", recall
+		# return f_score, mean_reciprocal_rank, precision, recall
+
+
 
 
 def read_listOfList_from_CSV(csv_file_path):
@@ -114,4 +161,8 @@ def path_to_place_name(file_path):
 if __name__ == '__main__':
 	test_instance = test_w2v()
 	result_output_path = os.path.join(CURRENT_DIR_PATH, "w2v_glove_50d_wmd_Mar16.csv")
-	test_instance.run_w2v_in_batch(result_output_path)
+	# test_instance.run_w2v_in_batch(result_output_path)
+
+	test_instance.load_result_data(result_output_path)
+	for i in xrange(10):
+		test_instance.evaluate(i+1)
