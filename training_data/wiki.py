@@ -1,21 +1,29 @@
-import util
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-import wikipedia
-from bs4 import BeautifulSoup
-import urllib2
+import codecs
+import csv
 import os
-import time
-import nltk.data
 import re
+import sys
+import time
+
+from bs4 import BeautifulSoup
+import nltk.data
+import urllib2
+import wikipedia
 
 
-current_dir_path = os.path.dirname(os.path.realpath(__file__))
-wikipedia_dir_path = os.path.join(current_dir_path, "wikipedia")
+reload(sys)  
+sys.setdefaultencoding('utf8')
+
+CURRENT_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
+WIKIPEDIA_DIR_PATH = os.path.join(CURRENT_DIR_PATH, "wikipedia")
 
 
 URL_MOST_COMMON_US_PLACE_NAME = "https://en.wikipedia.org/wiki/List_of_the_most_common_U.S._place_names"
-MOST_COMMON_PLACE_NAME_CSV_FILE = os.path.join(current_dir_path, "wiki_most_common_us_place_name_cleaned1.csv")
-
+# MOST_COMMON_PLACE_NAME_CSV_FILE = os.path.join(CURRENT_DIR_PATH, "wiki_most_common_us_place_name_cleaned.csv")
+MOST_COMMON_PLACE_NAME_CSV_FILE = os.path.join(CURRENT_DIR_PATH, "wiki_most_common_us_place_name_double_cleaned.csv")
 
 
 def grab_wiki_most_common_us_place_name(url=URL_MOST_COMMON_US_PLACE_NAME):
@@ -70,7 +78,7 @@ def validate_place_names_with_wiki(placeNameList):
 """
 	Create folders on the disk for each city in the cities
 """
-def create_dir_for_cities(cities, parent_dir=wikipedia_dir_path):
+def create_dir_for_cities(cities, parent_dir=WIKIPEDIA_DIR_PATH):
 	for city_name in cities:
 		if not os.path.exists(os.path.join(parent_dir, city_name)):
 			os.makedirs(os.path.join(parent_dir, city_name))
@@ -82,7 +90,7 @@ def create_dir_for_cities(cities, parent_dir=wikipedia_dir_path):
 """
 def write_cities_wikis_to_disk(cities, 
 								ambi_cities,
-								parent_dir=wikipedia_dir_path):
+								parent_dir=WIKIPEDIA_DIR_PATH):
 	assert len(cities)==len(ambi_cities)
 	for i in xrange(565, len(cities)):
 		print cities[i]
@@ -95,11 +103,111 @@ def write_cities_wikis_to_disk(cities,
 									cities[i].replace(" ", "_")+".txt"))
 
 
+"""
+	Read text from a file and return with a string
+"""
+def read_from_txt_to_str(txt_file_path):
+	with codecs.open(txt_file_path, 'rb', encoding='utf8') as outfile:
+		line_list = outfile.readlines()
+	line_list = [line.strip() for line in line_list]
+	# print len(line_list)
+	return "\n".join(line_list).strip()
+
+
+def read_listOfList_from_CSV(csv_file_path):
+		listOfList = []
+		with open(csv_file_path, 'rb') as csvfile:
+			spamreader = csv.reader(csvfile, delimiter=',', quotechar='"')
+			for row in spamreader:
+				listOfList.append(row)
+		return listOfList
+
+
+
 
 
 class wiki:
 	def __init__(self):
-		pass
+		# ["Washington", "Springfield", ...]
+		self.ambi_place_names_list = self._get_ambiguous_place_name_list()
+		# ["Washington, Georgia": "Washington", "Washington, Akansas": "Washington", ...]
+		self.place_name_dictionary = self._get_place_place_name_map()
+
+
+
+	def _get_ambiguous_place_name_list(self, wikiFolderPath=WIKIPEDIA_DIR_PATH):
+		return os.listdir(wikiFolderPath)
+
+
+	def _get_place_place_name_map(self, wikiFolderPath=WIKIPEDIA_DIR_PATH):
+		place_map_to_ambi_place_name = {}
+		for folder in os.listdir(wikiFolderPath):
+			for wiki_file in os.listdir(os.path.join(wikiFolderPath, folder)):
+				place = wiki_file[:wiki_file.index(".txt")].replace('_', ' ')
+				place_map_to_ambi_place_name[place] = folder
+		return place_map_to_ambi_place_name
+
+
+	def get_all_ambi_places(self):
+		return self.ambi_place_names_list
+
+
+	def get_candidate_places(self, place_name, filter_option=True):
+		if place_name not in self.ambi_place_names_list:
+			print "[Warning] this place name \"" + place_name + "is not found"
+			return []
+		candidate_places = []
+		filter_list = self.get_filter_list()
+		for key in self.place_name_dictionary:
+			if filter_option == True and key not in filter_list:
+				continue
+			if self.place_name_dictionary[key] == place_name:
+				candidate_places.append(key)
+		return candidate_places
+
+
+	def get_candidate_places_file_path(self, place_name, filter_option=True):
+		if place_name not in self.ambi_place_names_list:
+			print "[Warning] this place name \"" + place_name + "is not found"
+			return []
+		candidate_places_files_path = []
+		filter_list = self.get_filter_list()
+		for key in self.place_name_dictionary:
+			if filter_option == True and key not in filter_list:
+				continue
+			if self.place_name_dictionary[key] == place_name:
+				temp_file_path = os.path.join(WIKIPEDIA_DIR_PATH, place_name, str(key.replace(' ', '_')) + ".txt")
+				if self.validate_file_path(temp_file_path):
+					candidate_places_files_path.append(temp_file_path)
+				else:
+					print "[Warning] The file path is invalid. ", temp_file_path
+		return candidate_places_files_path
+
+
+
+
+
+	"""
+		Read the wiki_most_common_us_place_name_(double)_cleaned.csv_file_path
+			and get our vocabulary of candiate place names
+	"""
+	@staticmethod
+	def get_filter_list(wiki_place_file=MOST_COMMON_PLACE_NAME_CSV_FILE):
+		city_placeName = read_listOfList_from_CSV(wiki_place_file)
+		filter_list = []
+		for item in city_placeName:
+			filter_list.append(item[0])
+		return filter_list
+
+
+	@staticmethod
+	def read_wiki_content_as_str(filePath):
+		return read_from_txt_to_str(filePath)
+
+
+	@staticmethod
+	def validate_file_path(file_Path):
+		return os.path.exists(file_Path)
 
 
 	"""
@@ -181,14 +289,21 @@ if __name__ == '__main__':
 
 
 	# placeNameList = grab_wiki_most_common_us_place_name()
-	# util.write_listOfList_to_CSV(placeNameList, os.path.join(current_dir_path, "wiki_most_common_us_place_name.csv"))
+	# util.write_listOfList_to_CSV(placeNameList, os.path.join(CURRENT_DIR_PATH, "wiki_most_common_us_place_name.csv"))
 
-	ambiguousPlaceName, disambiguousPlaceName = get_most_common_us_place_names_lists()
+	# ambiguousPlaceName, disambiguousPlaceName = get_most_common_us_place_names_lists()
 	# validate_place_names_with_wiki(disambiguousPlaceName)
 
 	# create_dir_for_cities(ambiguousPlaceName)
 
-	write_cities_wikis_to_disk(disambiguousPlaceName, ambiguousPlaceName)
+	# write_cities_wikis_to_disk(disambiguousPlaceName, ambiguousPlaceName)
 
 
 	# print re.sub('^={2}[\sA-Za-z]+={2}', '', "== Notes ==    ")
+
+	# wk = wiki()
+	# all_ambi_places = wk.get_all_ambi_places()
+	# for place in wk.get_all_ambi_places():
+	# 	wk.get_candidate_places_file_path(place)
+
+	wiki.read_wiki_content_as_str("/home/yiting/Dropbox/ThingsStrings/Things_and_Strings/training_data/wikipedia/Washington/Washington,_District_of_Columbia.txt")

@@ -12,6 +12,29 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 
+"""
+In Python 2,
+	str: binary data (raw 8-bit values), e.g., accii and utf-8
+	unicode: Unicode characters
+* Operate on raw 8-bit values that are UTF-8-encoded (or other encoding)
+* Operate on Unicode characters that have no specific encoding
+"""
+def to_unicode(unicode_or_str):
+	if isinstance(unicode_or_str, str):
+		value = unicode_or_str.decode('utf-8')
+	else:
+		value = unicode_or_str
+	return value
+
+
+def to_str(unicode_or_str):
+	if isinstance(unicode_or_str, unicode):
+		value = unicode_or_str.encode('utf-8')
+	else
+		value = unicode_or_str
+	return value
+
+
 def write_listOfList_to_CSV(listOfList, csv_file_path):
 	with open(csv_file_path, 'wb') as csvfile:
 		spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -33,6 +56,15 @@ def write_listOfStrings_to_txt(listOfStrings, txt_file_path):
 		for string in listOfStrings:
 			string = string.decode('utf-8', errors='replace').encode('utf-8')
 			outfile.write(string + '\n')
+
+
+def read_from_txt_to_str(txt_file_path):
+	with codecs.open(txt_file_path, 'rb', encoding='utf8') as outfile:
+		line_list = outfile.readlines()
+	line_list = [line.strip() for line in line_list]
+	print len(line_list)
+	return "\n".join(line_list).strip()
+
 
 
 """
@@ -69,8 +101,8 @@ def tokenized_to_words(text):
 
 
 if __name__ == "__main__":
-	sent1 = 
-"""Washington, D.C., formally the District of Columbia and commonly referred to as "Washington", "the District", or simply "D.C.", is the capital of the United States.
+	sent1 = """
+Washington, D.C., formally the District of Columbia and commonly referred to as "Washington", "the District", or simply "D.C.", is the capital of the United States.
 The signing of the Residence Act on July 16, 1790, approved the creation of a capital district located along the Potomac River on the country's East Coast.
 The U.S. Constitution provided for a federal district under the exclusive jurisdiction of the Congress and the District is therefore not a part of any state.
 The states of Maryland and Virginia each donated land to form the federal district, which included the pre-existing settlements of Georgetown and Alexandria.
@@ -90,8 +122,7 @@ Various tribes of the Algonquian-speaking Piscataway people (also known as the C
 One group known as the Nacotchtank (also called the Nacostines by Catholic missionaries) maintained settlements around the Anacostia River within the present-day District of Columbia.
 Conflicts with European colonists and neighboring tribes forced the relocation of the Piscataway people, some of whom established a new settlement in 1699 near Point of Rocks, Maryland.
 """
-	sent2 = 
-"""
+	sent2 = """
 Milford is a coastal city in southwestern New Haven County, Connecticut, United States, located between Bridgeport and New Haven.
 The population was 52,759 at the 2010 census.
 The city contains the incorporated borough of Woodmont and the unincorporated village of Devon.
@@ -300,8 +331,7 @@ Milford Living magazine
 MilfordRadio.com, community information
 """
 
-	sent3 = 
-"""
+	sent3 = """
 Washington, D.C., formally the District of Columbia and commonly referred to as "Washington", "the District", or simply "D.C.", is the capital of the United States.
 The signing of the Residence Act on July 16, 1790, approved the creation of a capital district located along the Potomac River on the country's East Coast.
 The U.S. Constitution provided for a federal district under the exclusive jurisdiction of the Congress and the District is therefore not a part of any state.
@@ -698,5 +728,8 @@ Washington, D.C. at the Wayback Machine (archived March 31, 2001)
 	# 	print sent
 	# for word in tokenize_sent_to_words(sent1):
 	# 	print word
-	for word in tokenized_to_words(sent3):
-		print word
+	# for word in tokenized_to_words(sent3):
+	# 	print word
+
+
+	print read_from_txt("/home/yiting/Dropbox/ThingsStrings/Things_and_Strings/training_data/wikipedia/Washington/Washington,_District_of_Columbia.txt")

@@ -1,0 +1,83 @@
+TESTING_SENTENCE_FILEPATH = "/home/yiting/Dropbox/ThingsStrings/Things_and_Strings/testing_data/testing_sentence_city_ambiPlaceName.csv"
+
+WIKI_MOST_COMMON_US_PLACE_NAME_MAR_14 = "/home/yiting/Dropbox/ThingsStrings/Things_and_Strings/training_data/wiki_most_common_us_place_name_cleaned.csv"
+
+696 707 33 44
+arlington county, virginia
+milton township, jackson county, ohio
+springfield, pennsylvania
+milton township, wayne county, ohio
+greenville, greene county, new york
+fairview, north carolina
+bristol, minnesota
+greenville, north carolina
+fairview, pennsylvania
+dayton, richland county, wisconsin
+hudson, new york
+milton township, ashland county, ohio
+washington, wisconsin
+clinton, wisconsin
+oakland, pennsylvania
+newport, ohio
+jackson, wisconsin
+clinton, north carolina
+springfield, wisconsin (walworth county)
+lexington, north carolina
+franklin, wisconsin
+milton township, wood county, ohio
+clayton, wisconsin
+riverside, maryland
+riverside, new jersey
+ashland, louisiana
+milton township, mahoning county, ohio
+auburn, ohio
+dayton, waupaca county, wisconsin
+springfield, wisconsin (dane county)
+cleveland, wisconsin
+centerville, virginia
+riverside, georgia
+=====
+salem, fulton county, arkansas
+port washington, wisconsin
+kingston, idaho
+dayton, missouri
+port washington north, new york
+bristol, maryland
+north washington, iowa
+washington park, north carolina
+washington, michigan
+mount vernon, virginia
+springfield, dane county, wisconsin
+washington terrace, utah
+bristol, texas
+washington, ohio
+washingtonville, new york
+mount washington, kentucky
+washington-on-the-brazos, texas
+port washington, ohio
+auburn township, geauga county, ohio
+franklin, milwaukee county, wisconsin
+washington park, illinois
+washingtonville, pennsylvania
+dover, kansas
+winchester, iowa
+bristol, michigan
+greenville, massachusetts
+washington grove, maryland
+newport, michigan
+clayton, washington
+washingtonville, ohio
+bristol, ohio
+springfield, walworth county, wisconsin
+winchester, texas
+salem, saline county, arkansas
+mount washington, massachusetts
+manchester, massachusetts
+milford, kentucky
+jackson, new york
+madison, tennessee
+old washington, ohio
+winchester, wyoming
+bristol, louisiana
+madison heights, michigan
+washington court house, ohio

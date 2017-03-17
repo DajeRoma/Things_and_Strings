@@ -14,11 +14,11 @@ from nltk.tokenize import WordPunctTokenizer, word_tokenize
 # from util import tokenized_to_words
 
 
-
 reload(sys)  
 sys.setdefaultencoding('utf8')
 
-Data_Folder_Path = '/home/yiting/data_ThingsString'
+W2V_TRAINED_MODEL_FOLDER_PATH = '/home/yiting/data_ThingsString'
+
 
 
 class Word2VecModel:
@@ -207,7 +207,7 @@ def tokenized_to_words(text):
 
 
 if __name__ == "__main__":
-	# trained_model_filePath = os.path.join(Data_Folder_Path, "glove.6B", "glove.6B.50d.txt")
+	# trained_model_filePath = os.path.join(W2V_TRAINED_MODEL_FOLDER_PATH, "glove.6B", "glove.6B.50d.txt")
 	# fixTxtModelFile(trained_model_filePath)
 	# w2vModel = Word2VecModel.load_w2v_model(trained_model_filePath)
 	# w2v = Word2VecModel()
@@ -229,7 +229,7 @@ if __name__ == "__main__":
 
 
 
-	trained_model_filePath = os.path.join(Data_Folder_Path, "glove.6B", "glove.6B.50d.txt")
+	trained_model_filePath = os.path.join(W2V_TRAINED_MODEL_FOLDER_PATH, "glove.6B", "glove.6B.50d.txt")
 	w2v = Word2VecModel()
 	w2v.load_w2v_model(trained_model_filePath)
 	# print w2v.model.similarity('king', 'woman')
