@@ -27,6 +27,12 @@ TESTING_SENTENCES_FILE_PATH = os.path.join(
 
 W2V_TRAINED_MODEL_FOLDER_PATH = '/home/yiting/data_ThingsString'
 
+SCORE_METHOD = "wmd" # "avgvec"
+RESULT_OUTPUT_NAME = "w2v_glove_200d_" + SCORE_METHOD + "_Mar16.csv"
+TRAINED_MODEL_FILE = "glove.6B/glove.6B.200d.txt"
+SCORE_METHOD = "wmd" # "avgvec"
+
+
 
 
 class test_w2v():
@@ -49,8 +55,10 @@ class test_w2v():
 			self.ground_truth.append(row[1])
 			self.annoted_place_names.append(row[2])
 
-
-	def run_w2v_in_batch(self, result_csv_path):
+	"""
+		score_method: "wmd" or "avgvec"
+	"""
+	def run_w2v_in_batch(self, result_csv_path, score_method):
 		if not self.testing_sentences \
 			or not self.ground_truth \
 			or not self.annoted_place_names:
@@ -62,8 +70,7 @@ class test_w2v():
 			return None
 		wk = wiki()		
 		trained_model_filePath = os.path.join(W2V_TRAINED_MODEL_FOLDER_PATH,
-												"glove.6B",
-												"glove.6B.50d.txt")
+												TRAINED_MODEL_FILE)
 		w2v = Word2VecModel()
 		w2v.load_w2v_model(trained_model_filePath)
 		for i in range(len(self.testing_sentences))[:]:
@@ -78,7 +85,11 @@ class test_w2v():
 						.format(str(surface_form), str(candidate_places_count))
 			for candidate_place in candidate_places_wiki_path:
 				candidate_place_wiki = wk.read_wiki_content_as_str(candidate_place)
-				score = w2v.get_sents_dif_wmd(testing_sent, candidate_place_wiki)
+				score = 0
+				if score_method == "wmd":
+					score = w2v.get_sents_dif_wmd(testing_sent, candidate_place_wiki)
+				else:
+					score = w2v.get_sents_similarity_avgvec(testing_sent, candidate_place_wiki)
 				candidate_score_dict[path_to_place_name(candidate_place)] = score
 			write_dict_to_row_csv(candidate_score_dict, result_csv_path, append=True)
 
@@ -158,11 +169,16 @@ def path_to_place_name(file_path):
 	return place_name
 
 
+
+
 if __name__ == '__main__':
 	test_instance = test_w2v()
-	result_output_path = os.path.join(CURRENT_DIR_PATH, "w2v_glove_50d_wmd_Mar16.csv")
-	# test_instance.run_w2v_in_batch(result_output_path)
+	result_output_path = os.path.join(CURRENT_DIR_PATH, RESULT_OUTPUT_NAME)
+	
+	# 1. Run the model and get the result
+	# test_instance.run_w2v_in_batch(result_output_path, SCORE_METHOD)
 
+	# 2. Evaluate the result
 	test_instance.load_result_data(result_output_path)
 	for i in xrange(10):
 		test_instance.evaluate(i+1)

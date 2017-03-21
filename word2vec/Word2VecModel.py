@@ -212,11 +212,11 @@ def tokenized_to_words(text):
 
 
 if __name__ == "__main__":
-	trained_model_filePath = os.path.join(W2V_TRAINED_MODEL_FOLDER_PATH, "glove.6B", "glove.6B.100d.txt")
-	# Word2VecModel.fixTxtModelFile(trained_model_filePath)
-	w2v = Word2VecModel()
-	w2v.load_w2v_model(trained_model_filePath)
-	print w2v.get_wordwise_similarity("princess", "queen")
+	trained_model_filePath = os.path.join(W2V_TRAINED_MODEL_FOLDER_PATH, "glove.6B", "glove.6B.200d.txt")
+	Word2VecModel.fixTxtModelFile(trained_model_filePath)
+	# w2v = Word2VecModel()
+	# w2v.load_w2v_model(trained_model_filePath)
+	# print w2v.get_wordwise_similarity("princess", "queen")
 
 	# 0.79472449113
 
