@@ -76,12 +76,15 @@ class Word2VecModel:
 		model = Word2Vec.load_word2vec_format(modelFilePath, binary=binary)
 		self.model = model
 		self._update_model_dict()
+		print "[info] Model is loaded"
 
 
 	"""
 		Get dissimilarity between two sentences using Word Mover's Distance
 	"""
 	def get_sents_dif_wmd(self, sent1, sent2, stopword=True):
+		sent1List = []
+		sent2List = []
 		if stopword:
 			stopwordList = stopwords.words('english')
 			sent1List = [word.lower() for word \
@@ -142,6 +145,47 @@ class Word2VecModel:
 		sent2Vec = self.get_average_words_vectors(sent2List)
 		return dot(matutils.unitvec(sent1Vec), matutils.unitvec(sent2Vec))
 
+
+	"""
+		Get dissimilarity between two paragraphs using Word Mover's Distance
+		  note: 1. paragraphs will be split into sentences. 
+		  		2. each paragraph will generate a score
+		  		3. the lowest score will be picked
+	"""
+	def get_paragraphs_dif_wmd(self, training_para, testing_sent, stopword=True):
+		training_para_list = []
+		testing_sent_list = []
+		if stopword:
+			stopwordList = stopwords.words('english')
+			for temp_sent in tokenize_to_sents(training_para):
+				temp_list = [word.lower() for word \
+							in tokenize_sent_to_words(temp_sent) \
+								if word not in stopwordList \
+								and word in self._vocabDict]
+				training_para_list.append(temp_list)
+			testing_sent_list = [word.lower() for word \
+							in tokenized_to_words(testing_sent) \
+								if word not in stopwordList \
+								and word in self._vocabDict]
+		else:
+			for temp_sent in tokenize_to_sents(training_para):
+				temp_list = [word.lower() for word \
+							in tokenize_sent_to_words(temp_sent) \
+								if word in self._vocabDict]
+				training_para_list.append(temp_list)
+			testing_sent_list = [word.lower() for word \
+							in tokenized_to_words(testing_sent) \
+								if word in self._vocabDict]
+		# Note that if one of the documents have no words that exist in the
+		#   Word2Vec vocab, `float('inf')` (i.e. infinity) will be returned.
+		lowest_wmd = 8 	# in general, wmd is lower than 8
+		for i in xrange(len(training_para_list)):
+			training_sent_list = training_para_list[i]
+			if training_sent_list:
+				wmd_score = self.model.wmdistance(training_sent_list, testing_sent_list)
+				if wmd_score < lowest_wmd:
+					lowest_wmd = wmd_score
+		return lowest_wmd
 
 
 	@staticmethod

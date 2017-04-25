@@ -5,16 +5,17 @@ A machine learning method for improving Place Name Disambiguation
 ### Finished
 Get training data from wikipedia
 
-Word2Vec model
+Get and clean testing data
 
+Word2Vec Model
+
+Entity Co-Occurrence Model
 
 
 ### Todo
-Apply Doc2Vec model
-
-Get and clean testing data
-
 Testing
+
+Doc2Vec model
 
 
 ### Readings
