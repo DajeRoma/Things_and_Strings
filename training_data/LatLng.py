@@ -3,6 +3,8 @@
 import csv
 import json
 import requests
+
+
 # from SPARQLWrapper import SPARQLWrapper, JSON
 
 class LatLng:
@@ -24,8 +26,8 @@ class LatLng:
 		sparqlRequest = requests.get('http://dbpedia.org/sparql', params = parameters)
 		# print sparqlRequest.json()
 		results = sparqlRequest.json()["results"]["bindings"]
-		if len(results) != 1:
-			print place_uri
+		if len(results) == 0:
+			# print place_uri
 			return None, None
 		point_coor = results[0]['g']['value'][6:-1].split(' ')
 		lat, lng = point_coor[1], point_coor[0]
@@ -65,15 +67,74 @@ def add_coor_in_batch():
 	counter = 1
 	for record in list_of_records:
 		lat, lng = ll.get_lat_lng_from_DBpedia_URI(wiki_url_to_db_uri(record[2]))
-		list_to_return.append(record + [lat, lng])
+		redirected_db_uri = wiki_url_to_db_uri(record[2])
+		if not lat:
+			redirected_db_uri = get_redirect_db_uri(record[2])
+			if not redirected_db_uri:
+				lat, lng = None, None
+			else:
+				lat, lng = ll.get_lat_lng_from_DBpedia_URI(redirected_db_uri)
+		list_to_return.append(record + [redirected_db_uri, lat, lng])
 		print counter
 		counter += 1
 	write_listOfLists_from_CSV(list_to_return, "/home/yiting/Dropbox/ThingsStrings/Things_and_Strings/training_data/wiki_most_common_us_place_name_double_cleaned_coor.csv")
+
+
+def get_redirect_db_uri(url):
+	entities = set()
+	# url = "http://en.wikipedia.org/wiki/Washington,_D.C."
+	if "https" in url:
+		url = url.replace("https", "http")
+	query = """select *
+				{
+				  {
+					select ?a ?b ?c
+					where {
+						   <""" + url + """> foaf:primaryTopic ?a.
+						   ?a ?b ?c.
+						   FILTER(STRSTARTS(STR(?b), "http://dbpedia.org/ontology/") || STRSTARTS(STR(?b), "http://dbpedia.org/property/")).
+						   FILTER(!isLiteral(?c)).
+					}
+				  }
+				  union
+				  {
+					select ?c ?b ?a
+					where {
+						   <""" + url + """> foaf:primaryTopic ?a.
+						   ?c ?b ?a.
+						   FILTER(STRSTARTS(STR(?b), "http://dbpedia.org/ontology/") || STRSTARTS(STR(?b), "http://dbpedia.org/property/")).
+						   FILTER(!isLiteral(?c)).
+					}
+				  }
+				}
+	"""
+	parameters = {'query': query, 'format': 'json'}
+	sparqlRequest = requests.get('http://dbpedia.org/sparql', params = parameters)
+	# print sparqlRequest.json()
+	results = sparqlRequest.json()["results"]["bindings"]
+	# in case "redirected"
+	if len(results) == 1 and results[0]['b']['value'] == "http://dbpedia.org/ontology/wikiPageRedirects":
+		redirct_db_uri = results[0]['c']['value']
+		# redirct_url = redirct_url.replace("http://dbpedia.org/resource/", "http://en.wikipedia.org/wiki/")
+		print url, "\n>>", redirct_db_uri
+		return redirct_db_uri
+		# return get_db_entities_from_url(redirct_url)
+	else:
+		return None
+
+	
+
 
 
 
 if __name__ == '__main__':
 	# lat, lng =  LatLng.get_lat_lng_from_DBpedia_URI("http://dbpedia.org/resource/Washington,_Arkansas")
 	# print lat, lng
+	# place_uri = "http://dbpedia.org/resource/Washington,_District_of_Columbia"
+	# LatLng.get_lat_lng_from_DBpedia_URI(place_uri)
+
 	# add_coor_in_batch()
+
+	# get_redirect_db_uri("https://en.wikipedia.org/wiki/Washington,_District_of_Columbia")
+
 	pass
