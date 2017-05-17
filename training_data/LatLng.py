@@ -137,4 +137,8 @@ if __name__ == '__main__':
 
 	# get_redirect_db_uri("https://en.wikipedia.org/wiki/Washington,_District_of_Columbia")
 
+<<<<<<< HEAD
 	pass
+=======
+	pass
+>>>>>>> 0d68dc1cbaa3f11855f8cf2528170e86b6ccba1b
