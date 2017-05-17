@@ -79,7 +79,7 @@ class test_ec():
 			result_for_a_sentence = []
 			for i in xrange(len(row)/2):
 				result_for_a_sentence.append((row[2*i].lower(), row[2*i+1]))
-			sorted_result = sorted(result_for_a_sentence, key=itemgetter(1))
+			sorted_result = sorted(result_for_a_sentence, key=itemgetter(1), reverse=True)
 			result_list.append(sorted_result)
 		self.result = result_list
 

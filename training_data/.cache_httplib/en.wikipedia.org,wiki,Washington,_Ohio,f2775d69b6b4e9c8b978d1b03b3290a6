@@ -1,0 +1,810 @@
+status: 200
+content-length: 112651
+via: 1.1 varnish-v4, 1.1 varnish-v4, 1.1 varnish-v4, 1.1 varnish-v4
+vary: Accept-Encoding,Cookie,Authorization
+p3p: CP="This is not a P3P policy! See
+ https://en.wikipedia.org/wiki/Special:CentralAutoLogin/P3P for more info."
+x-cache-status: hit
+content-language: en
+x-ua-compatible: IE=Edge
+cache-control: private, s-maxage=0, max-age=0, must-revalidate
+backend-timing: D=102896 t=1494004887909019
+x-varnish: 663382666, 571806439, 582547579 562708841, 98264745
+x-cache: cp1055 miss, cp2010 miss, cp4016 hit/1, cp4010 miss
+set-cookie: WMF-Last-Access=05-May-2017; Path=/; HttpOnly; secure;
+ Expires=Tue, 06 Jun 2017 12:00:00 GMT,
+ WMF-Last-Access-Global=05-May-2017; Path=/; Domain=.wikipedia.org; HttpOnly;
+ secure; Expires=Tue, 06 Jun 2017 12:00:00 GMT,
+ GeoIP=US:CA:Santa_Barbara:34.43:-119.84:v4; Path=/; secure;
+ Domain=.wikipedia.org
+accept-ranges: bytes
+last-modified: Fri, 21 Apr 2017 17:21:27 GMT
+-content-encoding: gzip
+link: </static/images/project-logos/enwiki.png>; rel=preload; as=image;
+ media=not all and (min-resolution:
+ 1.5dppx),</static/images/project-logos/enwiki-1.5x.png>; rel=preload; as=image;
+ media=(min-resolution: 1.5dppx) and (max-resolution:
+ 1.999999dppx),</static/images/project-logos/enwiki-2x.png>; rel=preload;
+ as=image; media=(min-resolution: 2dppx)
+date: Fri, 05 May 2017 17:21:44 GMT
+content-location: https://en.wikipedia.org/wiki/Washington,_Ohio
+x-client-ip: 128.111.106.188
+x-analytics: ns=0;page_id=29260885;https=1;nocookies=1
+x-content-type-options: nosniff
+x-powered-by: HHVM/3.12.14
+age: 15
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+server: mw1242.eqiad.wmnet
+connection: keep-alive
+content-type: text/html; charset=UTF-8
+-varied-accept-encoding: gzip, deflate
+
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Washington Court House, Ohio - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Washington_Court_House,_Ohio","wgTitle":"Washington Court House, Ohio","wgCurRevisionId":771573323,"wgRevisionId":771573323,"wgArticleId":29260885,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Coordinates on Wikidata","All articles with unsourced statements","Articles with unsourced statements from October 2014","Articles with unsourced statements from June 2007","Articles with unsourced statements from December 2013","Articles to be expanded from March 2017","All articles to be expanded","Articles using small message boxes","Wikipedia articles incorporating a citation from the 1911 Encyclopaedia Britannica with Wikisource reference","Wikipedia articles incorporating a citation from the New International Encyclopedia","Washington Court House, Ohio","County seats in Ohio"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Washington_Court_House,_Ohio","wgRelevantArticleId":29260885,"wgRequestId":"WQy0lwpAME0AAGFjLqIAAAAX","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgRedirectedFrom":"Washington,_Ohio","wgFlaggedRevsParams":{"tags":{}},"wgStableRevisionId":null,"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsShouldSendModuleToUser":false,"wgPopupsConflictsWithNavPopupGadget":false,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"en","wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":false},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"English","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgInternalRedirectTargetUrl":"/wiki/Washington_Court_House,_Ohio","wgCoordinates":{"lat":39.536388888889,"lon":-83.435555555556},"wgWikibaseItemId":"Q2203766","wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0,"wgEditSubmitButtonLabelPublish":false});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.cite.styles":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready"});mw.loader.implement("user.options@0j3lz3q",function($,jQuery,require,module){mw.user.options.set({"variant":"en"});});mw.loader.implement("user.tokens@1dqfd7l",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.action.view.redirect","ext.cite.a11y","mediawiki.toc","mediawiki.action.view.postEdit","site","mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.gadget.teahouse","ext.gadget.ReferenceTooltips","ext.gadget.watchlist-notice","ext.gadget.DRN-wizard","ext.gadget.charinsert","ext.gadget.refToolbar","ext.gadget.extra-toolbar-buttons","ext.gadget.switcher","ext.gadget.featured-articles-links","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.interface","ext.quicksurveys.init","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=ext.cite.styles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediaBadges%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.29.0-wmf.21"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/8/89/Washington_Courthouse_Ohio.jpg"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/en.m.wikipedia.org/wiki/Washington_Court_House,_Ohio"/>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit"/>
+<link rel="edit" title="Edit this page" href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="copyright" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Washington_Court_House,_Ohio"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Washington_Court_House_Ohio rootpage-Washington_Court_House_Ohio skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div>
+						<div class="mw-indicators mw-body-content">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="en">Washington Court House, Ohio</h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">From Wikipedia, the free encyclopedia</div>
+								<div id="contentSub"><span class="mw-redirectedfrom">  (Redirected from <a href="/w/index.php?title=Washington,_Ohio&amp;redirect=no" class="mw-redirect" title="Washington, Ohio">Washington, Ohio</a>)</span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div role="note" class="hatnote">"Washington, Ohio" redirects here. For the Ohio location formerly known as "Washington", see <a href="/wiki/Old_Washington,_Ohio" title="Old Washington, Ohio">Old Washington, Ohio</a>.</div>
+<table class="infobox geography vcard" style="width:22em;width:23em">
+<tr>
+<th colspan="2" style="text-align:center;font-size:125%;font-weight:bold;font-size:1.25em; white-space:nowrap"><span class="fn org">Washington Court House, Ohio</span></th>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center;background-color:#cddeff; font-weight:bold;"><span class="category"><a href="/wiki/City_(Ohio)" class="mw-redirect" title="City (Ohio)">City</a></span></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align:center;padding:0.7em 0.8em"><a href="/wiki/File:Washington_Courthouse_Ohio.jpg" class="image" title="Fayette County Courthouse in Washington Court House"><img alt="Fayette County Courthouse in Washington Court House" src="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Washington_Courthouse_Ohio.jpg/250px-Washington_Courthouse_Ohio.jpg" width="250" height="181" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/8/89/Washington_Courthouse_Ohio.jpg/375px-Washington_Courthouse_Ohio.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/8/89/Washington_Courthouse_Ohio.jpg/500px-Washington_Courthouse_Ohio.jpg 2x" data-file-width="711" data-file-height="516" /></a>
+<div>Fayette County Courthouse in Washington Court House</div>
+</td>
+</tr>
+<tr class="mergedtoprow">
+<td colspan="2" class="maptable" style="text-align:center">
+<table style="width:100%; background:none;">
+<tr>
+<td style="vertical-align:middle; text-align:center;"><a href="/wiki/File:WCHseal.jpg" class="image" title="Official seal of Washington Court House, Ohio"><img alt="Official seal of Washington Court House, Ohio" src="//upload.wikimedia.org/wikipedia/en/thumb/0/05/WCHseal.jpg/100px-WCHseal.jpg" width="100" height="100" srcset="//upload.wikimedia.org/wikipedia/en/thumb/0/05/WCHseal.jpg/150px-WCHseal.jpg 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/0/05/WCHseal.jpg/200px-WCHseal.jpg 2x" data-file-width="202" data-file-height="201" /></a><br />
+<small><b>Seal</b></small></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="mergedtoprow">
+<td colspan="2" style="text-align:center">Nickname(s): <span class="nickname">Washington C.H.</span></td>
+</tr>
+<tr class="mergedtoprow">
+<td colspan="2" style="text-align:center"><a href="/wiki/File:OHMap-doton-Washington_Court_House.png" class="image" title="Location of Washington Court House, Ohio"><img alt="Location of Washington Court House, Ohio" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/40/OHMap-doton-Washington_Court_House.png/250px-OHMap-doton-Washington_Court_House.png" width="250" height="274" srcset="//upload.wikimedia.org/wikipedia/commons/4/40/OHMap-doton-Washington_Court_House.png 1.5x" data-file-width="274" data-file-height="300" /></a><br />
+<small>Location of Washington Court House, Ohio</small></td>
+</tr>
+<tr class="mergedrow">
+<td colspan="2" style="text-align:center"><a href="/wiki/File:Map_of_Fayette_County_Ohio_Highlighting_Washington_Court_House_City.png" class="image" title="Location of Washington Court House in Fayette County"><img alt="Location of Washington Court House in Fayette County" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Map_of_Fayette_County_Ohio_Highlighting_Washington_Court_House_City.png/250px-Map_of_Fayette_County_Ohio_Highlighting_Washington_Court_House_City.png" width="250" height="292" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Map_of_Fayette_County_Ohio_Highlighting_Washington_Court_House_City.png/375px-Map_of_Fayette_County_Ohio_Highlighting_Washington_Court_House_City.png 1.5x, //upload.wikimedia.org/wikipedia/commons/a/a4/Map_of_Fayette_County_Ohio_Highlighting_Washington_Court_House_City.png 2x" data-file-width="466" data-file-height="544" /></a><br />
+<small>Location of Washington Court House in Fayette County</small></td>
+</tr>
+<tr class="mergedbottomrow">
+<td colspan="2" style="text-align:center">Coordinates: <span class="plainlinks nourlexpansion"><a class="external text" href="//tools.wmflabs.org/geohack/geohack.php?pagename=Washington_Court_House%2C_Ohio&amp;params=39_32_11_N_83_26_8_W_region:US-OH_type:city(14192)"><span class="geo-default"><span class="geo-dms" title="Maps, aerial photos, and other data for this location"><span class="latitude">39°32′11″N</span> <span class="longitude">83°26′8″W</span></span></span><span class="geo-multi-punct">﻿ / ﻿</span><span class="geo-nondefault"><span class="geo-dec" title="Maps, aerial photos, and other data for this location">39.53639°N 83.43556°W</span><span style="display:none">﻿ / <span class="geo">39.53639; -83.43556</span></span></span></a></span><span style="font-size: small;"><span id="coordinates"><a href="/wiki/Geographic_coordinate_system" title="Geographic coordinate system">Coordinates</a>: <span class="plainlinks nourlexpansion"><a class="external text" href="//tools.wmflabs.org/geohack/geohack.php?pagename=Washington_Court_House%2C_Ohio&amp;params=39_32_11_N_83_26_8_W_region:US-OH_type:city(14192)"><span class="geo-default"><span class="geo-dms" title="Maps, aerial photos, and other data for this location"><span class="latitude">39°32′11″N</span> <span class="longitude">83°26′8″W</span></span></span><span class="geo-multi-punct">﻿ / ﻿</span><span class="geo-nondefault"><span class="geo-dec" title="Maps, aerial photos, and other data for this location">39.53639°N 83.43556°W</span><span style="display:none">﻿ / <span class="geo">39.53639; -83.43556</span></span></span></a></span></span></span></td>
+</tr>
+<tr class="mergedtoprow">
+<th scope="row">Country</th>
+<td>United States</td>
+</tr>
+<tr class="mergedrow">
+<th scope="row">State</th>
+<td><a href="/wiki/Ohio" title="Ohio">Ohio</a></td>
+</tr>
+<tr class="mergedrow">
+<th scope="row"><a href="/wiki/List_of_counties_in_Ohio" title="List of counties in Ohio">County</a></th>
+<td><a href="/wiki/Fayette_County,_Ohio" title="Fayette County, Ohio">Fayette</a></td>
+</tr>
+<tr class="mergedrow">
+<th scope="row"><a href="/wiki/List_of_townships_in_Ohio" title="List of townships in Ohio">Township</a></th>
+<td><a href="/wiki/Union_Township,_Fayette_County,_Ohio" title="Union Township, Fayette County, Ohio">Union</a></td>
+</tr>
+<tr class="mergedtoprow">
+<th colspan="2" style="text-align:center;text-align:left">Government</th>
+</tr>
+<tr class="mergedrow">
+<th scope="row">&#160;•&#160;<a href="/wiki/City_manager" title="City manager">City manager</a></th>
+<td>Joseph J. Denen</td>
+</tr>
+<tr class="mergedtoprow">
+<th colspan="2" style="text-align:center;text-align:left">Area<span style="font-weight:normal"><sup id="cite_ref-Gazetteer_files_1-0" class="reference"><a href="#cite_note-Gazetteer_files-1">[1]</a></sup></span></th>
+</tr>
+<tr class="mergedrow">
+<th scope="row">&#160;•&#160;Total</th>
+<td>8.80&#160;sq&#160;mi (22.79&#160;km<sup>2</sup>)</td>
+</tr>
+<tr class="mergedrow">
+<th scope="row">&#160;•&#160;Land</th>
+<td>8.74&#160;sq&#160;mi (22.64&#160;km<sup>2</sup>)</td>
+</tr>
+<tr class="mergedrow">
+<th scope="row">&#160;•&#160;Water</th>
+<td>0.06&#160;sq&#160;mi (0.16&#160;km<sup>2</sup>)</td>
+</tr>
+<tr class="mergedtoprow">
+<th colspan="2" style="text-align:center;text-align:left">Population <span style="font-weight:normal">(<a href="/wiki/2010_United_States_Census" title="2010 United States Census">2010</a>)<sup id="cite_ref-FactFinder_2-0" class="reference"><a href="#cite_note-FactFinder-2">[2]</a></sup></span></th>
+</tr>
+<tr class="mergedrow">
+<th scope="row">&#160;•&#160;Total</th>
+<td>14,192</td>
+</tr>
+<tr class="mergedrow">
+<th scope="row">&#160;•&#160;Estimate&#160;<span style="font-weight:normal">(2012<sup id="cite_ref-2012_Pop_Estimate_3-0" class="reference"><a href="#cite_note-2012_Pop_Estimate-3">[3]</a></sup>)</span></th>
+<td>14,110</td>
+</tr>
+<tr class="mergedrow">
+<th scope="row">&#160;•&#160;Density</th>
+<td>1,623.8/sq&#160;mi (627.0/km<sup>2</sup>)</td>
+</tr>
+<tr class="mergedtoprow">
+<th scope="row"><a href="/wiki/Time_zone" title="Time zone">Time zone</a></th>
+<td><a href="/wiki/Eastern_Time_Zone" title="Eastern Time Zone">Eastern (EST)</a> (<a href="/wiki/UTC%E2%88%925" class="mw-redirect" title="UTC−5">UTC−5</a>)</td>
+</tr>
+<tr class="mergedrow">
+<th scope="row"><span style="white-space:nowrap">&#160;•&#160;Summer (<a href="/wiki/Daylight_saving_time" title="Daylight saving time">DST</a>)</span></th>
+<td>EDT (<a href="/wiki/UTC%E2%88%924" class="mw-redirect" title="UTC−4">UTC−4</a>)</td>
+</tr>
+<tr class="mergedtoprow">
+<th scope="row"><a href="/wiki/ZIP_code" class="mw-redirect" title="ZIP code">ZIP code</a></th>
+<td class="adr"><span class="postal-code">43160</span></td>
+</tr>
+<tr class="mergedrow">
+<th scope="row"><a href="/wiki/North_American_Numbering_Plan" title="North American Numbering Plan">Area code</a></th>
+<td><a href="/wiki/Area_code_740" class="mw-redirect" title="Area code 740">740</a></td>
+</tr>
+<tr class="mergedtoprow">
+<th scope="row"><a href="/wiki/Federal_Information_Processing_Standards" title="Federal Information Processing Standards">FIPS code</a></th>
+<td>39-81214<sup id="cite_ref-GR2_4-0" class="reference"><a href="#cite_note-GR2-4">[4]</a></sup></td>
+</tr>
+<tr class="mergedtoprow">
+<th scope="row">Website</th>
+<td><a rel="nofollow" class="external free" href="http://www.cityofwch.com/">http://www.cityofwch.com/</a></td>
+</tr>
+</table>
+<p><b>Washington Court House</b> is a city in <a href="/wiki/Fayette_County,_Ohio" title="Fayette County, Ohio">Fayette County, Ohio</a>, United States. It is the <a href="/wiki/County_seat" title="County seat">county seat</a> of Fayette County and is located between <a href="/wiki/Cincinnati" title="Cincinnati">Cincinnati</a> and <a href="/wiki/Columbus,_Ohio" title="Columbus, Ohio">Columbus, Ohio</a>. The population was 14,192 in 2010 at the <a href="/wiki/United_States_Census_2010" class="mw-redirect" title="United States Census 2010">2010 census</a>. Until 2002, the official name of the city was City of Washington,<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (October 2014)">citation needed</span></a></i>]</sup> but there also existed a municipality in <a href="/wiki/Guernsey_County,_Ohio" title="Guernsey County, Ohio">Guernsey County, Ohio</a> with the name Washington (now known as <a href="/wiki/Old_Washington,_Ohio" title="Old Washington, Ohio">Old Washington</a>). The area was originally settled by Virginia war veterans who received the land from the government as payment for their service in the <a href="/wiki/American_Revolution" title="American Revolution">American Revolution</a>. In 2002, a new charter was adopted, officially changing the name to the "City of Washington Court House."<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (June 2007)">citation needed</span></a></i>]</sup> The name is often abbreviated as "Washington C.H."</p>
+<p>The city has always been named the City of Washington Court House, but for local government they went by the City of Washington for contracting and governmental purposes. When Council decided to change to a Charter form of government, which allowed more self-rule, they decided to officially change the name to match how it was actually named. Part of it was to alleviate any confusion with other entities in the Postal Services eyes.<sup id="cite_ref-wajohnson_6-0" class="reference"><a href="#cite_note-wajohnson-6">[6]</a></sup></p>
+<p>Washington C.H. has an unusual street grid layout. Typically, street grids are arranged east-west and north-south, especially in the Midwest. In this case, the streets in the downtown area, centering on the courthouse building, are arranged northeast-southwest and northwest-southeast. This was done so that all four sides of the courthouse building would receive some sunlight every day of the year. In the traditional grid system, the north side of a building never receives direct sunlight during the fall and winter months.</p>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contents</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#History"><span class="tocnumber">1</span> <span class="toctext">History</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#1894_riot"><span class="tocnumber">1.1</span> <span class="toctext">1894 riot</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="#Geography"><span class="tocnumber">2</span> <span class="toctext">Geography</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#Demographics"><span class="tocnumber">3</span> <span class="toctext">Demographics</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="#2010_census"><span class="tocnumber">3.1</span> <span class="toctext">2010 census</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#2000_census"><span class="tocnumber">3.2</span> <span class="toctext">2000 census</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="#Media"><span class="tocnumber">4</span> <span class="toctext">Media</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Notable_people"><span class="tocnumber">5</span> <span class="toctext">Notable people</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#Government"><span class="tocnumber">6</span> <span class="toctext">Government</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="#City_Council.2C_as_of_2016"><span class="tocnumber">6.1</span> <span class="toctext">City Council, as of 2016</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Other_officials.2C_as_of_2016"><span class="tocnumber">6.2</span> <span class="toctext">Other officials, as of 2016</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Airport"><span class="tocnumber">7</span> <span class="toctext">Airport</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#References"><span class="tocnumber">9</span> <span class="toctext">References</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#External_links"><span class="tocnumber">10</span> <span class="toctext">External links</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span class="mw-headline" id="History">History</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=1" title="Edit section: History">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Washington Court House's first settlers appear to have been Edward Smith, Sr., and his family, who emigrated from Pennsylvania in 1810. Smith and his family constructed a crude house in the thick woodlands near <a href="/wiki/Paint_Creek_(Scioto_River)" title="Paint Creek (Scioto River)">Paint Creek</a>, but their efforts to clear the land were interrupted by his departure for military service in the <a href="/wiki/War_of_1812" title="War of 1812">War of 1812</a>.<sup id="cite_ref-allen_7-0" class="reference"><a href="#cite_note-allen-7">[7]</a></sup> Comparatively soon after returning from his martial pursuits, Smith drowned while attempting to cross a flooded creek,<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup> but his widow and ten children survived and prospered despite the absence of their patriarch. Smith's descendents remained prominent in Fayette County for more than a century after his arrival from Pennsylvania, although many had left Washington Court House for other parts of the county.<sup id="cite_ref-allen_7-1" class="reference"><a href="#cite_note-allen-7">[7]</a></sup> A <a href="/wiki/Edward_Smith,_Jr.,_Farm" class="mw-redirect" title="Edward Smith, Jr., Farm">family residence</a> still stands on <a href="/wiki/U.S._Route_62" title="U.S. Route 62">U.S. Route 62</a> not far outside the city's eastern boundary.<sup id="cite_ref-nris_9-0" class="reference"><a href="#cite_note-nris-9">[9]</a></sup></p>
+<p>In 1833, Washington Court House (then known as Washington) contained a printing office, seven stores, two taverns, two groceries, a schoolhouse, a meeting house, and about 70 residential houses.<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup></p>
+<p>Numerous locations in the city are listed on the <a href="/wiki/National_Register_of_Historic_Places" title="National Register of Historic Places">National Register of Historic Places</a>. Downtown, the <a href="/w/index.php?title=Washington_Court_House_Commercial_Historic_District&amp;action=edit&amp;redlink=1" class="new" title="Washington Court House Commercial Historic District (page does not exist)">courthouse square</a> has been named a <a href="/wiki/Historic_districts_in_the_United_States" title="Historic districts in the United States">historic district</a>, and a similar designation has been accorded the <a href="/wiki/Washington_Cemetery_(Washington_Court_House,_Ohio)" title="Washington Cemetery (Washington Court House, Ohio)">city cemetery</a>. Nine individual buildings are separately listed on the Register: <a href="/wiki/Judy_Chapel" class="mw-redirect" title="Judy Chapel">Judy Chapel</a> at the cemetery, the former <a href="/w/index.php?title=Washington_Middle_School_(Washington_Court_House,_Ohio)&amp;action=edit&amp;redlink=1" class="new" title="Washington Middle School (Washington Court House, Ohio) (page does not exist)">Washington School</a>, the <a href="/wiki/Fayette_County_Courthouse_(Ohio)" title="Fayette County Courthouse (Ohio)">Fayette County Courthouse</a>, the former <a href="/wiki/William_Burnett_House" title="William Burnett House">William Burnett House</a> (no longer standing<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup>), and the <a href="/wiki/Barney_Kelley_House" title="Barney Kelley House">Barney Kelley</a>, <a href="/wiki/Jacob_Light_House" title="Jacob Light House">Jacob Light</a>, <a href="/wiki/Rawlings-Brownell_House" title="Rawlings-Brownell House">Rawlings-Brownell</a>, <a href="/wiki/Robinson-Pavey_House" title="Robinson-Pavey House">Robinson-Pavey</a>, and <a href="/wiki/Morris_Sharp_House" title="Morris Sharp House">Morris Sharp</a> Houses.<sup id="cite_ref-nris_9-1" class="reference"><a href="#cite_note-nris-9">[9]</a></sup></p>
+<h3><span class="mw-headline" id="1894_riot">1894 riot</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=2" title="Edit section: 1894 riot">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:WCHRiot.JPG" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4b/WCHRiot.JPG/220px-WCHRiot.JPG" width="220" height="124" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4b/WCHRiot.JPG/330px-WCHRiot.JPG 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4b/WCHRiot.JPG/440px-WCHRiot.JPG 2x" data-file-width="4608" data-file-height="2592" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:WCHRiot.JPG" class="internal" title="Enlarge"></a></div>
+Ohio Historical Marker on the front lawn of the Fayette County Courthouse</div>
+</div>
+</div>
+<p>On October 16, 1894, a crowd gathered outside the Fayette County Court House with intent to lynch convicted rapist William "Jasper" Dolby. Ohio Governor <a href="/wiki/William_McKinley" title="William McKinley">William McKinley</a> called out the militia to subdue the crowd. On October 17, the crowd rushed the courthouse doors and were warned to "disperse or be fired upon." They ignored the warning and continued to batter the doors.</p>
+<p>Colonel Alonzo B. Coit ordered his troops to fire through the courthouse doors, killing five men. Colonel Coit was indicted for manslaughter, but was acquitted at trial. After the trial, Governor McKinley stated, "The law was upheld as it should have been&#160;... but in this case at fearful cost&#160;... Lynching cannot be tolerated in Ohio."<sup class="noprint Inline-Template Template-Fact" style="white-space:nowrap;">[<i><a href="/wiki/Wikipedia:Citation_needed" title="Wikipedia:Citation needed"><span title="This claim needs references to reliable sources. (December 2013)">citation needed</span></a></i>]</sup> The court house doors were not repaired or replaced and the bullet holes from the 1894 riot are still present in the South (SE) doors.</p>
+<h2><span class="mw-headline" id="Geography">Geography</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=3" title="Edit section: Geography">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Washington Court House is located at <span class="plainlinks nourlexpansion"><a class="external text" href="//tools.wmflabs.org/geohack/geohack.php?pagename=Washington_Court_House%2C_Ohio&amp;params=39_32_11_N_83_26_8_W_"><span class="geo-default"><span class="geo-dms" title="Maps, aerial photos, and other data for this location"><span class="latitude">39°32′11″N</span> <span class="longitude">83°26′8″W</span></span></span><span class="geo-multi-punct">﻿ / ﻿</span><span class="geo-nondefault"><span class="geo-dec" title="Maps, aerial photos, and other data for this location">39.53639°N 83.43556°W</span><span style="display:none">﻿ / <span class="geo">39.53639; -83.43556</span></span></span></a></span>,<sup id="cite_ref-GR1_12-0" class="reference"><a href="#cite_note-GR1-12">[12]</a></sup> along <a href="/wiki/Paint_Creek_(Scioto_River)" title="Paint Creek (Scioto River)">Paint Creek</a>.</p>
+<p>According to the <a href="/wiki/United_States_Census_Bureau" title="United States Census Bureau">United States Census Bureau</a>, the city has a total area of 8.80 square miles (22.79&#160;km<sup>2</sup>), of which 8.74 square miles (22.64&#160;km<sup>2</sup>) is land and 0.06 square miles (0.16&#160;km<sup>2</sup>) is water.<sup id="cite_ref-Gazetteer_files_1-1" class="reference"><a href="#cite_note-Gazetteer_files-1">[1]</a></sup></p>
+<h2><span class="mw-headline" id="Demographics">Demographics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=4" title="Edit section: Demographics">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="toccolours" style="border-spacing: 1px; float: right; clear: right; margin: 0 0 1em 1em; text-align:right">
+<tr>
+<th colspan="4" class="navbox-title" style="padding-right:3px; padding-left:3px; font-size:110%; text-align:center">Historical population</th>
+</tr>
+<tr style="font-size:95%">
+<th style="text-align:center; border-bottom:1px solid black">Census</th>
+<th style="text-align:center; border-bottom:1px solid black"><abbr title="Population">Pop.</abbr></th>
+<th style="text-align:center; border-bottom:1px solid black"></th>
+<th style="text-align:center; border-bottom:1px solid black"><abbr title="Percent change">%±</abbr></th>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1820_United_States_Census" title="1820 United States Census">1820</a></b></td>
+<td style="padding-left:8px;">191</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1830_United_States_Census" title="1830 United States Census">1830</a></b></td>
+<td style="padding-left:8px;">299</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">56.5%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1850_United_States_Census" title="1850 United States Census">1850</a></b></td>
+<td style="padding-left:8px;">569</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1860_United_States_Census" title="1860 United States Census">1860</a></b></td>
+<td style="padding-left:8px;">1,035</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">81.9%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1870_United_States_Census" title="1870 United States Census">1870</a></b></td>
+<td style="padding-left:8px;">2,117</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">104.5%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1880_United_States_Census" title="1880 United States Census">1880</a></b></td>
+<td style="padding-left:8px;">3,798</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">79.4%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1890_United_States_Census" title="1890 United States Census">1890</a></b></td>
+<td style="padding-left:8px;">5,742</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">51.2%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1900_United_States_Census" title="1900 United States Census">1900</a></b></td>
+<td style="padding-left:8px;">5,751</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">0.2%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1910_United_States_Census" title="1910 United States Census">1910</a></b></td>
+<td style="padding-left:8px;">7,277</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">26.5%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1920_United_States_Census" title="1920 United States Census">1920</a></b></td>
+<td style="padding-left:8px;">7,962</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">9.4%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1930_United_States_Census" title="1930 United States Census">1930</a></b></td>
+<td style="padding-left:8px;">8,426</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">5.8%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1940_United_States_Census" title="1940 United States Census">1940</a></b></td>
+<td style="padding-left:8px;">9,402</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">11.6%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1950_United_States_Census" title="1950 United States Census">1950</a></b></td>
+<td style="padding-left:8px;">10,560</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">12.3%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1960_United_States_Census" title="1960 United States Census">1960</a></b></td>
+<td style="padding-left:8px;">12,388</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">17.3%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1970_United_States_Census" title="1970 United States Census">1970</a></b></td>
+<td style="padding-left:8px;">12,495</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">0.9%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1980_United_States_Census" title="1980 United States Census">1980</a></b></td>
+<td style="padding-left:8px;">12,648</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">1.2%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/1990_United_States_Census" title="1990 United States Census">1990</a></b></td>
+<td style="padding-left:8px;">12,983</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">2.6%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/2000_United_States_Census" title="2000 United States Census">2000</a></b></td>
+<td style="padding-left:8px;">13,524</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">4.2%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b><a href="/wiki/2010_United_States_Census" title="2010 United States Census">2010</a></b></td>
+<td style="padding-left:8px;">14,192</td>
+<td style="font-size:85%"></td>
+<td style="padding-left:8px; text-align: center;">4.9%</td>
+</tr>
+<tr>
+<td style="text-align:center"><b>Est. 2015</b></td>
+<td style="padding-left:8px;">14,019</td>
+<td style="font-size:85%"><sup id="cite_ref-USCensusEst2015_13-0" class="reference"><a href="#cite_note-USCensusEst2015-13">[13]</a></sup></td>
+<td style="padding-left:8px; text-align: center;">−1.2%</td>
+</tr>
+<tr>
+<td colspan="4" style="border-top:1px solid black; font-size:85%; text-align:left">Sources:<sup id="cite_ref-GR2_4-1" class="reference"><a href="#cite_note-GR2-4">[4]</a></sup><sup id="cite_ref-Census1960_14-0" class="reference"><a href="#cite_note-Census1960-14">[14]</a></sup><sup id="cite_ref-Census1990_15-0" class="reference"><a href="#cite_note-Census1990-15">[15]</a></sup><sup id="cite_ref-CensusPopEst_16-0" class="reference"><a href="#cite_note-CensusPopEst-16">[16]</a></sup></td>
+</tr>
+</table>
+<h3><span class="mw-headline" id="2010_census">2010 census</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=5" title="Edit section: 2010 census">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>As of the <a href="/wiki/Census" title="Census">census</a><sup id="cite_ref-FactFinder_2-1" class="reference"><a href="#cite_note-FactFinder-2">[2]</a></sup> of 2010, there were 14,192 people, 5,762 households, and 3,628 families residing in the city. The population density was 1,623.8 inhabitants per square mile (627.0/km<sup>2</sup>). There were 6,433 housing units at an average density of 736.0 per square mile (284.2/km<sup>2</sup>). The racial makeup of the city was 93.5% <a href="/wiki/White_(U.S._Census)" class="mw-redirect" title="White (U.S. Census)">White</a>, 2.7% <a href="/wiki/African_American_(U.S._Census)" class="mw-redirect" title="African American (U.S. Census)">African American</a>, 0.3% <a href="/wiki/Native_American_(U.S._Census)" class="mw-redirect" title="Native American (U.S. Census)">Native American</a>, 0.8% <a href="/wiki/Asian_(U.S._Census)" class="mw-redirect" title="Asian (U.S. Census)">Asian</a>, 0.6% from <a href="/wiki/Race_(U.S._Census)" class="mw-redirect" title="Race (U.S. Census)">other races</a>, and 2.1% from two or more races. <a href="/wiki/Hispanic_(U.S._Census)" class="mw-redirect" title="Hispanic (U.S. Census)">Hispanic</a> or <a href="/wiki/Latino_(U.S._Census)" class="mw-redirect" title="Latino (U.S. Census)">Latino</a> of any race were 1.8% of the population.</p>
+<p>There were 5,762 households of which 32.8% had children under the age of 18 living with them, 40.7% were married couples living together, 16.6% had a female householder with no husband present, 5.7% had a male householder with no wife present, and 37.0% were non-families. 31.1% of all households were made up of individuals and 12.7% had someone living alone who was 65 years of age or older. The average household size was 2.37 and the average family size was 2.92.</p>
+<p>The median age in the city was 38.4 years. 25% of residents were under the age of 18; 8.1% were between the ages of 18 and 24; 25.7% were from 25 to 44; 25.2% were from 45 to 64; and 15.9% were 65 years of age or older. The gender makeup of the city was 47.7% male and 52.3% female.</p>
+<h3><span class="mw-headline" id="2000_census">2000 census</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=6" title="Edit section: 2000 census">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>As of the <a href="/wiki/Census" title="Census">census</a><sup id="cite_ref-GR2_4-2" class="reference"><a href="#cite_note-GR2-4">[4]</a></sup> of 2000, there were 13,524 people, 5,483 households, and 3,536 families residing in the city. The population density was 810.8/km² (2,100.8/mi²). There were 5,961 housing units at an average density of 357.4/km² (926.0/mi²). The racial makeup of the city was 94.52% <a href="/wiki/White_(U.S._Census)" class="mw-redirect" title="White (U.S. Census)">White</a>, 2.71% <a href="/wiki/African_American_(U.S._Census)" class="mw-redirect" title="African American (U.S. Census)">African American</a>, 0.16% <a href="/wiki/Native_American_(U.S._Census)" class="mw-redirect" title="Native American (U.S. Census)">Native American</a>, 0.82% <a href="/wiki/Asian_(U.S._Census)" class="mw-redirect" title="Asian (U.S. Census)">Asian</a>, 0.01% <a href="/wiki/Pacific_Islander_(U.S._Census)" class="mw-redirect" title="Pacific Islander (U.S. Census)">Pacific Islander</a>, 0.66% from other races, and 1.12% from two or more races. <a href="/wiki/Hispanic_(U.S._Census)" class="mw-redirect" title="Hispanic (U.S. Census)">Hispanic</a> or <a href="/wiki/Latino_(U.S._Census)" class="mw-redirect" title="Latino (U.S. Census)">Latino</a> of any race were 1.38% of the population.</p>
+<p>There were 5,483 households out of which 31.1% had children under the age of 18 living with them, 46.5% were married couples living together, 13.7% had a female householder with no husband present, and 35.5% were non-families. 30.7% of all households were made up of individuals and 14.2% had someone living alone who was 65 years of age or older. The average household size was 2.37 and the average family size was 2.93.</p>
+<p>In the city the age distribution of the population shows 25.0% under the age of 18, 8.1% from 18 to 24, 28.2% from 25 to 44, 22.0% from 45 to 64, and 16.7% who are 65 years of age or older. The <a href="/wiki/Median" title="Median">median</a> age is 37 years. For every 100 females there were 92.7 males. For every 100 females age 18 and over, there were 87.0 males.</p>
+<p>The median income for a household in the city was $33,003, and the median income for a family was $40,721. Males had a median income of $31,708 versus $22,382 for females. The <a href="/wiki/Per_capita_income" title="Per capita income">per capita income</a> for the city was $18,618. About 9.0% of families and 12.5% of the population were below the <a href="/wiki/Poverty_line" class="mw-redirect" title="Poverty line">poverty line</a>, including 16.3% of those under the age of 18 and 13.2% ages 65 or older.</p>
+<h2><span class="mw-headline" id="Media">Media</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=7" title="Edit section: Media">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Washington Court House is part of the Columbus, Ohio media market, and thus is served by several Columbus-area television and radio stations.<sup id="cite_ref-17" class="reference"><a href="#cite_note-17">[17]</a></sup> The city has one local radio station, Buckeye Country 105.5 FM (<a href="/wiki/WCHO-FM" title="WCHO-FM">WCHO-FM</a>). WCHO plays <a href="/wiki/Country_music" title="Country music">country music</a> and covers local news, sports, and agricultural stories. Washington Court House also easily receives radio and television stations from Dayton and Cincinnati.</p>
+<p>The hometown newspaper of Washington Court House is the <i><a href="/wiki/Record_Herald" title="Record Herald">Record Herald</a></i>. The <i>Record Herald</i> was formed from the merger of two dailies – <i>The Record-Republican</i> and the <i>Washington C.H. Herald</i> – in 1937.<sup id="cite_ref-18" class="reference"><a href="#cite_note-18">[18]</a></sup> The latter paper's publishing history dates back to 1858 when it began as a weekly.<sup id="cite_ref-19" class="reference"><a href="#cite_note-19">[19]</a></sup> As of 2012, the <i><a href="/wiki/Record_Herald" title="Record Herald">Record Herald</a></i> reported circulation of 5,143 daily and 21,849 for weekend inserts.<sup id="cite_ref-20" class="reference"><a href="#cite_note-20">[20]</a></sup></p>
+<h2><span class="mw-headline" id="Notable_people">Notable people</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=8" title="Edit section: Notable people">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Randall_Dale_Adams" title="Randall Dale Adams">Randall Dale Adams</a> – wrongly convicted of murder; his release was accomplished by <a href="/wiki/The_Thin_Blue_Line_(1988_film)" title="The Thin Blue Line (1988 film)">a 1988 documentary film</a></li>
+<li><a href="/wiki/Harry_M._Daugherty" title="Harry M. Daugherty">Harry M. Daugherty</a> – <a href="/wiki/United_States_Attorney_General" title="United States Attorney General">United States Attorney General</a> under Presidents <a href="/wiki/Warren_G._Harding" title="Warren G. Harding">Warren G. Harding</a> and <a href="/wiki/Calvin_Coolidge" title="Calvin Coolidge">Calvin Coolidge</a></li>
+<li><a href="/wiki/Scott_Lewis_(left-handed_pitcher)" title="Scott Lewis (left-handed pitcher)">Scott Lewis</a> – <a href="/wiki/Cleveland_Indians" title="Cleveland Indians">Cleveland Indians</a> baseball player</li>
+<li><a href="/wiki/Sam_Lucas" title="Sam Lucas">Sam Lucas</a> – vaudeville actor and singer</li>
+<li><a href="/wiki/Margaret_Peterson_Haddix" title="Margaret Peterson Haddix">Margaret Peterson Haddix</a> − author of children's fiction</li>
+<li><a href="/wiki/Art_Schlichter" title="Art Schlichter">Art Schlichter</a> – <a href="/wiki/Baltimore_Colts" class="mw-redirect" title="Baltimore Colts">Baltimore Colts</a> football player</li>
+<li><a href="/wiki/Jeff_Shaw" title="Jeff Shaw">Jeff Shaw</a> – <a href="/wiki/Major_League_Baseball" title="Major League Baseball">Major League Baseball</a> player</li>
+<li><a href="/wiki/Travis_Shaw" title="Travis Shaw">Travis Shaw</a> – <a href="/wiki/Major_League_Baseball" title="Major League Baseball">Major League Baseball</a> player</li>
+<li><a href="/wiki/Jess_Smith" title="Jess Smith">Jess Smith</a> - assistant to <a href="/wiki/Harry_M._Daugherty" title="Harry M. Daugherty">Harry M. Daugherty</a></li>
+</ul>
+<h2><span class="mw-headline" id="Government">Government</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=9" title="Edit section: Government">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="plainlinks metadata ambox mbox-small-left ambox-content" role="presentation">
+<tr>
+<td class="mbox-image"><a href="/wiki/File:Wiki_letter_w_cropped.svg" class="image"><img alt="[icon]" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/20px-Wiki_letter_w_cropped.svg.png" width="20" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/30px-Wiki_letter_w_cropped.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiki_letter_w_cropped.svg/40px-Wiki_letter_w_cropped.svg.png 2x" data-file-width="44" data-file-height="31" /></a></td>
+<td class="mbox-text"><span class="mbox-text-span"><b>This section needs expansion</b>. <small>You can help by <a class="external text" href="//en.wikipedia.org/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=">adding to it</a>.</small> <small><i>(March 2017)</i></small></span></td>
+</tr>
+</table>
+<div class="thumb tright">
+<div class="thumbinner" style="width:222px;"><a href="/wiki/File:Washington_Court_House_OH_from_airplane.jpg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/29/Washington_Court_House_OH_from_airplane.jpg/220px-Washington_Court_House_OH_from_airplane.jpg" width="220" height="165" class="thumbimage" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/2/29/Washington_Court_House_OH_from_airplane.jpg/330px-Washington_Court_House_OH_from_airplane.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/2/29/Washington_Court_House_OH_from_airplane.jpg/440px-Washington_Court_House_OH_from_airplane.jpg 2x" data-file-width="3072" data-file-height="2304" /></a>
+<div class="thumbcaption">
+<div class="magnify"><a href="/wiki/File:Washington_Court_House_OH_from_airplane.jpg" class="internal" title="Enlarge"></a></div>
+Aerial view of Washington Court House</div>
+</div>
+</div>
+<p>In 2016 the municipal government stated that any persons who survive a heroin overdose may be charged with a misdemeanor crime.<sup id="cite_ref-21" class="reference"><a href="#cite_note-21">[21]</a></sup></p>
+<h3><span class="mw-headline" id="City_Council.2C_as_of_2016">City Council, as of 2016</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=10" title="Edit section: City Council, as of 2016">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>Dale E. Lynch<sup id="cite_ref-council_22-0" class="reference"><a href="#cite_note-council-22">[22]</a></sup></li>
+<li>Trent Dye<sup id="cite_ref-council_22-1" class="reference"><a href="#cite_note-council-22">[22]</a></sup></li>
+<li>Kendra Redd Hernandez<sup id="cite_ref-council_22-2" class="reference"><a href="#cite_note-council-22">[22]</a></sup></li>
+<li>Leah Link-Foster</li>
+<li>Ted Hawk<sup id="cite_ref-council_22-3" class="reference"><a href="#cite_note-council-22">[22]</a></sup></li>
+<li>Kimberlee Bonnell</li>
+<li>Jim D. Chrisman<sup id="cite_ref-council_22-4" class="reference"><a href="#cite_note-council-22">[22]</a></sup></li>
+</ul>
+<h3><span class="mw-headline" id="Other_officials.2C_as_of_2016">Other officials, as of 2016</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=11" title="Edit section: Other officials, as of 2016">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul>
+<li>City Manager – Joe Denen<sup id="cite_ref-safety_23-0" class="reference"><a href="#cite_note-safety-23">[23]</a></sup></li>
+<li>Fire Chief – Tom Youtz<sup id="cite_ref-safety_23-1" class="reference"><a href="#cite_note-safety-23">[23]</a></sup></li>
+<li>Police Chief – Brian Hottinger<sup id="cite_ref-safety_23-2" class="reference"><a href="#cite_note-safety-23">[23]</a></sup></li>
+<li>Municipal Court Judge – Victor D. Pontious Jr<sup id="cite_ref-24" class="reference"><a href="#cite_note-24">[24]</a></sup></li>
+<li>Director of Finance – Tom Riley<sup id="cite_ref-finances_25-0" class="reference"><a href="#cite_note-finances-25">[25]</a></sup></li>
+<li>Asst. Director of Finance – Teena Keaton<sup id="cite_ref-finances_25-1" class="reference"><a href="#cite_note-finances-25">[25]</a></sup></li>
+<li>Building and Zoning Inspector – Rod Bryant<sup id="cite_ref-26" class="reference"><a href="#cite_note-26">[26]</a></sup></li>
+</ul>
+<h2><span class="mw-headline" id="Airport">Airport</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=12" title="Edit section: Airport">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/Fayette_County_Airport_(Ohio)" title="Fayette County Airport (Ohio)">Fayette County Airport</a> is a county-owned <a href="/wiki/General_aviation" title="General aviation">general aviation</a> facility that is located northeast of Washington Court House.</p>
+<h2><span class="mw-headline" id="See_also">See also</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=13" title="Edit section: See also">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/Washington_High_School_(Washington_Court_House,_Ohio)" title="Washington High School (Washington Court House, Ohio)">Washington High School (Washington Court House, Ohio)</a></li>
+<li><a href="/wiki/Education_in_Washington_Court_House" class="mw-redirect" title="Education in Washington Court House">Education in Washington Court House</a></li>
+</ul>
+<h2><span class="mw-headline" id="References">References</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=14" title="Edit section: References">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-Gazetteer_files-1"><span class="mw-cite-backlink">^ <a href="#cite_ref-Gazetteer_files_1-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-Gazetteer_files_1-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.census.gov/geo/www/gazetteer/files/Gaz_places_national.txt">"US Gazetteer files 2010"</a>. <a href="/wiki/United_States_Census_Bureau" title="United States Census Bureau">United States Census Bureau</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2013-01-06</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=US+Gazetteer+files+2010&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.census.gov%2Fgeo%2Fwww%2Fgazetteer%2Ffiles%2FGaz_places_national.txt&amp;rft.pub=United+States+Census+Bureau&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-FactFinder-2"><span class="mw-cite-backlink">^ <a href="#cite_ref-FactFinder_2-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-FactFinder_2-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://factfinder2.census.gov/faces/nav/jsf/pages/index.xhtml">"American FactFinder"</a>. <a href="/wiki/United_States_Census_Bureau" title="United States Census Bureau">United States Census Bureau</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2013-01-06</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=American+FactFinder&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ffactfinder2.census.gov%2Ffaces%2Fnav%2Fjsf%2Fpages%2Findex.xhtml&amp;rft.pub=United+States+Census+Bureau&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-2012_Pop_Estimate-3"><span class="mw-cite-backlink"><b><a href="#cite_ref-2012_Pop_Estimate_3-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.census.gov/popest/data/cities/totals/2012/SUB-EST2012.html">"Population Estimates"</a>. <a href="/wiki/United_States_Census_Bureau" title="United States Census Bureau">United States Census Bureau</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2013-06-17</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=Population+Estimates&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.census.gov%2Fpopest%2Fdata%2Fcities%2Ftotals%2F2012%2FSUB-EST2012.html&amp;rft.pub=United+States+Census+Bureau&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-GR2-4"><span class="mw-cite-backlink">^ <a href="#cite_ref-GR2_4-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-GR2_4-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-GR2_4-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://factfinder2.census.gov">"American FactFinder"</a>. <a href="/wiki/United_States_Census_Bureau" title="United States Census Bureau">United States Census Bureau</a><span class="reference-accessdate">. Retrieved <span class="nowrap">2008-01-31</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=American+FactFinder&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Ffactfinder2.census.gov&amp;rft.pub=United+States+Census+Bureau&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-GR3-5"><span class="mw-cite-backlink"><b><a href="#cite_ref-GR3_5-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://geonames.usgs.gov">"US Board on Geographic Names"</a>. <a href="/wiki/United_States_Geological_Survey" title="United States Geological Survey">United States Geological Survey</a>. 2007-10-25<span class="reference-accessdate">. Retrieved <span class="nowrap">2008-01-31</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=US+Board+on+Geographic+Names&amp;rft.date=2007-10-25&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fgeonames.usgs.gov&amp;rft.pub=United+States+Geological+Survey&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-wajohnson-6"><span class="mw-cite-backlink"><b><a href="#cite_ref-wajohnson_6-0">^</a></b></span> <span class="reference-text">Warren A. Johnson, Computer Resources Manager, City of Washington Court House, Ohio, email dated 17 November 2014</span></li>
+<li id="cite_note-allen-7"><span class="mw-cite-backlink">^ <a href="#cite_ref-allen_7-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-allen_7-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text">Allen, Frank M., ed. <i>History of Fayette County, Ohio: Her People, Industries, and Institutions</i>. <a href="/wiki/Indianapolis" title="Indianapolis">Indianapolis</a>: Bowen, 1914, 752.</span></li>
+<li id="cite_note-8"><span class="mw-cite-backlink"><b><a href="#cite_ref-8">^</a></b></span> <span class="reference-text">Dills, R.S. <i>History of Fayette County, Together With Historic Notes on the Northwest, and the State of Ohio</i>. <a href="/wiki/Dayton,_Ohio" title="Dayton, Ohio">Dayton</a>: Odell and Mayer, 1881, 459.</span></li>
+<li id="cite_note-nris-9"><span class="mw-cite-backlink">^ <a href="#cite_ref-nris_9-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-nris_9-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a href="/wiki/National_Park_Service" title="National Park Service">National Park Service</a> (2010-07-09). <a rel="nofollow" class="external text" href="http://nrhp.focus.nps.gov/natreg/docs/All_Data.html">"National Register Information System"</a>. <i>National Register of Historic Places</i>. National Park Service.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.atitle=National+Register+Information+System&amp;rft.au=National+Park+Service&amp;rft.date=2010-07-09&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fnrhp.focus.nps.gov%2Fnatreg%2Fdocs%2FAll_Data.html&amp;rft.jtitle=National+Register+of+Historic+Places&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-10"><span class="mw-cite-backlink"><b><a href="#cite_ref-10">^</a></b></span> <span class="reference-text"><cite class="citation book">Kilbourn, John (1833). <a rel="nofollow" class="external text" href="https://books.google.com/books?id=dt48AAAAYAAJ&amp;pg=PA479#v=onepage&amp;q&amp;f=false"><i>The Ohio Gazetteer, or, a Topographical Dictionary</i></a>. Scott and Wright. p.&#160;479<span class="reference-accessdate">. Retrieved <span class="nowrap">12 December</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.au=Kilbourn%2C+John&amp;rft.btitle=The+Ohio+Gazetteer%2C+or%2C+a+Topographical+Dictionary&amp;rft.date=1833&amp;rft.genre=book&amp;rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3Ddt48AAAAYAAJ%26pg%3DPA479%23v%3Donepage%26q%26f%3Dfalse&amp;rft.pages=479&amp;rft.pub=Scott+and+Wright&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-11"><span class="mw-cite-backlink"><b><a href="#cite_ref-11">^</a></b></span> <span class="reference-text"><a rel="nofollow" class="external text" href="http://www.fayette-co-oh.com/Fayette%20County%20Land%20Use%20Plan.pdf">Fayette County Comprehensive Use Strategy Plan</a>, Fayette County, 2006, 13. Accessed 2013-05-23.</span></li>
+<li id="cite_note-GR1-12"><span class="mw-cite-backlink"><b><a href="#cite_ref-GR1_12-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.census.gov/geo/www/gazetteer/gazette.html">"US Gazetteer files: 2010, 2000, and 1990"</a>. <a href="/wiki/United_States_Census_Bureau" title="United States Census Bureau">United States Census Bureau</a>. 2011-02-12<span class="reference-accessdate">. Retrieved <span class="nowrap">2011-04-23</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=US+Gazetteer+files%3A+2010%2C+2000%2C+and+1990&amp;rft.date=2011-02-12&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.census.gov%2Fgeo%2Fwww%2Fgazetteer%2Fgazette.html&amp;rft.pub=United+States+Census+Bureau&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-USCensusEst2015-13"><span class="mw-cite-backlink"><b><a href="#cite_ref-USCensusEst2015_13-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.census.gov/popest/data/cities/totals/2015/SUB-EST2015.html">"Annual Estimates of the Resident Population for Incorporated Places: April 1, 2010 to July 1, 2015"</a><span class="reference-accessdate">. Retrieved <span class="nowrap">July 2,</span> 2016</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=Annual+Estimates+of+the+Resident+Population+for+Incorporated+Places%3A+April+1%2C+2010+to+July+1%2C+2015&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.census.gov%2Fpopest%2Fdata%2Fcities%2Ftotals%2F2015%2FSUB-EST2015.html&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Census1960-14"><span class="mw-cite-backlink"><b><a href="#cite_ref-Census1960_14-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www2.census.gov/prod2/decennial/documents/37749197v1p37_ch02.pdf">"Number of Inhabitants: Ohio"</a> <span style="font-size:85%;">(PDF)</span>. <i>18th Census of the United States</i>. U.S. Census Bureau<span class="reference-accessdate">. Retrieved <span class="nowrap">22 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.atitle=Number+of+Inhabitants%3A+Ohio&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww2.census.gov%2Fprod2%2Fdecennial%2Fdocuments%2F37749197v1p37_ch02.pdf&amp;rft.jtitle=18th+Census+of+the+United+States&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-Census1990-15"><span class="mw-cite-backlink"><b><a href="#cite_ref-Census1990_15-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.census.gov/prod/cen1990/cph2/cph-2-37.pdf">"Ohio: Population and Housing Unit Counts"</a> <span style="font-size:85%;">(PDF)</span>. U.S. Census Bureau<span class="reference-accessdate">. Retrieved <span class="nowrap">22 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=Ohio%3A+Population+and+Housing+Unit+Counts&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.census.gov%2Fprod%2Fcen1990%2Fcph2%2Fcph-2-37.pdf&amp;rft.pub=U.S.+Census+Bureau&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-CensusPopEst-16"><span class="mw-cite-backlink"><b><a href="#cite_ref-CensusPopEst_16-0">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.census.gov/popest/data/cities/totals/2012/SUB-EST2012.html">"Incorporated Places and Minor Civil Divisions Datasets: Subcounty Population Estimates: April 1, 2010 to July 1, 2012"</a>. U.S. Census Bureau<span class="reference-accessdate">. Retrieved <span class="nowrap">25 November</span> 2013</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=Incorporated+Places+and+Minor+Civil+Divisions+Datasets%3A+Subcounty+Population+Estimates%3A+April+1%2C+2010+to+July+1%2C+2012&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.census.gov%2Fpopest%2Fdata%2Fcities%2Ftotals%2F2012%2FSUB-EST2012.html&amp;rft.pub=U.S.+Census+Bureau&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-17"><span class="mw-cite-backlink"><b><a href="#cite_ref-17">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://dishuser.org/TVMarkets/City%20Maps/Columbus.gif">"Columbus Media Market Map"</a>. Echo Star<span class="reference-accessdate">. Retrieved <span class="nowrap">January 6,</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=Columbus+Media+Market+Map&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fdishuser.org%2FTVMarkets%2FCity%2520Maps%2FColumbus.gif&amp;rft.pub=Echo+Star&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-18"><span class="mw-cite-backlink"><b><a href="#cite_ref-18">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://chroniclingamerica.loc.gov/lccn/sn88077507/">"About Washington C.H. Record-Herald"</a>. <i>Chronicling America</i>. <a href="/wiki/Library_of_Congress" title="Library of Congress">Library of Congress</a><span class="reference-accessdate">. Retrieved <span class="nowrap">January 6,</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.atitle=About+Washington+C.H.+Record-Herald&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fchroniclingamerica.loc.gov%2Flccn%2Fsn88077507%2F&amp;rft.jtitle=Chronicling+America&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-19"><span class="mw-cite-backlink"><b><a href="#cite_ref-19">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://chroniclingamerica.loc.gov/lccn/sn85038144/">"About Washington Herald 1858-1860"</a>. <i>Chronicling America</i>. <a href="/wiki/Library_of_Congress" title="Library of Congress">Library of Congress</a><span class="reference-accessdate">. Retrieved <span class="nowrap">January 6,</span> 2014</span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.atitle=About+Washington+Herald+1858-1860&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fchroniclingamerica.loc.gov%2Flccn%2Fsn85038144%2F&amp;rft.jtitle=Chronicling+America&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-20"><span class="mw-cite-backlink"><b><a href="#cite_ref-20">^</a></b></span> <span class="reference-text"><cite class="citation web">Self-reported, sworn statement of circulation (October 1, 2012). <a rel="nofollow" class="external text" href="https://web.archive.org/web/20131008163549/http://www.recordherald.com/ftp/displayads/Rate_Card.pdf">"<i>Record Herald</i> Rate Card"</a> <span style="font-size:85%;">(PDF)</span>. Archived from <a rel="nofollow" class="external text" href="http://www.recordherald.com/ftp/displayads/Rate_Card.pdf">the original</a> <span style="font-size:85%;">(PDF)</span> on October 8, 2013.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.au=Self-reported%2C+sworn+statement+of+circulation&amp;rft.btitle=Record+Herald+Rate+Card&amp;rft.date=2012-10-01&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.recordherald.com%2Fftp%2Fdisplayads%2FRate_Card.pdf&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-21"><span class="mw-cite-backlink"><b><a href="#cite_ref-21">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.csmonitor.com/USA/2017/0307/Ohio-town-to-charge-overdose-survivors-with-inducing-panic">"Ohio town to charge overdose survivors with 'inducing panic<span style="padding-right:0.2em;">'</span>"</a>. <i><a href="/wiki/Christian_Science_Monitor" class="mw-redirect" title="Christian Science Monitor">Christian Science Monitor</a></i>. 2017-03-07<span class="reference-accessdate">. Retrieved <span class="nowrap">2017-03-09</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=Ohio+town+to+charge+overdose+survivors+with+%27inducing+panic%27&amp;rft.date=2017-03-07&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.csmonitor.com%2FUSA%2F2017%2F0307%2FOhio-town-to-charge-overdose-survivors-with-inducing-panic&amp;rft.pub=%27%27Christian+Science+Monitor%27%27&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-council-22"><span class="mw-cite-backlink">^ <a href="#cite_ref-council_22-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-council_22-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-council_22-2"><sup><i><b>c</b></i></sup></a> <a href="#cite_ref-council_22-3"><sup><i><b>d</b></i></sup></a> <a href="#cite_ref-council_22-4"><sup><i><b>e</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.ci.washington-court-house.oh.us/city%20council.html">"Washington Court House city council"</a>. City of Washington<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-02-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=Washington+Court+House+city+council&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.ci.washington-court-house.oh.us%2Fcity%2520council.html&amp;rft.pub=City+of+Washington&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-safety-23"><span class="mw-cite-backlink">^ <a href="#cite_ref-safety_23-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-safety_23-1"><sup><i><b>b</b></i></sup></a> <a href="#cite_ref-safety_23-2"><sup><i><b>c</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.ci.washington-court-house.oh.us/Safety%20Forces.html">"Washington Court House Public Safety"</a>. City of Washington<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-02-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=Washington+Court+House+Public+Safety&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.ci.washington-court-house.oh.us%2FSafety%2520Forces.html&amp;rft.pub=City+of+Washington&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-24"><span class="mw-cite-backlink"><b><a href="#cite_ref-24">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://70.61.249.71/">"Washington Court House Municipal Court"</a>. City of Washington<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-02-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=Washington+Court+House+Municipal+Court&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2F70.61.249.71%2F&amp;rft.pub=City+of+Washington&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-finances-25"><span class="mw-cite-backlink">^ <a href="#cite_ref-finances_25-0"><sup><i><b>a</b></i></sup></a> <a href="#cite_ref-finances_25-1"><sup><i><b>b</b></i></sup></a></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.ci.washington-court-house.oh.us/finances.html">"Washington Court House Finance"</a>. City of Washington<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-02-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=Washington+Court+House+Finance&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.ci.washington-court-house.oh.us%2Ffinances.html&amp;rft.pub=City+of+Washington&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+<li id="cite_note-26"><span class="mw-cite-backlink"><b><a href="#cite_ref-26">^</a></b></span> <span class="reference-text"><cite class="citation web"><a rel="nofollow" class="external text" href="http://www.ci.washington-court-house.oh.us/Building%20Department.html">"Washington Court House Building Dept."</a>. City of Washington<span class="reference-accessdate">. Retrieved <span class="nowrap">2010-02-28</span></span>.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.btitle=Washington+Court+House+Building+Dept.&amp;rft.genre=unknown&amp;rft_id=http%3A%2F%2Fwww.ci.washington-court-house.oh.us%2FBuilding%2520Department.html&amp;rft.pub=City+of+Washington&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></span></li>
+</ol>
+</div>
+<h2><span class="mw-headline" id="External_links">External links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit&amp;section=15" title="Edit section: External links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a href="/wiki/File:Commons-logo.svg" class="image"><img alt="" src="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/12px-Commons-logo.svg.png" width="12" height="16" class="noviewer" srcset="//upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/18px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/en/thumb/4/4a/Commons-logo.svg/24px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></a> Media related to <a href="https://commons.wikimedia.org/wiki/Category:Washington_Court_House,_Ohio" class="extiw" title="commons:Category:Washington Court House, Ohio">Washington Court House, Ohio</a> at Wikimedia Commons</li>
+<li><img alt="Wikisource-logo.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png" width="12" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/18px-Wikisource-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/24px-Wikisource-logo.svg.png 2x" data-file-width="410" data-file-height="430" />&#160;<cite class="citation encyclopaedia">"<a href="https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Washington_(Ohio)" class="extiw" title="wikisource:1911 Encyclopædia Britannica/Washington (Ohio)">Washington (or Washington Court House), a city and the county-seat of Fayette county, Ohio, U.S.A.</a>". <i><a href="/wiki/Encyclop%C3%A6dia_Britannica_Eleventh_Edition" title="Encyclopædia Britannica Eleventh Edition">Encyclopædia Britannica</a></i> (11th ed.). 1911.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.atitle=Washington+%28or+Washington+Court+House%29%2C+a+city+and+the+county-seat+of+Fayette+county%2C+Ohio%2C+U.S.A.&amp;rft.btitle=Encyclop%C3%A6dia+Britannica&amp;rft.date=1911&amp;rft.edition=11th&amp;rft.genre=bookitem&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+<li><img alt="Wikisource-logo.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/12px-Wikisource-logo.svg.png" width="12" height="13" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/18px-Wikisource-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/24px-Wikisource-logo.svg.png 2x" data-file-width="410" data-file-height="430" />&#160;<cite class="citation encyclopaedia">"<a href="https://en.wikisource.org/wiki/The_New_International_Encyclop%C3%A6dia/Washington_Court_House" class="extiw" title="s:The New International Encyclopædia/Washington Court House">Washington Court House</a>". <i><a href="/wiki/New_International_Encyclopedia" title="New International Encyclopedia">New International Encyclopedia</a></i>. 1905.</cite><span title="ctx_ver=Z39.88-2004&amp;rfr_id=info%3Asid%2Fen.wikipedia.org%3AWashington+Court+House%2C+Ohio&amp;rft.atitle=Washington+Court+House&amp;rft.btitle=New+International+Encyclopedia&amp;rft.date=1905&amp;rft.genre=bookitem&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook" class="Z3988"><span style="display:none;">&#160;</span></span></li>
+</ul>
+<div role="navigation" class="navbox" aria-labelledby="Municipalities_and_communities_of_Fayette_County.2C_Ohio.2C_United_States" style="padding:3px">
+<table class="nowraplinks collapsible autocollapse navbox-inner" style="border-spacing:0;background:transparent;color:inherit">
+<tr>
+<th scope="col" class="navbox-title" colspan="3">
+<div class="plainlinks hlist navbar mini">
+<ul>
+<li class="nv-view"><a href="/wiki/Template:Fayette_County,_Ohio" title="Template:Fayette County, Ohio"><abbr title="View this template" style=";;background:none transparent;border:none;">v</abbr></a></li>
+<li class="nv-talk"><a href="/wiki/Template_talk:Fayette_County,_Ohio" title="Template talk:Fayette County, Ohio"><abbr title="Discuss this template" style=";;background:none transparent;border:none;">t</abbr></a></li>
+<li class="nv-edit"><a class="external text" href="//en.wikipedia.org/w/index.php?title=Template:Fayette_County,_Ohio&amp;action=edit"><abbr title="Edit this template" style=";;background:none transparent;border:none;">e</abbr></a></li>
+</ul>
+</div>
+<div id="Municipalities_and_communities_of_Fayette_County.2C_Ohio.2C_United_States" class="adr" style="font-size:114%;margin:0 4em">Municipalities and communities of <a href="/wiki/Fayette_County,_Ohio" title="Fayette County, Ohio"><span class="region">Fayette County, Ohio</span></a>, <span class="country-name">United States</span></div>
+</th>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<td class="navbox-abovebelow" colspan="3">
+<div><a href="/wiki/County_seat" title="County seat"><span>County seat</span></a>: <b><a class="mw-selflink selflink"><span>Washington Court House</span></a></b></div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/City_(Ohio)" class="mw-redirect" title="City (Ohio)">City</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a class="mw-selflink selflink">Washington Court House</a></li>
+</ul>
+</div>
+</td>
+<td class="navbox-image" rowspan="11" style="width:0%;padding:0px 0px 0px 2px">
+<div>
+<div class="center">
+<div class="floatnone"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Map_of_Ohio_highlighting_Fayette_County.svg/80px-Map_of_Ohio_highlighting_Fayette_County.svg.png" title="Map of Ohio highlighting Fayette County" width="80" height="87" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Map_of_Ohio_highlighting_Fayette_County.svg/120px-Map_of_Ohio_highlighting_Fayette_County.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Map_of_Ohio_highlighting_Fayette_County.svg/160px-Map_of_Ohio_highlighting_Fayette_County.svg.png 2x" data-file-width="3675" data-file-height="3995" /></div>
+</div>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Village_(Ohio)" class="mw-redirect" title="Village (Ohio)">Villages</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Bloomingburg,_Ohio" title="Bloomingburg, Ohio">Bloomingburg</a></li>
+<li><a href="/wiki/Jeffersonville,_Ohio" title="Jeffersonville, Ohio">Jeffersonville</a></li>
+<li><a href="/wiki/Milledgeville,_Ohio" title="Milledgeville, Ohio">Milledgeville</a></li>
+<li><a href="/wiki/New_Holland,_Ohio" title="New Holland, Ohio">New Holland</a>‡</li>
+<li><a href="/wiki/Octa,_Ohio" title="Octa, Ohio">Octa</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Civil_township" title="Civil township">Townships</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Concord_Township,_Fayette_County,_Ohio" title="Concord Township, Fayette County, Ohio">Concord</a></li>
+<li><a href="/wiki/Green_Township,_Fayette_County,_Ohio" title="Green Township, Fayette County, Ohio">Green</a></li>
+<li><a href="/wiki/Jasper_Township,_Fayette_County,_Ohio" title="Jasper Township, Fayette County, Ohio">Jasper</a></li>
+<li><a href="/wiki/Jefferson_Township,_Fayette_County,_Ohio" title="Jefferson Township, Fayette County, Ohio">Jefferson</a></li>
+<li><a href="/wiki/Madison_Township,_Fayette_County,_Ohio" title="Madison Township, Fayette County, Ohio">Madison</a></li>
+<li><a href="/wiki/Marion_Township,_Fayette_County,_Ohio" title="Marion Township, Fayette County, Ohio">Marion</a></li>
+<li><a href="/wiki/Paint_Township,_Fayette_County,_Ohio" title="Paint Township, Fayette County, Ohio">Paint</a></li>
+<li><a href="/wiki/Perry_Township,_Fayette_County,_Ohio" title="Perry Township, Fayette County, Ohio">Perry</a></li>
+<li><a href="/wiki/Union_Township,_Fayette_County,_Ohio" title="Union Township, Fayette County, Ohio">Union</a></li>
+<li><a href="/wiki/Wayne_Township,_Fayette_County,_Ohio" title="Wayne Township, Fayette County, Ohio">Wayne</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Census-designated_place" title="Census-designated place">CDPs</a></th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Good_Hope,_Ohio" title="Good Hope, Ohio">Good Hope</a></li>
+<li><a href="/wiki/Pancoastburg,_Ohio" title="Pancoastburg, Ohio">Pancoastburg</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group"><a href="/wiki/Unincorporated_area" title="Unincorporated area">Unincorporated<br />
+communities</a></th>
+<td class="navbox-list navbox-odd hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">
+<ul>
+<li><a href="/wiki/Buena_Vista,_Fayette_County,_Ohio" title="Buena Vista, Fayette County, Ohio">Buena Vista</a></li>
+<li><a href="/wiki/Cook,_Ohio" title="Cook, Ohio">Cook</a></li>
+<li><a href="/wiki/Cunningham,_Ohio" title="Cunningham, Ohio">Cunningham</a></li>
+<li><a href="/wiki/Eber,_Ohio" title="Eber, Ohio">Eber</a></li>
+<li><a href="/wiki/Edgefield,_Ohio" title="Edgefield, Ohio">Edgefield</a></li>
+<li><a href="/wiki/Fairview,_Fayette_County,_Ohio" title="Fairview, Fayette County, Ohio">Fairview</a></li>
+<li><a href="/wiki/Glendon,_Ohio" title="Glendon, Ohio">Glendon</a></li>
+<li><a href="/wiki/Hagler,_Ohio" title="Hagler, Ohio">Hagler</a></li>
+<li><a href="/wiki/Jasper_Mills,_Ohio" title="Jasper Mills, Ohio">Jasper Mills</a></li>
+<li><a href="/wiki/Johnson,_Ohio" title="Johnson, Ohio">Johnson</a></li>
+<li><a href="/wiki/Luttrell,_Ohio" title="Luttrell, Ohio">Luttrell</a></li>
+<li><a href="/wiki/Madison_Mills,_Ohio" title="Madison Mills, Ohio">Madison Mills</a></li>
+<li><a href="/wiki/Manara,_Ohio" title="Manara, Ohio">Manara</a></li>
+<li><a href="/wiki/McLean,_Ohio" title="McLean, Ohio">McLean</a></li>
+<li><a href="/wiki/New_Martinsburg,_Ohio" title="New Martinsburg, Ohio">New Martinsburg</a></li>
+<li><a href="/wiki/Parrott,_Ohio" title="Parrott, Ohio">Parrott</a></li>
+<li><a href="/wiki/Plano,_Ohio" title="Plano, Ohio">Plano</a>‡</li>
+<li><a href="/wiki/Pleasant_View,_Ohio" title="Pleasant View, Ohio">Pleasant View</a></li>
+<li><a href="/wiki/Rock_Mills,_Ohio" title="Rock Mills, Ohio">Rock Mills</a></li>
+<li><a href="/wiki/South_Plymouth,_Ohio" title="South Plymouth, Ohio">South Plymouth</a></li>
+<li><a href="/wiki/Staunton,_Ohio" title="Staunton, Ohio">Staunton</a></li>
+<li><a href="/wiki/West_Lancaster,_Ohio" title="West Lancaster, Ohio">West Lancaster</a></li>
+<li><a href="/wiki/White_Oak,_Fayette_County,_Ohio" title="White Oak, Fayette County, Ohio">White Oak</a></li>
+<li><a href="/wiki/Yankeetown,_Fayette_County,_Ohio" title="Yankeetown, Fayette County, Ohio">Yankeetown</a></li>
+<li><a href="/wiki/Yatesville,_Ohio" title="Yatesville, Ohio">Yatesville</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr style="height:2px">
+<td colspan="2"></td>
+</tr>
+<tr>
+<th scope="row" class="navbox-group">Footnotes</th>
+<td class="navbox-list navbox-even hlist" style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px">
+<div style="padding:0em 0.25em">‡This populated place also has portions in an adjacent county or counties</div>
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1261
+Cached time: 20170412204511
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.460 seconds
+Real time usage: 0.552 seconds
+Preprocessor visited node count: 5888/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 110154/2097152 bytes
+Template argument size: 12731/2097152 bytes
+Highest expansion depth: 18/40
+Expensive parser function count: 8/500
+Lua time usage: 0.197/10.000 seconds
+Lua memory usage: 8.35 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  465.017      1 -total
+ 32.76%  152.359      1 Template:Infobox_settlement
+ 25.19%  117.118      2 Template:Infobox
+ 22.29%  103.630      1 Template:Reflist
+ 16.56%   77.030     21 Template:Cite_web
+ 11.41%   53.061      3 Template:Citation_needed
+ 10.35%   48.114      3 Template:Fix
+  7.62%   35.428      1 Template:US_Census_population
+  6.39%   29.698      5 Template:Convert
+  5.53%   25.715      6 Template:Category_handler
+-->
+
+<!-- Saved in parser cache with key enwiki:pcache:idhash:29260885-0!*!0!!en!4!* and timestamp 20170412204510 and revision id 771573323
+ -->
+<noscript><img src="//en.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Washington_Court_House,_Ohio&amp;oldid=771573323">https://en.wikipedia.org/w/index.php?title=Washington_Court_House,_Ohio&amp;oldid=771573323</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Categories</a>: <ul><li><a href="/wiki/Category:Washington_Court_House,_Ohio" title="Category:Washington Court House, Ohio">Washington Court House, Ohio</a></li><li><a href="/wiki/Category:County_seats_in_Ohio" title="Category:County seats in Ohio">County seats in Ohio</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Coordinates_on_Wikidata" title="Category:Coordinates on Wikidata">Coordinates on Wikidata</a></li><li><a href="/wiki/Category:All_articles_with_unsourced_statements" title="Category:All articles with unsourced statements">All articles with unsourced statements</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_October_2014" title="Category:Articles with unsourced statements from October 2014">Articles with unsourced statements from October 2014</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_June_2007" title="Category:Articles with unsourced statements from June 2007">Articles with unsourced statements from June 2007</a></li><li><a href="/wiki/Category:Articles_with_unsourced_statements_from_December_2013" title="Category:Articles with unsourced statements from December 2013">Articles with unsourced statements from December 2013</a></li><li><a href="/wiki/Category:Articles_to_be_expanded_from_March_2017" title="Category:Articles to be expanded from March 2017">Articles to be expanded from March 2017</a></li><li><a href="/wiki/Category:All_articles_to_be_expanded" title="Category:All articles to be expanded">All articles to be expanded</a></li><li><a href="/wiki/Category:Articles_using_small_message_boxes" title="Category:Articles using small message boxes">Articles using small message boxes</a></li><li><a href="/wiki/Category:Wikipedia_articles_incorporating_a_citation_from_the_1911_Encyclopaedia_Britannica_with_Wikisource_reference" title="Category:Wikipedia articles incorporating a citation from the 1911 Encyclopaedia Britannica with Wikisource reference">Wikipedia articles incorporating a citation from the 1911 Encyclopaedia Britannica with Wikisource reference</a></li><li><a href="/wiki/Category:Wikipedia_articles_incorporating_a_citation_from_the_New_International_Encyclopedia" title="Category:Wikipedia articles incorporating a citation from the New International Encyclopedia">Wikipedia articles incorporating a citation from the New International Encyclopedia</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-anonuserpage">Not logged in</li><li id="pt-anontalk"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n">Talk</a></li><li id="pt-anoncontribs"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y">Contributions</a></li><li id="pt-createaccount"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Washington+Court+House%2C+Ohio" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Washington+Court+House%2C+Ohio" title="You're encouraged to log in; however, it's not mandatory. [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+															<li  id="ca-nstab-main" class="selected"><span><a href="/wiki/Washington_Court_House,_Ohio"  title="View the content page [c]" accesskey="c">Article</a></span></li>
+															<li  id="ca-talk"><span><a href="/wiki/Talk:Washington_Court_House,_Ohio"  title="Discussion about the content page [t]" accesskey="t" rel="discussion">Talk</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label">
+							<span>Variants</span><a href="#"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="/wiki/Washington_Court_House,_Ohio" >Read</a></span></li>
+															<li id="ca-edit"><span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=edit"  title="Edit this page [e]" accesskey="e">Edit</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=history"  title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span><a href="#"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Search Wikipedia" title="Search Wikipedia [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search Wikipedia for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id='p-navigation' aria-labelledby='p-navigation-label'>
+			<h3 id='p-navigation-label'>Navigation</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-contents"><a href="/wiki/Portal:Contents" title="Guides to browsing Wikipedia">Contents</a></li><li id="n-featuredcontent"><a href="/wiki/Portal:Featured_content" title="Featured content – the best of Wikipedia">Featured content</a></li><li id="n-currentevents"><a href="/wiki/Portal:Current_events" title="Find background information on current events">Current events</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random article [x]" accesskey="x">Random article</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_en.wikipedia.org&amp;uselang=en" title="Support us">Donate to Wikipedia</a></li><li id="n-shoplink"><a href="//shop.wikimedia.org" title="Visit the Wikipedia store">Wikipedia store</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-interaction' aria-labelledby='p-interaction-label'>
+			<h3 id='p-interaction-label'>Interaction</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-help"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia">Help</a></li><li id="n-aboutsite"><a href="/wiki/Wikipedia:About" title="Find out about Wikipedia">About Wikipedia</a></li><li id="n-portal"><a href="/wiki/Wikipedia:Community_portal" title="About the project, what you can do, where to find things">Community portal</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-contactpage"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia">Contact page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-tb' aria-labelledby='p-tb-label'>
+			<h3 id='p-tb-label'>Tools</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/Washington_Court_House,_Ohio" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/Washington_Court_House,_Ohio" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-upload"><a href="/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u">Upload file</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-permalink"><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;oldid=771573323" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;action=info" title="More information about this page">Page information</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Q2203766" title="Link to connected data repository item [g]" accesskey="g">Wikidata item</a></li><li id="t-cite"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Washington_Court_House%2C_Ohio&amp;id=771573323" title="Information on how to cite this page">Cite this page</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-coll-print_export' aria-labelledby='p-coll-print_export-label'>
+			<h3 id='p-coll-print_export-label'>Print/export</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="/w/index.php?title=Special:Book&amp;bookcmd=book_creator&amp;referer=Washington+Court+House%2C+Ohio">Create a book</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=Special:Book&amp;bookcmd=render_article&amp;arttitle=Washington+Court+House%2C+Ohio&amp;returnto=Washington+Court+House%2C+Ohio&amp;oldid=771573323&amp;writer=rdf2latex">Download as PDF</a></li><li id="t-print"><a href="/w/index.php?title=Washington_Court_House,_Ohio&amp;printable=yes" title="Printable version of this page [p]" accesskey="p">Printable version</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-wikibase-otherprojects' aria-labelledby='p-wikibase-otherprojects-label'>
+			<h3 id='p-wikibase-otherprojects-label'>In other projects</h3>
+
+			<div class="body">
+									<ul>
+						<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Washington_Court_House,_Ohio" hreflang="en">Wikimedia Commons</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id='p-lang' aria-labelledby='p-lang-label'>
+			<h3 id='p-lang-label'>Languages</h3>
+
+			<div class="body">
+									<ul>
+						<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%88%D8%A7%D8%B4%D9%86%D8%B7%D9%86_%D9%83%D9%88%D8%B1%D8%AA_%D9%87%D8%A7%D9%88%D8%B3_(%D8%A3%D9%88%D9%87%D8%A7%D9%8A%D9%88)" title="واشنطن كورت هاوس (أوهايو) – Arabic" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-zh-min-nan"><a href="https://zh-min-nan.wikipedia.org/wiki/Washington_(Ohio)" title="Washington (Ohio) – Chinese (Min Nan)" lang="zh-min-nan" hreflang="zh-min-nan" class="interlanguage-link-target">Bân-lâm-gú</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Washington_Court_House" title="Washington Court House – Catalan" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Washington_Court_House_(Ohio)" title="Washington Court House (Ohio) – Spanish" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Washington_Court_House_(Ohio)" title="Washington Court House (Ohio) – Basque" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%88%D8%A7%D8%B4%DB%8C%D9%86%DA%AF%D8%AA%D9%86_%DA%A9%D9%88%D8%B1%D8%AA_%D9%87%D8%A7%D9%88%D8%B3%D8%8C_%D8%A7%D9%88%D9%87%D8%A7%DB%8C%D9%88" title="واشینگتن کورت هاوس، اوهایو – Persian" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Washington_Court_House" title="Washington Court House – French" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Washington_Court_House" title="Washington Court House – Italian" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-kk"><a href="https://kk.wikipedia.org/wiki/%D0%92%D0%B0%D1%88%D0%B8%D0%BD%D0%B3%D1%82%D0%BE%D0%BD_%D0%9A%D0%BE%D1%83%D1%80%D1%82_%D0%A5%D0%B0%D1%83%D1%81_(%D0%9E%D0%B3%D0%B0%D0%B9%D0%BE)" title="Вашингтон Коурт Хаус (Огайо) – Kazakh" lang="kk" hreflang="kk" class="interlanguage-link-target">Қазақша</a></li><li class="interlanguage-link interwiki-ht"><a href="https://ht.wikipedia.org/wiki/Washington_Court_House,_Ohio" title="Washington Court House, Ohio – Haitian Creole" lang="ht" hreflang="ht" class="interlanguage-link-target">Kreyòl ayisyen</a></li><li class="interlanguage-link interwiki-mg"><a href="https://mg.wikipedia.org/wiki/Washington_Court_House,_Ohio" title="Washington Court House, Ohio – Malagasy" lang="mg" hreflang="mg" class="interlanguage-link-target">Malagasy</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Washington_(Ohio)" title="Washington (Ohio) – Dutch" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-uz"><a href="https://uz.wikipedia.org/wiki/Washington_Court_House_(Ohio)" title="Washington Court House (Ohio) – Uzbek" lang="uz" hreflang="uz" class="interlanguage-link-target">Oʻzbekcha/ўзбекча</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Washington_Court_House" title="Washington Court House – Polish" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Washington_(Ohio)" title="Washington (Ohio) – Portuguese" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/%D0%92%D0%BE%D1%88%D0%B8%D0%BD%D0%B3%D1%82%D0%BE%D0%BD_%D0%9A%D0%BE%D1%80%D1%82_%D0%A5%D0%B0%D1%83%D1%81_(%D0%9E%D1%85%D0%B0%D1%98%D0%BE)" title="Вошингтон Корт Хаус (Охајо) – Serbian" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sh"><a href="https://sh.wikipedia.org/wiki/Washington_Court_House,_Ohio" title="Washington Court House, Ohio – Serbo-Croatian" lang="sh" hreflang="sh" class="interlanguage-link-target">Srpskohrvatski / српскохрватски</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Washington_Court_House" title="Washington Court House – Swedish" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Washington_Court_House,_Ohio" title="Washington Court House, Ohio – Turkish" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-ur"><a href="https://ur.wikipedia.org/wiki/%D9%88%D8%A7%D8%B4%D9%86%DA%AF%D9%B9%D9%86%D8%8C_%D8%A7%D9%88%DB%81%D8%A7%D8%A6%DB%8C%D9%88" title="واشنگٹن، اوہائیو – Urdu" lang="ur" hreflang="ur" class="interlanguage-link-target">اردو</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Washington_Court_House,_Ohio" title="Washington Court House, Ohio – Vietnamese" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-vo"><a href="https://vo.wikipedia.org/wiki/Washington_Court_House" title="Washington Court House – Volapük" lang="vo" hreflang="vo" class="interlanguage-link-target">Volapük</a></li><li class="interlanguage-link interwiki-war"><a href="https://war.wikipedia.org/wiki/Washington_Court_House,_Ohio" title="Washington Court House, Ohio – Waray" lang="war" hreflang="war" class="interlanguage-link-target">Winaray</a></li>					</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Q2203766#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> This page was last edited on 22 March 2017, at 09:07.</li>
+											<li id="footer-info-copyright">Text is available under the <a rel="license" href="//en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">Creative Commons Attribution-ShareAlike License</a><a rel="license" href="//creativecommons.org/licenses/by-sa/3.0/" style="display:none;"></a>;
+additional terms may apply.  By using this site, you agree to the <a href="//wikimediafoundation.org/wiki/Terms_of_Use">Terms of Use</a> and <a href="//wikimediafoundation.org/wiki/Privacy_policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a href="//www.wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://wikimediafoundation.org/wiki/Privacy_policy" class="extiw" title="wmf:Privacy policy">Privacy policy</a></li>
+											<li id="footer-places-about"><a href="/wiki/Wikipedia:About" title="Wikipedia:About">About Wikipedia</a></li>
+											<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:General_disclaimer" title="Wikipedia:General disclaimer">Disclaimers</a></li>
+											<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Developers</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Cookie statement</a></li>
+											<li id="footer-places-mobileview"><a href="//en.m.wikipedia.org/w/index.php?title=Washington_Court_House,_Ohio&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.460","walltime":"0.552","ppvisitednodes":{"value":5888,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":110154,"limit":2097152},"templateargumentsize":{"value":12731,"limit":2097152},"expansiondepth":{"value":18,"limit":40},"expensivefunctioncount":{"value":8,"limit":500},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  465.017      1 -total"," 32.76%  152.359      1 Template:Infobox_settlement"," 25.19%  117.118      2 Template:Infobox"," 22.29%  103.630      1 Template:Reflist"," 16.56%   77.030     21 Template:Cite_web"," 11.41%   53.061      3 Template:Citation_needed"," 10.35%   48.114      3 Template:Fix","  7.62%   35.428      1 Template:US_Census_population","  6.39%   29.698      5 Template:Convert","  5.53%   25.715      6 Template:Category_handler"]},"scribunto":{"limitreport-timeusage":{"value":"0.197","limit":"10.000"},"limitreport-memusage":{"value":8754932,"limit":52428800}},"cachereport":{"origin":"mw1261","timestamp":"20170412204511","ttl":2592000,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":90,"wgHostname":"mw1242"});});</script>
+	</body>
+</html>
