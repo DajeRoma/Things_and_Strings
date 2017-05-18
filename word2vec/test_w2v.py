@@ -212,7 +212,8 @@ def standardize_wmd(wmd_tuples):
 		if std == 0:
 			standardized_distances.append((cities[i] , "0"))
 		else:
-			standardized_distances.append((cities[i] , str((distances[i]) - mean / std)))
+			standardized_distances.append((cities[i] , str((mean - distances[i])/ std)))
+			# note: reverse the ordering, making it the higher the score, the more similar
 	return standardized_distances
 
 
