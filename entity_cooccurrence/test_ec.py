@@ -155,26 +155,6 @@ class test_ec():
 		# return f_score, mean_reciprocal_rank, precision, recall
 
 
-"""
-	standardize the wmd score; also reverse the ordering, making it 
-	  the higher the score, the more similar
-"""
-def standardize_wmd(wmd_tuples):
-	cities = []
-	distances = []
-	for wmd_tuple in wmd_tuples:
-		cities.append(wmd_tuple[0])
-		distances.append(float(wmd_tuple[1]))
-	mean = np.mean(distances)
-	std = np.std(distances)
-	standardized_distances = []
-	for i in xrange(len(distances)):
-		if std == 0:
-			standardized_distances.append((cities[i] , "0"))
-		else:
-			standardized_distances.append((cities[i] , str((mean - distances[i]) / std)))
-	return standardized_distances
-
 
 """
 	Given a list of scores, calculate the percentile, and return 
@@ -238,5 +218,5 @@ if __name__ == '__main__':
 	# 	test_instance.evaluate(i+1)
 
 	test_instance.load_result_data(result_output_path)
-	for i in xrange(0, 101):
+	for i in xrange(0, 101, 5):
 		test_instance.evaluate_percentile(i)

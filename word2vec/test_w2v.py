@@ -55,7 +55,7 @@ class test_w2v():
 
 	def load_testing_data(self, 
 						testingDataFilePath=TESTING_SENTENCES_FILE_PATH):
-		listOfList = read_listOfList_from_CSV(TESTING_SENTENCES_FILE_PATH)
+		listOfList = read_listOfList_from_CSV(testingDataFilePath)
 		self.testing_sentences = []
 		self.ground_truth = []
 		self.annoted_place_names = []
@@ -212,7 +212,7 @@ def standardize_wmd(wmd_tuples):
 		if std == 0:
 			standardized_distances.append((cities[i] , "0"))
 		else:
-			standardized_distances.append((cities[i] , str((mean - distances[i]) / std)))
+			standardized_distances.append((cities[i] , str((distances[i]) - mean / std)))
 	return standardized_distances
 
 
@@ -272,10 +272,10 @@ if __name__ == '__main__':
 	# test_instance.run_w2v_in_batch(result_output_path, SCORE_METHOD)
 
 	# 2. Evaluate the result
-	test_instance.load_result_data(result_output_path, reverse_option=INCREMENT_SCORE)
-	for i in xrange(1):
-		test_instance.evaluate(i+1)
-
 	# test_instance.load_result_data(result_output_path, reverse_option=INCREMENT_SCORE)
-	# for i in xrange(0, 101):
-	# 	test_instance.evaluate_percentile(i)
+	# for i in xrange(1):
+	# 	test_instance.evaluate(i+1)
+
+	test_instance.load_result_data(result_output_path, reverse_option=INCREMENT_SCORE)
+	for i in xrange(0, 101, 5):
+		test_instance.evaluate_percentile(i)
