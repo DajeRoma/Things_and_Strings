@@ -85,7 +85,7 @@ class integration_test:
 			result_for_a_sentence = []
 			for i in xrange(len(row)/2):
 				result_for_a_sentence.append((row[2*i].lower(), row[2*i+1]))
-			sorted_result = sorted(result_for_a_sentence, key=itemgetter(1), reverse=True)
+			sorted_result = sorted(result_for_a_sentence, key=itemgetter(1), reverse=False)
 			result_list.append(sorted_result)
 		self.lda_result = result_list
 
@@ -111,7 +111,7 @@ class integration_test:
 	def standarid_result(self):
 		self.ec_std_result = standardize_result_list(self.ec_result)
 		# self.ec_std_result = self.ec_result
-		self.lda_std_result = standardize_result_list(self.lda_result)
+		self.lda_std_result = standardize_result_list(self.lda_result, reverse = True)
 		self.w2v_std_result = standardize_result_list(self.w2v_result, reverse = True)
 
 
@@ -265,7 +265,7 @@ if __name__ == "__main__":
 	it = integration_test()
 	it.load_all_three_result(sample_ec_result_file, sample_lda_result_file, sample_w2v_result_file)
 	it.standarid_result()
-	it.integrate(0, 0, 1)
+	it.integrate(0, 1, 0)
 	for i in xrange(0, 101, 5):
 		it.evaluate_percentile(i)
 

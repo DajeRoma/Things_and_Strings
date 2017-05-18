@@ -65,7 +65,8 @@ class test_lda():
 			result_for_a_sentence = []
 			for i in xrange((len(row)+1)/2):
 				result_for_a_sentence.append((row[2*i].lower(), float(row[2*i+1])))
-			sorted_result = sorted(result_for_a_sentence, key=itemgetter(1), reverse=True)
+			# a lower score (Jensen-Shannon divergence indicates greater similarity) means higher similarity
+			sorted_result = sorted(result_for_a_sentence, key=itemgetter(1), reverse=False)
 			result_list.append(sorted_result)
 		self.result = result_list
 
@@ -156,7 +157,7 @@ def filter_by_percentile(city_scores, percent):
 	new_city_scores = []
 	for city_score in city_scores:
 		# floating issue causes incorrect comparison
-		if round(float(city_score[1]), 8) >= round(float(limit), 8):
+		if round(float(city_score[1]), 8) <= round(float(limit), 8):
 			new_city_scores.append(city_score)
 	return new_city_scores
 
@@ -203,5 +204,5 @@ if __name__ == '__main__':
 	# 	test_instance.evaluate(i+1)
 
 	test_instance.load_result_data(result_output_path)
-	for i in xrange(0, 101):
+	for i in xrange(0, 101, 5):
 		test_instance.evaluate_percentile(i)
