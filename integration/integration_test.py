@@ -4,6 +4,7 @@ import sys
 import os
 import numpy as np
 from operator import itemgetter
+from multiprocessing import Pool
 
 sys.path.append('/home/yiting/Dropbox/ThingsStrings/Things_and_Strings/')
 from entity_cooccurrence.EntityCooccurrence import EntityCooccurrence
@@ -21,6 +22,9 @@ TESTING_SENTENCES_FILE_PATH = os.path.join(
 			os.path.dirname(CURRENT_DIR_PATH),
 			"testing_data",
 			"testing_sentence_city_ambiPlaceName_Mar14.csv")
+DEFAULT_RESULT_PATH = os.path.join(
+					CURRENT_DIR_PATH,
+					"comprehensive_summary_May24.csv")
 
 
 class integration_test:
@@ -176,14 +180,44 @@ class integration_test:
 			if rank > 0:
 				reciprocal_rank_sum += 1.0 / rank
 		mean_reciprocal_rank = 1.0 * reciprocal_rank_sum / p
-		# print "tp:",tp , "\tp-hat:", p_hat, "\tp:", p
-		# print "F Score:", f_score
-		# print "MRR:", mean_reciprocal_rank
-		# print "precision:", precision
-		# print "Recall:", recall
-		print str(tp) + "\t" + str(p_hat) + "\t" + str(p) + "\t" + str(f_score) + "\t" + str(mean_reciprocal_rank) + "\t" + str(precision) + "\t" + str(recall)
-		# return f_score, mean_reciprocal_rank, precision, recall
 
+		print str(tp) + "\t" + str(p_hat) + "\t" + str(p) + "\t" + str(f_score) + "\t" + str(mean_reciprocal_rank) + "\t" + str(precision) + "\t" + str(recall)
+
+
+	def evaluate_percentile_best_return(self, weight1, weight2, weight3):
+		if len(self.ground_truth) != len(self.integrated_result):
+			print "[Warning] Lenth of integrated model's result and the ground truth do not match"
+			print "testing/ground truth:", len(self.integrated_result), len(self.ground_truth)
+		f_summary_dict = {}
+		for k in xrange(0, 101, 1):
+			percentile = int(k)			
+			tp, p_hat, p = 0, 0, 0
+			rank_list = []
+			for i in xrange(min(len(self.ground_truth), len(self.integrated_result))):
+				p += 1
+				result_for_a_sentence = self.integrated_result[i]
+				result_for_a_sentence = filter_by_percentile(result_for_a_sentence, percentile)
+				for j in xrange(len(result_for_a_sentence)):
+					p_hat += 1
+					if str(result_for_a_sentence[j][0]) == str(self.ground_truth[i]):
+						tp += 1
+						rank_list.append(j+1)
+			precision = 1.0 * tp / p_hat
+			recall = 1.0 * tp / p
+			f_score = 2.0 * (precision * recall) / (precision + recall)
+			reciprocal_rank_sum = 0
+			for rank in rank_list:
+				if rank > 0:
+					reciprocal_rank_sum += 1.0 / rank
+			mean_reciprocal_rank = 1.0 * reciprocal_rank_sum / p
+			# if f_score in f_summary_dict:
+			# 	print f_summary_dict[f_score]
+			row_to_write = str(weight1) + "\t" + str(weight2) + "\t" + str(weight3) + "\t" + str(k) + "th" + "\t" + str(tp) + "\t" + str(p_hat) + "\t" + str(p) + "\t" + str(f_score) + "\t" + str(mean_reciprocal_rank) + "\t" + str(precision) + "\t" + str(recall)
+			append_row_to_CSV(row_to_write, DEFAULT_RESULT_PATH)
+			f_summary_dict[f_score] = str(weight1) + "\t" + str(weight2) + "\t" + str(weight3) + "\t" + str(k) + "th" + "\t" + str(tp) + "\t" + str(p_hat) + "\t" + str(p) + "\t" + str(f_score) + "\t" + str(mean_reciprocal_rank) + "\t" + str(precision) + "\t" + str(recall)
+			# print str(tp) + "\t" + str(p_hat) + "\t" + str(p) + "\t" + str(f_score) + "\t" + str(mean_reciprocal_rank) + "\t" + str(precision) + "\t" + str(recall)
+		max_f = max(f_summary_dict.keys())
+		print f_summary_dict[max_f]
 
 
 
@@ -239,6 +273,13 @@ def read_listOfLists_from_CSV(csv_file_path):
 	return listOfLists
 
 
+def append_row_to_CSV(row, csv_file_path):
+	row_to_write = row.split("\t")
+	with open(csv_file_path, 'a') as csvfile:
+		spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+		spamwriter.writerow(row_to_write)
+
+
 """
 	Given a list of scores, calculate the percentile, and return 
 	  the part of the list of scores that is higher than the percentile
@@ -257,16 +298,45 @@ def filter_by_percentile(city_scores, percent):
 	return new_city_scores
 
 
-
-if __name__ == "__main__":
+def try_pool(i):
 	sample_ec_result_file = os.path.join(CURRENT_DIR_PATH, "ec_test_result.csv")
 	sample_lda_result_file = os.path.join(CURRENT_DIR_PATH, "lda_testing_result_May5.csv")
 	sample_w2v_result_file = os.path.join(CURRENT_DIR_PATH, "w2v_google_news_300d_para_wmd_Mar16.csv")
 	it = integration_test()
 	it.load_all_three_result(sample_ec_result_file, sample_lda_result_file, sample_w2v_result_file)
 	it.standarid_result()
-	it.integrate(0, 1, 0)
-	for i in xrange(0, 101, 5):
-		it.evaluate_percentile(i)
+
+	j = 0
+	while i + j <= 100:
+		weight1 = i / 100.0
+		weight2 = j / 100.0
+		weight3 = (100 - i - j) / 100.0
+		it.integrate(weight1, weight2, weight3)
+		it.evaluate_percentile_best_return(weight1, weight2, weight3)
+		j += 1
 
 
+
+if __name__ == "__main__":
+	# sample_ec_result_file = os.path.join(CURRENT_DIR_PATH, "ec_test_result.csv")
+	# sample_lda_result_file = os.path.join(CURRENT_DIR_PATH, "lda_testing_result_May5.csv")
+	# sample_w2v_result_file = os.path.join(CURRENT_DIR_PATH, "w2v_google_news_300d_para_wmd_Mar16.csv")
+	# it = integration_test()
+	# it.load_all_three_result(sample_ec_result_file, sample_lda_result_file, sample_w2v_result_file)
+	# it.standarid_result()
+
+	# # it.integrate(0.5, 0.5, 0)
+	# # for i in xrange(0, 101, 5):
+	# # 	it.evaluate_percentile(i)
+	# for i in xrange(101):
+	# 	j = 0
+	# 	while i + j <= 100:
+	# 		weight1 = i / 100.0
+	# 		weight2 = j / 100.0
+	# 		weight3 = (100 - i - j) / 100.0
+	# 		it.integrate(weight1, weight2, weight3)
+	# 		it.evaluate_percentile_best_return(weight1, weight2, weight3)
+	# 		j += 1
+
+	p = Pool(3)
+	print(p.map(try_pool, xrange(101)))
