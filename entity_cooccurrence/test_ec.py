@@ -39,7 +39,7 @@ class test_ec():
 
 	def load_testing_data(self, 
 						testingDataFilePath=TESTING_SENTENCES_FILE_PATH):
-		listOfList = read_listOfList_from_CSV(TESTING_SENTENCES_FILE_PATH)
+		listOfList = read_listOfList_from_CSV(testingDataFilePath)
 		self.testing_sentences = []
 		self.ground_truth = []
 		self.annoted_place_names = []

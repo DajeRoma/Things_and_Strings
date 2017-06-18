@@ -25,7 +25,7 @@ class DBpedia_Spotlight():
 		headers = {"Accept": "application/json"}
 		response = requests.get(url, headers=headers)
 		res_json = response.json()
-		print res_json
+		# print res_json
 		if "surfaceForm" not in res_json["annotation"]:
 			return []
 		if isinstance(res_json["annotation"]["surfaceForm"], list):
