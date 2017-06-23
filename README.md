@@ -2,20 +2,8 @@
 A machine learning method for improving Place Name Disambiguation
 
 
-### Finished
-Get training data from wikipedia
 
-Get and clean testing data
-
-Word2Vec Model
-
-Entity Co-Occurrence Model
-
-
-### Todo
-Testing
-
-Doc2Vec model
+![My image](https://github.com/DajeRoma/Things_and_Strings/drawing/Percential_F1.png)
 
 
 ### Readings
