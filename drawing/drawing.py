@@ -41,7 +41,7 @@ def draw_F1_to_percentile():
 	ax.get_xaxis().tick_bottom()
 	ax.get_yaxis().tick_left()
 
-	fig.subplots_adjust(left=.06, right=.75, bottom=.02, top=.94)
+	fig.subplots_adjust(left=.06, right=.84, bottom=.08, top=.94)
 	# Limit the range of the plot to only where the data is.
 	# Avoid unnecessary whitespace.
 	# ax.set_xlim(0, 1)
@@ -50,7 +50,7 @@ def draw_F1_to_percentile():
 	# Make sure your axis ticks are large enough to be easily read.
 	# You don't want your viewers squinting to read your plot.
 	plt.xticks([0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1], fontsize=14)
-	plt.yticks([0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3], fontsize=14)
+	plt.yticks([0, 0.05, 0.1, 0.15, 0.2, 0.25], fontsize=14)
 	# ax.xaxis.set_major_formatter(plt.FuncFormatter('{:.0f}'.format))
 	# ax.yaxis.set_major_formatter(plt.FuncFormatter('{:.0f}%'.format))
 
@@ -116,16 +116,16 @@ def draw_F1_to_percentile():
 	tr_logo = plt.imread(tr_logo)
 	oc_logo = plt.imread(oc_logo)
 	ts_logo = plt.imread(ts_logo)
-	newax1 = fig.add_axes([0.755, 0.18, 0.08, 0.08], anchor='NE', zorder=1)
+	newax1 = fig.add_axes([0.855, 0.23, 0.08, 0.08], anchor='NE', zorder=1)
 	newax1.imshow(dbsl_logo)
 	newax1.axis('off')
-	newax2 = fig.add_axes([0.76, 0.208, 0.12, 0.12], anchor='NE', zorder=1)
+	newax2 = fig.add_axes([0.86, 0.27, 0.12, 0.12], anchor='NE', zorder=1)
 	newax2.imshow(tr_logo)
 	newax2.axis('off')
-	newax3 = fig.add_axes([0.758, 0.35, 0.08, 0.08], anchor='NE', zorder=1)
+	newax3 = fig.add_axes([0.858, 0.42, 0.1, 0.1], anchor='NE', zorder=1)
 	newax3.imshow(oc_logo)
 	newax3.axis('off')
-	newax4 = fig.add_axes([0.72, 0.67, 0.1, 0.1], anchor='NE', zorder=1)
+	newax4 = fig.add_axes([0.82, 0.745, 0.1, 0.1], anchor='NE', zorder=1)
 	newax4.imshow(ts_logo)
 	newax4.axis('off')
 
@@ -161,7 +161,8 @@ def draw_F1_to_percentile():
 	# You can also save it as a PDF, JPEG, etc.
 	# Just change the file extension in this call.
 	# plt.savefig('percent-bachelors-degrees-women-usa.png', bbox_inches='tight')
-	plt.show()
+	# plt.show()
+	plt.savefig('figure.png', dpi = 100)
 
 
 def read_listOfList_from_CSV(csv_file_path):
