@@ -3,7 +3,7 @@ A machine learning method for improving Place Name Disambiguation
 
 
 
-![My image](/drawing/Percential_F1.png)
+![My image](/drawing/Percentile_F1_logo.png)
 
 ### Readings
 
