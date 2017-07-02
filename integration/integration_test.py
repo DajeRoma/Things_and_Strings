@@ -24,7 +24,7 @@ TESTING_SENTENCES_FILE_PATH = os.path.join(
 			"testing_sentence_city_ambiPlaceName_Mar14.csv")
 DEFAULT_RESULT_PATH = os.path.join(
 					CURRENT_DIR_PATH,
-					"comprehensive_summary_May24.csv")
+					"comprehensive_summary_June27.csv")
 
 
 class integration_test:
@@ -217,7 +217,7 @@ class integration_test:
 			f_summary_dict[f_score] = str(weight1) + "\t" + str(weight2) + "\t" + str(weight3) + "\t" + str(k) + "th" + "\t" + str(tp) + "\t" + str(p_hat) + "\t" + str(p) + "\t" + str(f_score) + "\t" + str(mean_reciprocal_rank) + "\t" + str(precision) + "\t" + str(recall)
 			# print str(tp) + "\t" + str(p_hat) + "\t" + str(p) + "\t" + str(f_score) + "\t" + str(mean_reciprocal_rank) + "\t" + str(precision) + "\t" + str(recall)
 		max_f = max(f_summary_dict.keys())
-		print f_summary_dict[max_f]
+		# print f_summary_dict[max_f]
 
 
 
@@ -299,6 +299,25 @@ def filter_by_percentile(city_scores, percent):
 
 
 def try_pool(i):
+	# sample_ec_result_file = os.path.join(CURRENT_DIR_PATH, "ec_test_result.csv")
+	# sample_lda_result_file = os.path.join(CURRENT_DIR_PATH, "lda_testing_result_May5.csv")
+	# sample_w2v_result_file = os.path.join(CURRENT_DIR_PATH, "w2v_google_news_300d_para_wmd_Mar16.csv")
+	# it = integration_test()
+	# it.load_all_three_result(sample_ec_result_file, sample_lda_result_file, sample_w2v_result_file)
+	# it.standarid_result()
+
+	j = 0.0
+	while i + j <= 100:
+		weight1 = i / 100.0
+		weight2 = j / 100.0
+		weight3 = (100.0 - i - j) / 100.0
+		# it.integrate(weight1, weight2, weight3)
+		# it.evaluate_percentile_best_return(weight1, weight2, weight3)
+		j += 1.0
+		print weight1, weight2, weight3
+
+
+def batch():
 	sample_ec_result_file = os.path.join(CURRENT_DIR_PATH, "ec_test_result.csv")
 	sample_lda_result_file = os.path.join(CURRENT_DIR_PATH, "lda_testing_result_May5.csv")
 	sample_w2v_result_file = os.path.join(CURRENT_DIR_PATH, "w2v_google_news_300d_para_wmd_Mar16.csv")
@@ -306,15 +325,19 @@ def try_pool(i):
 	it.load_all_three_result(sample_ec_result_file, sample_lda_result_file, sample_w2v_result_file)
 	it.standarid_result()
 
-	j = 0
-	while i + j <= 100:
-		weight1 = i / 100.0
-		weight2 = j / 100.0
-		weight3 = (100 - i - j) / 100.0
-		it.integrate(weight1, weight2, weight3)
-		it.evaluate_percentile_best_return(weight1, weight2, weight3)
-		j += 1
-
+	weight_list = []
+	for i in xrange(101):
+		j = 0.0
+		while i + j <= 100:
+			weight1 = i / 100.0
+			weight2 = j / 100.0
+			weight3 = (100.0 - i - j) / 100.0
+			j += 1.0
+			weight_list.append([weight1, weight2, weight3])
+	for weight in weight_list:
+		print weight[0], weight[1], weight[2]
+		it.integrate(weight[0], weight[1], weight[2])
+		it.evaluate_percentile_best_return(weight[0], weight[1], weight[2])
 
 
 if __name__ == "__main__":
@@ -338,5 +361,10 @@ if __name__ == "__main__":
 	# 		it.evaluate_percentile_best_return(weight1, weight2, weight3)
 	# 		j += 1
 
-	p = Pool(3)
-	print(p.map(try_pool, xrange(101)))
+	# p = Pool(3)
+	# print(p.map(try_pool, xrange(101)))
+
+	# for i in xrange(101):
+	# 	try_pool(i)
+
+	batch()
