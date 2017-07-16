@@ -76,6 +76,25 @@ class test_tr():
 		# return f_score, mean_reciprocal_rank, precision, recall
 
 
+	def evaluate_only_one(self):
+		if len(self.ground_truth) != len(self.result):
+			print "[Warning] Lenth of the ground truth and the result do not match"
+			print "testing/ground truth:", len(self.result), len(self.ground_truth) 
+		tp, p_hat, p = 0, 0, 0
+		for i in xrange(min(len(self.ground_truth), len(self.result))):
+			p += 1
+			result_for_a_sentence = self.result[i]
+			if result_for_a_sentence:
+				p_hat += 1
+				if compare(str(result_for_a_sentence[0]).lower(), str(self.ground_truth[i]).lower()):
+					tp += 1
+		precision = 1.0 * tp / p_hat
+		recall = 1.0 * tp / p
+		f_score = 2.0 * (precision * recall) / (precision + recall)
+		print str(tp) + "\t" + str(p_hat) + "\t" + str(p) + "\t" + str(f_score) + "\t" + str(precision) + "\t" + str(recall)
+		# return f_score, precision, recall
+
+
 def compare(place_name1, place_name2):
 	for state_name in US_STATES:
 		state_name = state_name.lower()
@@ -100,4 +119,5 @@ if __name__ == "__main__":
 	test_case.load_result_data(os.path.join(CURRENT_DIR_PATH, 
 									"textrazor",
 									"textrazor_result.csv"))
-	test_case.evaluate()
+	# test_case.evaluate()
+	test_case.evaluate_only_one()

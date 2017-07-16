@@ -8,6 +8,8 @@ Created on May 14, 2017
 '''
 
 import csv
+from nltk import word_tokenize
+import numpy as np
 
 # [Testing Sentence] || dover, vermont || dover
 TESTING_SENTENCE_FILEPATH = "/home/yiting/Dropbox/ThingsStrings/Things_and_Strings/testing_data/testing_sentence_city_ambiPlaceName.csv"
@@ -38,16 +40,34 @@ def read_listOfList_from_CSV(csv_file_path):
 	return listOfList
 
 
+def get_stat(list_of_lists):
+	sents = []
+	locations = []
+	ambi_place_names = []
+	for row in list_of_lists:
+		sents.append(row[0])
+		if row[1] not in locations:
+			locations.append(row[1])
+		if row[2] not in ambi_place_names:
+			ambi_place_names.append(row[2])
+	print len(locations), len(ambi_place_names)
+	sent_length = []
+	for sent in sents:
+		words = word_tokenize(sent)
+		sent_length.append(len(words))
+	print np.mean(sent_length), np.median(sent_length)
+
 
 
 
 
 if __name__ == '__main__':
-	in_A_not_in_B, in_B_not_in_A = find_difference(TESTING_SENTENCE_FILEPATH, WIKI_MOST_COMMON_US_PLACE_NAME_MAR_14)
-	for item in in_A_not_in_B:
-		print item
-	print "====="
-	for item in in_B_not_in_A:
-		print item
+	# in_A_not_in_B, in_B_not_in_A = find_difference(TESTING_SENTENCE_FILEPATH, WIKI_MOST_COMMON_US_PLACE_NAME_MAR_14)
+	# for item in in_A_not_in_B:
+	# 	print item
+	# print "====="
+	# for item in in_B_not_in_A:
+	# 	print item
 
-
+	ll = read_listOfList_from_CSV("testing_sentence_city_ambiPlaceName_Mar14.csv")	
+	get_stat(ll)

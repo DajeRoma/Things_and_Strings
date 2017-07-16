@@ -5,6 +5,7 @@ import os
 import numpy as np
 from operator import itemgetter
 from multiprocessing import Pool
+import math
 
 sys.path.append('/home/yiting/Dropbox/ThingsStrings/Things_and_Strings/')
 from entity_cooccurrence.EntityCooccurrence import EntityCooccurrence
@@ -112,11 +113,21 @@ class integration_test:
 	"""
 		Standardize the results of all three models
 	"""
-	def standarid_result(self):
+	def standardize_result(self):
 		self.ec_std_result = standardize_result_list(self.ec_result)
 		# self.ec_std_result = self.ec_result
 		self.lda_std_result = standardize_result_list(self.lda_result, reverse = True)
 		self.w2v_std_result = standardize_result_list(self.w2v_result, reverse = True)
+
+
+	"""
+		Normalize the results of all three models
+	"""
+	def normalize_result(self):
+		self.ec_std_result = normalize_result_list(self.ec_result)
+		# self.ec_std_result = self.ec_result
+		self.lda_std_result = normalize_result_list(self.lda_result, reverse = True)
+		self.w2v_std_result = normalize_result_list(self.w2v_result, reverse = True)
 
 
 	def integrate(self, ec_weight, lda_weight, w2v_weight):
@@ -220,7 +231,72 @@ class integration_test:
 		# print f_summary_dict[max_f]
 
 
+	def evaluate_only_best_one(self, weight1, weight2, weight3):
+		if len(self.ground_truth) != len(self.integrated_result):
+			print "[Warning] Lenth of integrated model's result and the ground truth do not match"
+			print "testing/ground truth:", len(self.integrated_result), len(self.ground_truth)
+		f_summary_dict = {}		
+		tp, p_hat, p = 0, 0, 0
+		for i in xrange(min(len(self.ground_truth), len(self.integrated_result))):
+			p += 1
+			result_for_a_sentence = self.integrated_result[i]
+			result_for_a_sentence = filter_only_best_one(result_for_a_sentence)
+			p_hat += 1
+			if str(result_for_a_sentence[0]) == str(self.ground_truth[i]):
+					tp += 1
+		precision = 1.0 * tp / p_hat
+		recall = 1.0 * tp / p
+		f_score = 2.0 * (precision * recall) / (precision + recall)
 
+		row_to_write = str(weight1) + "\t" + str(weight2) + "\t" + str(weight3) + "\t" + str(tp) + "\t" + str(p_hat) + "\t" + str(p) + "\t" + str(f_score) + "\t" + str(precision) + "\t" + str(recall)
+		append_row_to_CSV(row_to_write, os.path.join(
+							CURRENT_DIR_PATH,
+							"best_one_summary_July6.csv"))
+		# print str(tp) + "\t" + str(p_hat) + "\t" + str(p) + "\t" + str(f_score) + "\t" + str(precision) + "\t" + str(recall)
+
+
+	def evaluate_percentile_CE(self, weight1, weight2, weight3):
+		if len(self.ground_truth) != len(self.integrated_result):
+			print "[Warning] Lenth of integrated model's result and the ground truth do not match"
+			print "testing/ground truth:", len(self.integrated_result), len(self.ground_truth)
+		f_summary_dict = {}
+		for k in xrange(0, 101, 1):
+			percentile = int(k)			
+			tp, p_hat, p = 0, 0, 0
+			rank_list = []
+			pr_sum = 0
+			for i in xrange(min(len(self.ground_truth), len(self.integrated_result))):
+				p += 1
+				result_for_a_sentence = self.integrated_result[i]
+				# result_for_a_sentence = filter_by_percentile(result_for_a_sentence, percentile)
+				for j in xrange(len(result_for_a_sentence)):
+					p_hat += 1
+					if str(result_for_a_sentence[j][0]) == str(self.ground_truth[i]):
+						tp += 1
+						# print float(result_for_a_sentence[j][1])
+						if float(result_for_a_sentence[j][1]) == 0:
+							pr_sum += math.log(0.05, 2)
+						else:
+							pr_sum += math.log(float(result_for_a_sentence[j][1]), 2)
+						rank_list.append(j+1)
+			precision = 1.0 * tp / p_hat
+			recall = 1.0 * tp / p
+			f_score = 2.0 * (precision * recall) / (precision + recall)
+			reciprocal_rank_sum = 0
+			for rank in rank_list:
+				if rank > 0:
+					reciprocal_rank_sum += 1.0 / rank
+			mean_reciprocal_rank = 1.0 * reciprocal_rank_sum / p
+			ce = pr_sum * (-1.0 / p)
+			# if f_score in f_summary_dict:
+			# 	print f_summary_dict[f_score]
+			print ce
+			row_to_write = str(weight1) + "\t" + str(weight2) + "\t" + str(weight3) + "\t" + str(k) + "th" + "\t" + str(tp) + "\t" + str(p_hat) + "\t" + str(p) + "\t" + str(f_score) + "\t" + str(mean_reciprocal_rank) + "\t" + str(precision) + "\t" + str(recall)
+			# append_row_to_CSV(row_to_write, DEFAULT_RESULT_PATH)
+			f_summary_dict[f_score] = str(weight1) + "\t" + str(weight2) + "\t" + str(weight3) + "\t" + str(k) + "th" + "\t" + str(tp) + "\t" + str(p_hat) + "\t" + str(p) + "\t" + str(f_score) + "\t" + str(mean_reciprocal_rank) + "\t" + str(precision) + "\t" + str(recall)
+			# print str(tp) + "\t" + str(p_hat) + "\t" + str(p) + "\t" + str(f_score) + "\t" + str(mean_reciprocal_rank) + "\t" + str(precision) + "\t" + str(recall)
+		max_f = max(f_summary_dict.keys())
+		# print f_summary_dict[max_f]
 
 
 def sum_3_tuple_lists_wWeights(tuple_list1, tuple_list2, tuple_list3,
@@ -240,7 +316,7 @@ def sum_3_tuple_lists_wWeights(tuple_list1, tuple_list2, tuple_list3,
 
 
 """
-	standardize the scores in the result_list
+	standardize the scores between negative infinite and infinite in the result_list
 	  note: result_list = [[("city1", "0.05"), ("city2", "0.04"), (), ...], [], ...]
 """
 def standardize_result_list(result_list, reverse = False):	
@@ -264,6 +340,31 @@ def standardize_result_list(result_list, reverse = False):
 	return std_result_list
 
 
+"""
+	normalize the scores between 0 and 1 in the result_list
+	  note: result_list = [[("city1", "0.05"), ("city2", "0.04"), (), ...], [], ...]
+"""
+def normalize_result_list(result_list, reverse = False):	
+	nor_result_list = []
+	for record in result_list:
+		nor_record = []
+		scores = []
+		for cell in record:
+			scores.append(float(cell[1]))
+		maximum = max(scores)
+		minimum = min(scores)
+		for cell in record:
+			if maximum - minimum == 0:
+				nor_record.append((cell[0], 0.5))
+			else:			
+				if reverse:
+					nor_record.append((cell[0], (maximum - float(cell[1])) / (maximum - minimum)))
+				else:
+					nor_record.append((cell[0], (float(cell[1]) - minimum) / (maximum - minimum)))
+		nor_result_list.append(nor_record)
+	return nor_result_list
+
+
 def read_listOfLists_from_CSV(csv_file_path):
 	listOfLists = []
 	with open(csv_file_path, 'rb') as csvfile:
@@ -281,7 +382,7 @@ def append_row_to_CSV(row, csv_file_path):
 
 
 """
-	Given a list of scores, calculate the percentile, and return 
+	Given a list of score tuples, calculate the percentile, and return 
 	  the part of the list of scores that is higher than the percentile
 	Note: percent goes from 1 ~ 100
 """
@@ -298,21 +399,29 @@ def filter_by_percentile(city_scores, percent):
 	return new_city_scores
 
 
+"""
+	Given a list of score tuples, return the one with the highest score
+"""
+def filter_only_best_one(city_scores):
+	best_one = sorted(city_scores, key=lambda tup: tup[1], reverse=True)[0]
+	return best_one
+
+
 def try_pool(i):
-	# sample_ec_result_file = os.path.join(CURRENT_DIR_PATH, "ec_test_result.csv")
-	# sample_lda_result_file = os.path.join(CURRENT_DIR_PATH, "lda_testing_result_May5.csv")
-	# sample_w2v_result_file = os.path.join(CURRENT_DIR_PATH, "w2v_google_news_300d_para_wmd_Mar16.csv")
-	# it = integration_test()
-	# it.load_all_three_result(sample_ec_result_file, sample_lda_result_file, sample_w2v_result_file)
-	# it.standarid_result()
+	sample_ec_result_file = os.path.join(CURRENT_DIR_PATH, "ec_test_result.csv")
+	sample_lda_result_file = os.path.join(CURRENT_DIR_PATH, "lda_testing_result_May5.csv")
+	sample_w2v_result_file = os.path.join(CURRENT_DIR_PATH, "w2v_google_news_300d_para_wmd_Mar16.csv")
+	it = integration_test()
+	it.load_all_three_result(sample_ec_result_file, sample_lda_result_file, sample_w2v_result_file)
+	it.standardize_result()
 
 	j = 0.0
 	while i + j <= 100:
 		weight1 = i / 100.0
 		weight2 = j / 100.0
 		weight3 = (100.0 - i - j) / 100.0
-		# it.integrate(weight1, weight2, weight3)
-		# it.evaluate_percentile_best_return(weight1, weight2, weight3)
+		it.integrate(weight1, weight2, weight3)
+		it.evaluate_percentile_best_return(weight1, weight2, weight3)
 		j += 1.0
 		print weight1, weight2, weight3
 
@@ -323,7 +432,7 @@ def batch():
 	sample_w2v_result_file = os.path.join(CURRENT_DIR_PATH, "w2v_google_news_300d_para_wmd_Mar16.csv")
 	it = integration_test()
 	it.load_all_three_result(sample_ec_result_file, sample_lda_result_file, sample_w2v_result_file)
-	it.standarid_result()
+	it.standardize_result()
 
 	weight_list = []
 	for i in xrange(101):
@@ -340,13 +449,49 @@ def batch():
 		it.evaluate_percentile_best_return(weight[0], weight[1], weight[2])
 
 
+def batch_best_one():
+	sample_ec_result_file = os.path.join(CURRENT_DIR_PATH, "ec_test_result.csv")
+	sample_lda_result_file = os.path.join(CURRENT_DIR_PATH, "lda_testing_result_May5.csv")
+	sample_w2v_result_file = os.path.join(CURRENT_DIR_PATH, "w2v_google_news_300d_para_wmd_Mar16.csv")
+	it = integration_test()
+	it.load_all_three_result(sample_ec_result_file, sample_lda_result_file, sample_w2v_result_file)
+	it.standardize_result()
+
+	weight_list = []
+	for i in xrange(101):
+		j = 0.0
+		while i + j <= 100:
+			weight1 = i / 100.0
+			weight2 = j / 100.0
+			weight3 = (100.0 - i - j) / 100.0
+			j += 1.0
+			weight_list.append([weight1, weight2, weight3])
+	for weight in weight_list:
+		print weight[0], weight[1], weight[2]
+		it.integrate(weight[0], weight[1], weight[2])
+		it.evaluate_only_best_one(weight[0], weight[1], weight[2])
+
+
+def get_ce():
+	sample_ec_result_file = os.path.join(CURRENT_DIR_PATH, "ec_test_result.csv")
+	sample_lda_result_file = os.path.join(CURRENT_DIR_PATH, "lda_testing_result_May5.csv")
+	sample_w2v_result_file = os.path.join(CURRENT_DIR_PATH, "w2v_google_news_300d_para_wmd_Mar16.csv")
+	it = integration_test()
+	it.load_all_three_result(sample_ec_result_file, sample_lda_result_file, sample_w2v_result_file)
+	it.normalize_result()
+
+
+	it.integrate(0.31, 0.22, 0.47)
+	it.evaluate_percentile_CE(0.31, 0.22, 0.47)	
+
+
 if __name__ == "__main__":
 	# sample_ec_result_file = os.path.join(CURRENT_DIR_PATH, "ec_test_result.csv")
 	# sample_lda_result_file = os.path.join(CURRENT_DIR_PATH, "lda_testing_result_May5.csv")
 	# sample_w2v_result_file = os.path.join(CURRENT_DIR_PATH, "w2v_google_news_300d_para_wmd_Mar16.csv")
 	# it = integration_test()
 	# it.load_all_three_result(sample_ec_result_file, sample_lda_result_file, sample_w2v_result_file)
-	# it.standarid_result()
+	# it.standardize_result()
 
 	# # it.integrate(0.5, 0.5, 0)
 	# # for i in xrange(0, 101, 5):
@@ -367,4 +512,8 @@ if __name__ == "__main__":
 	# for i in xrange(101):
 	# 	try_pool(i)
 
-	batch()
+	# batch()
+
+	# batch_best_one()
+
+	get_ce()

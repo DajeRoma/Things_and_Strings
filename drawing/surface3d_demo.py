@@ -28,7 +28,7 @@ def read_listOfList_from_CSV(csv_file_path):
 	return listOfList
 
 
-data = read_listOfList_from_CSV(os.path.join(CURRENT_DIR_PATH, "comprehensive_summary_June27.csv"))
+data = read_listOfList_from_CSV(os.path.join(CURRENT_DIR_PATH, "best_one_summary_July6.csv"))
 data_dict = {}
 print len(data)/101
 counter = 0
@@ -71,8 +71,8 @@ print len(data_dict.keys())
 
 fig = plt.figure(figsize=(80, 60))
 ax = fig.add_subplot(111, projection='3d')
-
-sp = ax.scatter(X, Y, Z, s=20, c=V)
+# fig.subplots_adjust(left=.2, right=.8)
+sp = ax.scatter(X, Y, Z, s=20, c=V, edgecolors='none')
 plt.colorbar(sp)
 ax.set_xlabel('Entity Co-occurrence Weight')
 ax.set_ylabel('Topic Model Weight')
