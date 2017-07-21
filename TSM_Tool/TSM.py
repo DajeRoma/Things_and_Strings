@@ -10,6 +10,7 @@ from nltk.tag.stanford import StanfordNERTagger
 
 import wiki
 import util
+from EntityCooccurrence import EntityCooccurrence
 
 
 reload(sys)  
@@ -18,10 +19,13 @@ sys.setdefaultencoding('utf8')
 CURRENT_DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 CANDIDATES_LIST_PATH = os.path.join(CURRENT_DIR_PATH, "candidate_locations_list.csv")
 WIKI_DIR_PATH = os.path.join(CURRENT_DIR_PATH, "wikipedia")
+WIKI_ENTITIES_PATH = os.path.join(CURRENT_DIR_PATH, "wikipedia_entities.csv")
+DB_ENTITIES_PATH = os.path.join(CURRENT_DIR_PATH, "dbpedia_entities.csv")
 
 
 class TSM:
-	def __init__(self, place_name):
+	def __init__(self, place_name, sentence):
+		self.sentence = sentence
 		self.ambiguous_place_name = place_name.lower()
 		self.candidate_locations = []
 		self.candidate_locations_db = []
@@ -35,11 +39,51 @@ class TSM:
 		self.load_existing_list()
 		self.get_candidate_locations()
 		self.load_wiki_content()
-		self.write_to_existing_list()
+		self.write_to_candidate_location_list()
+
+		self.all_candidate_locations_wiki_entities = {}
+		self.all_candidate_locations_db_entities = {}
 
 
-	def write_to_existing_list(self):
+
+
+
+	def call_entity_cooccurrence(self):
+		ec = EntityCooccurrence()
+		for ambi_name in self.all_candidates:
+			ec.ambi_name_to_candidates[ambi_name.lower()] = \
+				[item.lower() for item in self.all_candidates[ambi_name].keys()]
+		ec.load_wiki_entities(WIKI_ENTITIES_PATH)
+		ec.load_dbpedia_entities(DB_ENTITIES_PATH)
+		if self.new_ambiguous_name is True:
+			self._add_entities_for_ec(self)
+
+	def _add_entities_for_ec(self):
 		pass
+
+
+
+
+
+	def write_to_candidate_location_list(self):		
+		if self.new_ambiguous_name is False:
+			return
+		list_of_lists = []
+		for i in xrange(len(self.candidate_locations)):
+			temp_list = []
+			temp_list.append(self.candidate_locations[i])
+			temp_list.append(self.ambiguous_place_name.title())
+			temp_list.append(self.candidate_locations_wiki[i])
+			temp_list.append(self.candidate_locations_db[i])
+			temp_list.append(self.candidate_locations_lat[i])
+			temp_list.append(self.candidate_locations_long[i])
+			list_of_lists.append(temp_list)
+		with open(CANDIDATES_LIST_PATH, 'a') as csvfile:
+			spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+			for listEntry in list_of_lists:
+				spamwriter.writerow(listEntry)
+		print "Candidate location list updated"
+		
 
 
 	def load_existing_list(self):
@@ -65,12 +109,12 @@ class TSM:
 			return
 		else:
 			print "!!!!"
-			# os.makedirs(os.path.join(WIKI_DIR_PATH, self.ambiguous_place_name))
-			# print "Downloading Wikipedia text..."
-			# wiki.write_cities_wikis_to_disk(self.candidate_locations, 
-			# 						[self.ambiguous_place_name] * len(self.candidate_locations),
-			# 						parent_dir=WIKI_DIR_PATH)
-			# print "Wikipedia texts have been downloaded..."
+			os.makedirs(os.path.join(WIKI_DIR_PATH, self.ambiguous_place_name))
+			print "Downloading Wikipedia text..."
+			wiki.write_cities_wikis_to_disk(self.candidate_locations, 
+									[self.ambiguous_place_name] * len(self.candidate_locations),
+									parent_dir=WIKI_DIR_PATH)
+			print "Wikipedia texts have been downloaded..."
 
 
 	# [u'Washington, Arkansas', u'Washington, Connecticut', ...]
@@ -152,8 +196,6 @@ class TSM:
 		return
 
 
-
-
 	# Returns:
 	# annotated_word_list => [(u'Washington', u'LOCATION'), (u',', 'O'), (u'D.C.', u'LOCATION'), (u', formally the', 'O'), (u'District of Columbia', u'LOCATION'), (u'and commonly referred to as ``', 'O'), (u'Washington', u'LOCATION'), (u"'' , `` the District '' , or simply `` D.C. '' , is the capital of the", 'O'), (u'United States', u'LOCATION'), (u'.', 'O')]
 	# word_list => [u'Washington', u',', u'D.C.', u', formally the', u'District of Columbia', u'and commonly referred to as ``', u'Washington', u"'' , `` the District '' , or simply `` D.C. '' , is the capital of the", u'United States', u'.']
@@ -210,7 +252,7 @@ if __name__ == "__main__":
 	# print TSM.named_emtity_recognition(short_text)
 
 
-	tsm = TSM("london")
+	tsm = TSM("washington")
 	# tsm.get_candidate_locations()
 	# tsm.load_wiki_content()
 	# tsm.get_candidate_locations()
