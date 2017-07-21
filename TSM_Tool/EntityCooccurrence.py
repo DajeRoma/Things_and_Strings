@@ -229,7 +229,7 @@ def get_wiki_entities_from_url(url):
 
 
 """
-	Given an url of a candidate place's DBpedia page, find all entities
+	Given an url of a candidate place's Wikipedia page, find all entities
 """
 def get_db_entities_from_url(url):
 	entities = set()

@@ -12,7 +12,6 @@ import wiki
 import util
 from EntityCooccurrence import EntityCooccurrence
 
-
 reload(sys)  
 sys.setdefaultencoding('utf8')
 
@@ -55,14 +54,78 @@ class TSM:
 				[item.lower() for item in self.all_candidates[ambi_name].keys()]
 		ec.load_wiki_entities(WIKI_ENTITIES_PATH)
 		ec.load_dbpedia_entities(DB_ENTITIES_PATH)
+
+
 		if self.new_ambiguous_name is True:
-			self._add_entities_for_ec(self)
-
-	def _add_entities_for_ec(self):
-		pass
+			self._add_entities_for_ec(ec)
+		print ec.candidate_db_entities
 
 
+	def _add_entities_for_ec(self, ec_model):
+		for i in xrange(len(self.candidate_locations)):
+			db_entities = self.get_db_entities_from_url(self.candidate_locations_db[i])
+			self._add_db_entities_to_csv(self.candidate_locations[i],
+											db_entities,
+											DB_ENTITIES_PATH)
+			db_entities = set(db_entities)
+			ec_model.candidate_db_entities[self.candidate_locations[i]] = db_entities
+			
 
+
+	@staticmethod
+	def _add_db_entities_to_csv(location_name, entities, csvFilePath):
+		with open(csvFilePath, 'a') as csvfile:
+			spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+			spamwriter.writerow([location_name] + entities)
+
+
+	"""
+		Given an url of a candidate place's DBpedia page url, find all entities
+	"""
+	@staticmethod
+	def get_db_entities_from_url(url):
+		entities = set()
+		query = """select distinct ?b ?c
+					{
+					  {
+						select ?b ?c
+						where {
+							   <""" + url + """> ?b ?c.
+							   FILTER(STRSTARTS(STR(?b), "http://dbpedia.org/ontology/") || STRSTARTS(STR(?b), "http://dbpedia.org/property/")).
+							   FILTER(!isLiteral(?c)).
+						}
+					  }
+					  union
+					  {
+						select ?c ?b
+						where {
+							   ?c ?b <""" + url + """>.
+							   FILTER(STRSTARTS(STR(?b), "http://dbpedia.org/ontology/") || STRSTARTS(STR(?b), "http://dbpedia.org/property/")).
+							   FILTER(!isLiteral(?c)).
+						}
+					  }
+					}
+		"""
+		parameters = {'query': query, 'format': 'json'}
+		sparqlRequest = requests.get('http://dbpedia.org/sparql', params = parameters)
+		# print sparqlRequest.json()
+		results = sparqlRequest.json()["results"]["bindings"]
+		# in case "redirected"
+		if len(results) == 1 and results[0]['b']['value'] == "http://dbpedia.org/ontology/wikiPageRedirects":
+			redirct_url = results[0]['c']['value']
+			redirct_url = redirct_url.replace("http://dbpedia.org/resource/", "http://en.wikipedia.org/wiki/")
+			return get_db_entities_from_url(redirct_url)
+		for result in results:
+			obj = result['c']['value']
+			if "http://dbpedia.org/resource/" in obj:
+				entity = obj[len("http://dbpedia.org/resource/"):]
+				entity = entity.replace('_', " ")
+				if '(' in entity:
+					entity = entity[:entity.find('(')]
+				entity = entity.strip()
+				entities.add(entity)
+				# print entity
+		return list(set(entities))
 
 
 	def write_to_candidate_location_list(self):		
@@ -252,7 +315,8 @@ if __name__ == "__main__":
 	# print TSM.named_emtity_recognition(short_text)
 
 
-	tsm = TSM("washington")
+	tsm = TSM("london", "")
+	tsm.call_entity_cooccurrence()
 	# tsm.get_candidate_locations()
 	# tsm.load_wiki_content()
 	# tsm.get_candidate_locations()
