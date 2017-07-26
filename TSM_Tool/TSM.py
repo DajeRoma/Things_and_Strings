@@ -11,6 +11,7 @@ from nltk.tag.stanford import StanfordNERTagger
 import wiki
 import util
 from EntityCooccurrence import EntityCooccurrence
+from EntityCooccurrence import get_wiki_entities_from_url
 
 reload(sys)  
 sys.setdefaultencoding('utf8')
@@ -43,6 +44,11 @@ class TSM:
 		self.all_candidate_locations_wiki_entities = {}
 		self.all_candidate_locations_db_entities = {}
 
+		self.ec_result = {}
+
+
+
+
 
 
 
@@ -55,25 +61,28 @@ class TSM:
 		ec.load_wiki_entities(WIKI_ENTITIES_PATH)
 		ec.load_dbpedia_entities(DB_ENTITIES_PATH)
 
-
 		if self.new_ambiguous_name is True:
 			self._add_entities_for_ec(ec)
-		print ec.candidate_db_entities
+		self.ec_result = ec.apply_model(self.sentence, self.ambiguous_place_name)
 
 
 	def _add_entities_for_ec(self, ec_model):
 		for i in xrange(len(self.candidate_locations)):
 			db_entities = self.get_db_entities_from_url(self.candidate_locations_db[i])
-			self._add_db_entities_to_csv(self.candidate_locations[i],
+			self._add_entities_to_csv(self.candidate_locations[i],
 											db_entities,
 											DB_ENTITIES_PATH)
 			db_entities = set(db_entities)
 			ec_model.candidate_db_entities[self.candidate_locations[i]] = db_entities
+			wiki_entities = get_wiki_entities_from_url(self.candidate_locations_wiki[i])
+			self._add_entities_to_csv(self.candidate_locations[i],
+											wiki_entities,
+											WIKI_ENTITIES_PATH)
+			ec_model.candidate_wiki_entities[self.candidate_locations[i]] = wiki_entities
 			
 
-
 	@staticmethod
-	def _add_db_entities_to_csv(location_name, entities, csvFilePath):
+	def _add_entities_to_csv(location_name, entities, csvFilePath):
 		with open(csvFilePath, 'a') as csvfile:
 			spamwriter = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 			spamwriter.writerow([location_name] + entities)
@@ -190,9 +199,11 @@ class TSM:
 				self.candidate_locations_db.append(self.all_candidates[self.ambiguous_place_name][loc]["db"])
 				self.candidate_locations_long.append(self.all_candidates[self.ambiguous_place_name][loc]["long"])
 				self.candidate_locations_lat.append(self.all_candidates[self.ambiguous_place_name][loc]["lat"])
+			print self.ambiguous_place_name, "is NOT a new ambiguous place name"
 			print "Candidate locations loaded"
 			return
 		self.new_ambiguous_name = True
+		print self.ambiguous_place_name, "is a new ambiguous place name"
 		locations_db = []
 		locations_wiki = []
 		locations = []
@@ -315,7 +326,7 @@ if __name__ == "__main__":
 	# print TSM.named_emtity_recognition(short_text)
 
 
-	tsm = TSM("london", "")
+	tsm = TSM("boston", "I went to Boston and visited harvard this morning.")
 	tsm.call_entity_cooccurrence()
 	# tsm.get_candidate_locations()
 	# tsm.load_wiki_content()

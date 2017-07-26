@@ -133,7 +133,7 @@ class EntityCooccurrence:
 		the_E = len(candidates_wiki_entities.keys())
 		entities_idf = {}
 		for entity in entities_count:
-			entities_idf[entity] = 1 + log((the_E + 1) / entities_count[entity])
+			entities_idf[entity] = 1 + log((the_E + 1)*1.0 / entities_count[entity])
 		return entities_idf
 
 
