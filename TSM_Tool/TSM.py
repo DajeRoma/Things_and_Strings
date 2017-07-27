@@ -5,6 +5,7 @@ import codecs
 import sys
 import os
 import requests
+from subprocess import Popen
 from nltk import word_tokenize
 from nltk.tag.stanford import StanfordNERTagger
 
@@ -21,6 +22,8 @@ CANDIDATES_LIST_PATH = os.path.join(CURRENT_DIR_PATH, "candidate_locations_list.
 WIKI_DIR_PATH = os.path.join(CURRENT_DIR_PATH, "wikipedia")
 WIKI_ENTITIES_PATH = os.path.join(CURRENT_DIR_PATH, "wikipedia_entities.csv")
 DB_ENTITIES_PATH = os.path.join(CURRENT_DIR_PATH, "dbpedia_entities.csv")
+LDA_RESULT_DIR_PATH = os.path.join(CURRENT_DIR_PATH, "lda_result")
+FULLER7_DIR_PATH = "/home/yiting/javaWorkspace/LDA/files/"
 
 
 class TSM:
@@ -45,12 +48,41 @@ class TSM:
 		self.all_candidate_locations_db_entities = {}
 
 		self.ec_result = {}
+		self.lda_result = {}
 
 
 
 
 
 
+	def call_topic_model(self):
+		lda_result_file_path = os.path.join(LDA_RESULT_DIR_PATH, "temp.csv")
+		self._call_lda_jar(lda_result_file_path)
+		self._read_lda_result(lda_result_file_path)
+
+
+	def _read_lda_result(self, lda_result_file_path):
+		with open(lda_result_file_path, 'rb') as csvfile:
+			spamreader = csv.reader(csvfile, delimiter=',', quotechar='\"')
+			for row in spamreader:
+				self.lda_result[row[0]] = float(row[1])
+
+
+	def _call_lda_jar(self, lda_result_file_path):
+		lda_result = lda_result_file_path
+		command = "java -jar topic.jar \"" + self.ambiguous_place_name + "\" \"" + self.sentence \
+		 			+ "\" \"" + CANDIDATES_LIST_PATH + "\" \"" + FULLER7_DIR_PATH + "\" \"" \
+		 			+ lda_result + "\""
+		print "Calling", command
+		try:
+			e = Popen(
+				command,
+				cwd = CURRENT_DIR_PATH,
+				shell = True
+			)
+			stdout, stderr = e.communicate()
+		except IOError as (errno,strerror):
+			print "I/O error({0}): {1}".format(errno, strerror)
 
 
 	def call_entity_cooccurrence(self):
@@ -326,8 +358,11 @@ if __name__ == "__main__":
 	# print TSM.named_emtity_recognition(short_text)
 
 
-	tsm = TSM("boston", "I went to Boston and visited harvard this morning.")
-	tsm.call_entity_cooccurrence()
+	# tsm = TSM("boston", "I went to Boston and visited harvard this morning.")
+	# tsm.call_entity_cooccurrence()
+
+	tsm = TSM("washington", "records show 374 persons living in town in 1900. recurrent attempts to move the county seat to hope finally succeeded in 1938-39. the washington telegraph founded in 1840, and the only  newspaper published throughout the civil war, printed its last issue in 1947.")	
+	tsm.call_topic_model()
 	# tsm.get_candidate_locations()
 	# tsm.load_wiki_content()
 	# tsm.get_candidate_locations()
