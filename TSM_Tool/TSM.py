@@ -358,10 +358,10 @@ if __name__ == "__main__":
 	# print TSM.named_emtity_recognition(short_text)
 
 
-	# tsm = TSM("boston", "I went to Boston and visited harvard this morning.")
+	tsm = TSM("boston", "I went to Boston and visited harvard this morning.")
 	# tsm.call_entity_cooccurrence()
 
-	tsm = TSM("washington", "records show 374 persons living in town in 1900. recurrent attempts to move the county seat to hope finally succeeded in 1938-39. the washington telegraph founded in 1840, and the only  newspaper published throughout the civil war, printed its last issue in 1947.")	
+	# tsm = TSM("washington", "records show 374 persons living in town in 1900. recurrent attempts to move the county seat to hope finally succeeded in 1938-39. the washington telegraph founded in 1840, and the only  newspaper published throughout the civil war, printed its last issue in 1947.")	
 	tsm.call_topic_model()
 	# tsm.get_candidate_locations()
 	# tsm.load_wiki_content()
