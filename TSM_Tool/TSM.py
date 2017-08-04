@@ -13,6 +13,7 @@ import wiki
 import util
 from EntityCooccurrence import EntityCooccurrence
 from EntityCooccurrence import get_wiki_entities_from_url
+from Word2VecModel import Word2VecModel
 
 reload(sys)  
 sys.setdefaultencoding('utf8')
@@ -24,17 +25,21 @@ WIKI_ENTITIES_PATH = os.path.join(CURRENT_DIR_PATH, "wikipedia_entities.csv")
 DB_ENTITIES_PATH = os.path.join(CURRENT_DIR_PATH, "dbpedia_entities.csv")
 LDA_RESULT_DIR_PATH = os.path.join(CURRENT_DIR_PATH, "lda_result")
 FULLER7_DIR_PATH = "/home/yiting/javaWorkspace/LDA/files/"
+GOOGLE_NEW_WE_TRAINED_MODEL_PATH = os.path.join("/home/yiting/data_ThingsString",
+										"GoogleNews-vectors-negative300.bin")
 
 
 class TSM:
 	def __init__(self, place_name, sentence):
 		self.sentence = sentence
-		self.ambiguous_place_name = place_name.lower()
-		self.candidate_locations = []
+		self.ambiguous_place_name = place_name.lower()	# boston
+		self.candidate_locations = []	# ['Boston, Davao Oriental',
 		self.candidate_locations_db = []
-		self.candidate_locations_wiki = []
+		self.candidate_locations_wiki = [] 
+		# ['http://en.wikipedia.org/wiki/Boston,_Davao_Oriental', ...]
 		self.candidate_locations_long = []
 		self.candidate_locations_lat = []
+		self.candidate_locations_wiki_content = []
 
 		self.new_ambiguous_name = False
 		self.all_ambiguous_names_list = set()
@@ -49,8 +54,19 @@ class TSM:
 
 		self.ec_result = {}
 		self.lda_result = {}
+		self.we_result = {}
 
 
+
+	def call_word_embedding_model(self):
+		w2v = Word2VecModel()
+		w2v.load_w2v_model(GOOGLE_NEW_WE_TRAINED_MODEL_PATH, binary=True)
+		for i in xrange(len(self.candidate_locations)):
+			candidate_name = self.candidate_locations[i]
+			candidate_wiki_content = self.candidate_locations_wiki_content[i]
+			candidate_we_score = w2v.get_paragraphs_dif_wmd(candidate_wiki_content, self.sentence)
+			self.we_result[candidate_name.lower()] = candidate_we_score
+		print self.we_result
 
 
 
@@ -210,7 +226,6 @@ class TSM:
 		if self.new_ambiguous_name is False \
 			or os.path.isdir(os.path.join(WIKI_DIR_PATH, self.ambiguous_place_name)):
 			print "Wikipedia texts have been downloaded..."
-			return
 		else:
 			print "!!!!"
 			os.makedirs(os.path.join(WIKI_DIR_PATH, self.ambiguous_place_name))
@@ -219,6 +234,29 @@ class TSM:
 									[self.ambiguous_place_name] * len(self.candidate_locations),
 									parent_dir=WIKI_DIR_PATH)
 			print "Wikipedia texts have been downloaded..."
+		self._load_wiki_content_from_file()
+		print "Wikipedia texts have been loaded..."
+
+
+	def _load_wiki_content_from_file(self):
+		for candidate_location in self.candidate_locations:
+			candidate_location_file_path = os.path.join(WIKI_DIR_PATH,
+												self.ambiguous_place_name,
+												candidate_location.replace(" ", "_") + ".txt")
+			wiki_content = self._read_from_txt_to_str(candidate_location_file_path)
+			self.candidate_locations_wiki_content.append(wiki_content)
+
+
+	"""
+	Read text from a file and return with a string
+	"""
+	@staticmethod
+	def _read_from_txt_to_str(txt_file_path):
+		with codecs.open(txt_file_path, 'rb', encoding='utf8') as outfile:
+			line_list = outfile.readlines()
+		line_list = [line.strip() for line in line_list]
+		# print len(line_list)
+		return "\n".join(line_list).strip()
 
 
 	# [u'Washington, Arkansas', u'Washington, Connecticut', ...]
@@ -362,7 +400,9 @@ if __name__ == "__main__":
 	# tsm.call_entity_cooccurrence()
 
 	# tsm = TSM("washington", "records show 374 persons living in town in 1900. recurrent attempts to move the county seat to hope finally succeeded in 1938-39. the washington telegraph founded in 1840, and the only  newspaper published throughout the civil war, printed its last issue in 1947.")	
-	tsm.call_topic_model()
+	# tsm.call_topic_model()
 	# tsm.get_candidate_locations()
 	# tsm.load_wiki_content()
 	# tsm.get_candidate_locations()
+
+	tsm.call_word_embedding_model()
