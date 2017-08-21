@@ -177,7 +177,9 @@ class TSM:
 
 
 	def _preload_w2v(self):
+		print "loading w2v model..."
 		self.w2v.load_w2v_model(GOOGLE_NEW_WE_TRAINED_MODEL_PATH, binary=True)
+		print "loading w2v model..."
 
 
 	def call_word_embedding_model(self):		
