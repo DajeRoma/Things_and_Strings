@@ -44,10 +44,71 @@ class TSM:
 		self.new_ambiguous_name = False
 		self.all_ambiguous_names_list = set()
 		self.all_candidates = {}
+		if place_name:
+			self.load_existing_list()
+			self.get_candidate_locations()
+			self.load_wiki_content()
+			self.write_to_candidate_location_list()
+
+		self.w2v = Word2VecModel()
+		self._preload_w2v()
+
+		self.all_candidate_locations_wiki_entities = {}
+		self.all_candidate_locations_db_entities = {}
+
+		self.ec_result = {}
+		# {'boston, davao oriental': 0.9310071285130486, 
+		# 'boston, culpeper county, virginia': 0.9310071285130486, 
+		# 'boston, georgia': 0.9310071285130486, 
+		# 'boston, belize': 0.9310071285130486, 
+		# 'boston': 3.6390573296152584, 
+		# 'boston, county clare': 0.9310071285130486}
+		self.lda_result = {}
+		# {'boston, davao oriental': 0.6, 
+		# 'boston, culpeper county, virginia': 0.44965480638636757, 
+		# 'boston, georgia': 0.497400847366547, 
+		# 'boston, belize': 0.6, 
+		# 'boston': 0.5232323047852842, 
+		# 'boston, county clare': 0.6}
+		self.we_result = {}
+		# {'boston, davao oriental': 3.0747995519965303, 
+			# 'boston, culpeper county, virginia': 3.143116787634168, 
+			# 'boston, georgia': 2.884906165268664, 
+			# 'boston, belize': 2.951150195973547, 
+			# 'boston, indiana': 2.5267059528895324,
+			# 'boston, pennsylvania': 2.965466758122623, 
+			# 'boston': 2.1757625944288757, 
+			# 'boston, county clare': 2.9921878306078407}
+
+		self.ec_nor_result = {}
+		self.lda_nor_result = {}
+		self.we_nor_result = {}
+
+		self.integrated_result = []
+
+
+	def new_query(self, place_name, sentence):
+		self.sentence = sentence
+		self.ambiguous_place_name = place_name.lower()	# boston
+		self.candidate_locations = []	# ['Boston, Davao Oriental',
+		self.candidate_locations_db = []
+		self.candidate_locations_wiki = [] 
+		# ['http://en.wikipedia.org/wiki/Boston,_Davao_Oriental', ...]
+		self.candidate_locations_long = []
+		self.candidate_locations_lat = []
+		self.candidate_locations_wiki_content = []
+
+		self.new_ambiguous_name = False
+		self.all_ambiguous_names_list = set()
+		self.all_candidates = {}
 		self.load_existing_list()
 		self.get_candidate_locations()
 		self.load_wiki_content()
 		self.write_to_candidate_location_list()
+
+		# no need to reload
+		# self.w2v = Word2VecModel()
+		# self._preload_w2v()
 
 		self.all_candidate_locations_wiki_entities = {}
 		self.all_candidate_locations_db_entities = {}
@@ -56,25 +117,83 @@ class TSM:
 		self.lda_result = {}
 		self.we_result = {}
 
+		self.ec_nor_result = {}
+		self.lda_nor_result = {}
+		self.we_nor_result = {}
+
+		self.integrated_result = []
 
 
-	def call_word_embedding_model(self):
-		w2v = Word2VecModel()
-		w2v.load_w2v_model(GOOGLE_NEW_WE_TRAINED_MODEL_PATH, binary=True)
+
+	def call_integration_model(self):
+		self.call_entity_cooccurrence()
+		self.call_topic_model()
+		self.call_word_embedding_model()
+
+		self._normalize_result()
+		self._integrate(0.31, 0.22, 0.47)
+		print self.integrated_result
+		return self.integrated_result
+
+
+	def _integrate(self, ec_weight, lda_weight, we_weight):
+		self.integrated_result = {}
+		for city_name in self.ec_nor_result:
+			self.integrated_result[city_name] = self.ec_nor_result[city_name] * ec_weight \
+											+ self.lda_nor_result[city_name] * lda_weight \
+											+ self.we_nor_result[city_name] * we_weight
+
+
+	"""
+		Normalize the results of all three models
+	"""
+	def _normalize_result(self):
+		self.ec_nor_result = TSM._normalize_result_list(self.ec_result)
+		self.lda_nor_result = TSM._normalize_result_list(self.lda_result, reverse = True)
+		self.we_nor_result = TSM._normalize_result_list(self.we_result, reverse = True)
+
+
+	"""
+		Normalize the scores between 0 and 1 in the result_dict
+	  	note: result_dict = {"city1": "0.05", "city2": "0.04", ... }
+	"""
+	@staticmethod
+	def _normalize_result_list(result_dict, reverse = False):	
+		nor_result_dict = {}		
+		scores = []
+		for city_name in result_dict:
+			scores.append(float(result_dict[city_name]))
+		maximum = max(scores)
+		minimum = min(scores)
+		for city_name in result_dict:
+			if maximum - minimum == 0:
+				nor_result_dict[city_name] = 0.5
+			else:
+				if reverse:
+					nor_result_dict[city_name] = (maximum - float(result_dict[city_name])) / (maximum - minimum)
+				else:
+					nor_result_dict[city_name] = (float(result_dict[city_name]) - minimum) / (maximum - minimum)
+		return nor_result_dict
+
+
+	def _preload_w2v(self):
+		self.w2v.load_w2v_model(GOOGLE_NEW_WE_TRAINED_MODEL_PATH, binary=True)
+
+
+	def call_word_embedding_model(self):		
 		for i in xrange(len(self.candidate_locations)):
 			candidate_name = self.candidate_locations[i]
 			candidate_wiki_content = self.candidate_locations_wiki_content[i]
-			candidate_we_score = w2v.get_paragraphs_dif_wmd(candidate_wiki_content, self.sentence)
+			candidate_we_score = self.w2v.get_paragraphs_dif_wmd(candidate_wiki_content, self.sentence)
 			self.we_result[candidate_name.lower()] = candidate_we_score
 		print self.we_result
-
-
 
 
 	def call_topic_model(self):
 		lda_result_file_path = os.path.join(LDA_RESULT_DIR_PATH, "temp.csv")
 		self._call_lda_jar(lda_result_file_path)
 		self._read_lda_result(lda_result_file_path)
+		print self.lda_result
 
 
 	def _read_lda_result(self, lda_result_file_path):
@@ -112,6 +231,7 @@ class TSM:
 		if self.new_ambiguous_name is True:
 			self._add_entities_for_ec(ec)
 		self.ec_result = ec.apply_model(self.sentence, self.ambiguous_place_name)
+		print self.ec_result
 
 
 	def _add_entities_for_ec(self, ec_model):
@@ -405,4 +525,8 @@ if __name__ == "__main__":
 	# tsm.load_wiki_content()
 	# tsm.get_candidate_locations()
 
-	tsm.call_word_embedding_model()
+	# tsm.call_word_embedding_model()
+
+	tsm.call_integration_model()
+	tsm.new_query("washington", "records show 374 persons living in town in 1900. recurrent attempts to move the county seat to hope finally succeeded in 1938-39. the washington telegraph founded in 1840, and the only  newspaper published throughout the civil war, printed its last issue in 1947.")
+	tsm.call_integration_model()
