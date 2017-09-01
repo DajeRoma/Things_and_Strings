@@ -1,0 +1,187 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.png">
+    
+    <title>Things & Strings: Place Name Disambiguation from Short Texts</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <!-- Custom styles for this template -->
+      <link href="css/annotator.min.css" rel="stylesheet">
+    <link href="css/starter-template.css" rel="stylesheet">
+      <style>
+      #thresholds > div > div > span {
+        width:300px; float:left; margin:15px
+      }
+      #thresholds > div > div {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+      }
+      .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+          background-color: #f3f3f3;
+          color: black;
+      }
+      .centity {
+        background-color: #66FFCC ;
+      }
+      #thresholds > div > div > span { width: 80%; }
+      table {border-collapse: collapse;}
+  </style>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--script src="js/ie-emulation-modes-warning.js"></script-->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- script src="js/ie10-viewport-bug-workaround.js"></script-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/get_annotations.js">
+
+    </script>
+  </head>
+
+  <body >
+    <!--h3> Under construction </h3-->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">STKO<sup>&trade;</sup> Project</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">HOME</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>Things & Strings<sup>&trade;</sup>&nbsp;&nbsp;<i style="font-size: 16px;">developed by Yiting Ju</i></h1>
+        <p class="lead"></p>
+      </div>
+      <div class="row">
+        <!--form role="form" action="results.php" method="post"-->
+        <div class="reg-form">
+            <div class="col-lg-7 center-block">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="form-group">
+                            <label for="inputtext" class="sr-only">Input</label>
+                            <textarea class="form-control" id="inputtext" name="inputtext" rows="11" col="3"  required autofocus>I went to Boston and visited harvard this morning. </textarea>
+                            <span class="help-block">Insert text to be annotated</span>
+                        </div><!-- /form-group -->
+                    </div>
+                </div>
+                <div>
+                    <div class="col-lg-2">
+                        <button class="btn btn-primary btn-lg" id="submitbutton" onclick="process();">Annotate</button>
+                    </div>
+                    <div class="col-lg-1">
+                    </div>
+                    <div class="col-lg-9 center-block" style="display:none;" id="progressbar">
+                       <div class="col-lg-12 center-block">
+                          <div class="progress" style="margin-top:10px; margin-bottom:10px">
+                              <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%; vertical-align: middle; margin-top:auto; margin-bottom:auto">
+                                <span class="sr-only">0% Complete</span>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div><!-- /.col-lg-8 -->
+
+            <div class="col-lg-5 center-block">
+                <!--button type="button" class="btn btn-default" onclick="options();" id="optionsbutton">Show Options</button-->
+                <div>
+                  Recognized Place Names:</br></br>
+                  <div id="ambiPlaceNames">
+                  </div>
+                </div>
+                </br></br>
+                <!-- <div id="options" style="display: block;">
+                    <h3 style="margin-top:0px">Options</h3>
+                    <div class="form-group-lg" id="mainoptions">
+                        <div class="checkbox">
+                            <label class="checkbox-inline">
+                              <input type="checkbox" id="checkHideChem" value="hide" unchecked> Hide chemical name
+                            </label class="checkbox-inline">
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+     
+      </div>
+      </div>
+      <div class="row" id="resultsrow" style="display:none;"> 
+      <div class="col-lg-1 center-block">
+        </div>
+       <div class="col-lg-1 center-block" id="progress">
+        </div>
+        <div class="col-lg-10 center-block" id="results">
+        </div>
+        
+      </div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- <script language="JavaScript" type="text/javascript" src="js/jquery-3.0.0.min.js"></script> -->
+
+    <script src="jquery.scrollTo-1.4.12/jquery.scrollTo.min.js" type="text/javascript"></script>
+    <script src="jquery-ui-1.11.1.custom/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/annotator.min.js"></script>
+    <script>
+    $(function() {
+        // setup master volume
+        $( "#master" ).slider({
+          value: 60,
+          orientation: "horizontal",
+          range: "min",
+          animate: true
+        });
+        // setup graphic EQ
+        $( "#thresholds > div > div > span" ).each(function() {
+          // read initial values from markup and remove that
+          var value = parseInt( $( this ).text(), 10 );
+          $( this ).empty().slider({
+            value: value,
+            range: "min",
+            animate: true,
+            orientation: "horizontal",
+            slide: function( event, ui ) {
+                    $(this).parent().parent().children("#ths").text( ui.value );
+                },
+          });
+          $(this).parent().parent().children("#ths").text( value );
+        });
+      });
+    </script>
+  </body>
+</html>
+
+

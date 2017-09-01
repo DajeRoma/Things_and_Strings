@@ -250,7 +250,7 @@ class wiki:
 			except Exception as e1:
 				print '"'+entity+'" is ambiguous'
 				print str(e1)
-				return None
+				return ""
 
 
 	"""

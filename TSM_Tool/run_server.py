@@ -66,7 +66,7 @@ def crossdomain(origin=None, methods=None, headers=None,
 	# print request.environ
 
 
-tsm = TSM("", "")
+# tsm = TSM("", "")
 # @app.before_request
 # def preload():
 # 	tsm = TSM("", "")
@@ -75,13 +75,24 @@ tsm = TSM("", "")
 @app.route('/')
 # @cross_origin(origins='128.111.106.188')
 def index():
-	return '/search/<chemName>'
+	return '/search/<sentence>/<placeName>'
+
+
+@app.route('/ner/<sentence>')
+def named_entity_recognition(sentence):
+	annotated_word_list, word_list, locations_indices = TSM.named_emtity_recognition(sentence)
+	locations = []
+	for item in annotated_word_list:
+		if item[1] == "LOCATION":
+			locations.append(item[0])
+	return jsonify({"result": locations})
 
 
 @app.route('/search/<sentence>/<placeName>')
 # @cross_origin(origins='http://www.geog.ucsb.edu')
 def searchChem(sentence, placeName):
-	result_dict = tsm.new_query(placeName, sentence) 
+	tsm = TSM(placeName, sentence)
+	result_dict = tsm.call_integration_model()
 	return jsonify({"result": result_dict})
 
 

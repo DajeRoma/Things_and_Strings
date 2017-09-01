@@ -84,7 +84,7 @@ class TSM:
 		self.lda_nor_result = {}
 		self.we_nor_result = {}
 
-		self.integrated_result = []
+		self.integrated_result = {}
 
 
 	def new_query(self, place_name, sentence):
@@ -121,7 +121,7 @@ class TSM:
 		self.lda_nor_result = {}
 		self.we_nor_result = {}
 
-		self.integrated_result = []
+		self.integrated_result = {}
 
 
 
@@ -231,8 +231,8 @@ class TSM:
 		ec.load_dbpedia_entities(DB_ENTITIES_PATH)
 
 		if self.new_ambiguous_name is True:
-			self._add_entities_for_ec(ec)
-		self.ec_result = ec.apply_model(self.sentence, self.ambiguous_place_name)
+			ec = self._add_entities_for_ec(ec)
+		self.ec_result = ec.apply_model(self.setdefaultencodingence, self.ambiguous_place_name)
 		print self.ec_result
 
 
@@ -249,6 +249,7 @@ class TSM:
 											wiki_entities,
 											WIKI_ENTITIES_PATH)
 			ec_model.candidate_wiki_entities[self.candidate_locations[i]] = wiki_entities
+		return ec_model
 			
 
 	@staticmethod
